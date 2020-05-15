@@ -4,8 +4,13 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
-    "ios": "react-native run-ios",
     "start": "react-native start",
+    "hotReload": "adb reverse tcp:8081 tcp:8081 && adb shell input text \"RR\"",
+    "devMenu": "adb shell input keyevent 82",
+    "cleanup": "react-native start --reset-cache",
+    "cleanupAndroid": "cd android && gradle clean",
+    "kill": "adb shell am force-stop  com.helloreactnative",
+    "ios": "react-native run-ios",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
