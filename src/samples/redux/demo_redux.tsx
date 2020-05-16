@@ -3,17 +3,18 @@ import {
     SafeAreaView,
 } from 'react-native';
 import {Provider} from "react-redux";
-import Store from "./src/samples/redux/store";
+import Store from "./store";
 import {PersistGate} from "redux-persist/integration/react";
+import AppContainer from "./navigation/navigations";
 
 
-const App = () => {
+const DemoRedux = () => {
     return (
         <>
             <SafeAreaView style={{flex: 1}}>
                 <Provider store={Store().store}>
                     <PersistGate loading={null} persistor={Store().persist}>
-                        {/*<AppContainer/>*/}
+                        <AppContainer/>
                     </PersistGate>
                 </Provider>
             </SafeAreaView>
@@ -21,4 +22,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default DemoRedux;
