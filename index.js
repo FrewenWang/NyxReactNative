@@ -11,7 +11,18 @@ import {name as appName} from './app.json';
 
 
 // Redux的基础测试DemoRedux
-import DemoRedux from './src/samples/redux/demo_redux';
+// import DemoRedux from './src/samples/redux/demo_redux';
+//
+// AppRegistry.registerComponent(appName, () => DemoRedux);
 
-AppRegistry.registerComponent(appName, () => DemoRedux);
+
+// Redux的基础测试DemoRedux
+// import DemoMobx from './src/samples/mobx/DemoMobx';
+//
+// AppRegistry.registerComponent(appName, () => DemoMobx);
+
+// Redux的基础测试DemoRedux
+import DemoFlatList from './src/samples/basic/list/DemoFlatList';
+
+AppRegistry.registerComponent(appName, () => DemoFlatList);
 
