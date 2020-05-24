@@ -50,6 +50,7 @@
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.58.0",
     "prettier": "^2.0.4",
+    "react-native-bundle-visualizer": "^2.1.1",   
     "react-test-renderer": "16.11.0",
     "typescript": "^3.8.3"
   },
@@ -65,9 +66,19 @@
     ]
   },
   "babel": {
-    "plugins":[
-      ["@babel/plugin-proposal-decorators", {"legacy":true}],
-      ["@babel/plugin-proposal-class-properties", {"loose":true}]
+    "plugins": [
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ],
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": true
+        }
+      ]
     ]
   }
 }
