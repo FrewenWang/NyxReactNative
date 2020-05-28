@@ -1,11 +1,10 @@
-import MathUtils from './MathUtils';
 import Logger from './Logger';
 
 const TAG = 'TimeoutManager';
 
-
 interface TimeoutMsg {
   timer: number;
+  name: string | undefined;
   callBack: any;
   delay: number;
 }
@@ -24,8 +23,13 @@ export class TimeoutManager {
    */
   private timeoutMap: Map<number, TimeoutMsg>;
 
+  private static timerManagerId = 0;
+
+  private hasRelease: boolean = false;
+
   public constructor() {
-    this.name = 'TimerManager' + MathUtils.getRandom(0, 1000);
+    this.name = `TimerManager${++TimeoutManager.timerManagerId}`;
+    Logger.log(TAG, `${this.name}  created`);
     this.timeoutMap = new Map<number, TimeoutMsg>();
   }
 
@@ -35,23 +39,37 @@ export class TimeoutManager {
    * @param delay  timer回调的时长
    * @return timerId 回调出去的ID
    */
-  public startTimeout(callback: () => void, delay: number): number {
+  public startTimeout(
+    callback: () => void,
+    delay: number,
+    name?: string,
+  ): number {
+    if (this.hasRelease) {
+      Logger.log(TAG, 'TimerManager has Released !!');
+    }
     ++this.timerId;
-    let timer = this.doStartTimeout(this.timerId, callback, delay);
+    let timer = this.doStartTimeout(this.timerId, name, callback, delay);
 
-    this.notifyTimerStart(this.timerId, timer, callback, delay);
+    this.notifyTimerStart(this.timerId, name, timer, callback, delay);
 
     return this.timerId;
   }
 
-  private doStartTimeout(timerId: number, callback: () => void, delay: number): number {
+  private doStartTimeout(
+    timerId: number,
+    timerName: string | undefined,
+    callback: () => void,
+    delay: number,
+  ): number {
     let timer = setTimeout((): void => {
-      console.log(TAG, `Timer: ${this.getTimerName(timerId)} has processed`);
       if (callback) {
+        console.log(
+          TAG,
+          `Timer: ${this.getTimerName(timerId, timerName)} has processed`,
+        );
         callback();
       }
       this.clearTimer(timer);
-      this.timeoutMap.delete(timerId);
     }, delay);
     return timer;
   }
@@ -60,19 +78,36 @@ export class TimeoutManager {
    * 重置管理中的一个timer
    * @param startTimeout返回给调用方的TimerId
    */
-  public resetTimeout(timerId: number): void {
+  public resetTimeout(timerId: number | undefined): void {
+    if (timerId == undefined || timerId == null) {
+      return;
+    }
+    if (this.hasRelease) {
+      Logger.log(TAG, `TimerManager has Released !! timerId = ${timerId}`);
+    }
     let timerMsg;
     if (this.timeoutMap.has(timerId)) {
       timerMsg = this.timeoutMap.get(timerId);
       timerMsg && this.clearTimer(timerId);
     } else {
-      Logger.log(TAG, 'could not find Timer:' + this.getTimerName(timerId));
+      Logger.log(TAG, `could not find Timer:${this.getTimerName(timerId)}`);
     }
     if (timerMsg) {
-      let timer = this.doStartTimeout(timerId, timerMsg.callBack, timerMsg.delay);
-      this.notifyTimerStart(timerId, timer, timerMsg.callBack, timerMsg.delay);
+      let timer = this.doStartTimeout(
+        timerId,
+        timerMsg.name,
+        timerMsg.callBack,
+        timerMsg.delay,
+      );
+      this.notifyTimerStart(
+        timerId,
+        timerMsg.name,
+        timer,
+        timerMsg.callBack,
+        timerMsg.delay,
+      );
     } else {
-      Logger.log(TAG, 'could not find Timer:' + this.getTimerName(timerId));
+      Logger.log(TAG, `could not find Timer:${this.getTimerName(timerId)}`);
     }
   }
 
@@ -80,7 +115,10 @@ export class TimeoutManager {
    * 释放管理中的一个timer
    * @param timerHandle
    */
-  public clearTimer(timerId: number): boolean {
+  public clearTimer(timerId: number | undefined): boolean {
+    if (timerId == undefined || timerId == null) {
+      return false;
+    }
     if (this.timeoutMap.has(timerId)) {
       let timerMsg = this.timeoutMap.get(timerId);
       if (timerMsg?.timer) {
@@ -88,11 +126,12 @@ export class TimeoutManager {
         this.timeoutMap.delete(timerId);
         console.log(
           TAG,
-          `Timer: ${this.getTimerName(timerId)} has canceled`,
+          `Timer: ${this.getTimerName(timerId, timerMsg.name)} has canceled`,
         );
         return true;
       }
     }
+    Logger.log(TAG, `clear Timer:${this.getTimerName(timerId)}  failed!!!`);
     return false;
   }
 
@@ -104,24 +143,38 @@ export class TimeoutManager {
       this.clearTimer(key);
     });
     this.timeoutMap.clear();
+    this.hasRelease = true;
   }
 
-  private getTimerName(keyTimerID: number): string {
+  public getTimerName(
+    keyTimerID: number | undefined,
+    timerName?: string,
+  ): string {
+    if (timerName) {
+      return this.name + '-' + timerName;
+    }
     return this.name + '-' + keyTimerID;
   }
 
-  private notifyTimerStart(keyTimerID: number, timer: number, callback: () => void, delay: number): void {
+  private notifyTimerStart(
+    keyTimerID: number,
+    timerName: string | undefined,
+    timer: number,
+    callback: () => void,
+    delay: number,
+  ): void {
     console.log(
-      TAG, `startTimer : ${this.getTimerName(keyTimerID)}, time out delay: ${delay}`,
+      TAG,
+      `startTimer : ${this.getTimerName(
+        keyTimerID,
+        timerName,
+      )}, time out delay: ${delay}`,
     );
-    if (this.timeoutMap.get(keyTimerID)) {
-      this.timeoutMap.delete(keyTimerID);
-    }
     this.timeoutMap.set(keyTimerID, {
+      name: timerName,
       timer: timer,
       callBack: callback,
       delay: delay,
-
     });
   }
 }

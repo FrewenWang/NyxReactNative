@@ -6,4 +6,5 @@ export default class DemoHttp extends BaseComponent<ViewProps, {}> {
     super(props);
   }
 
+
 }

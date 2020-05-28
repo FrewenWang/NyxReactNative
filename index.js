@@ -22,7 +22,12 @@ import {name as appName} from './app.json';
 // AppRegistry.registerComponent(appName, () => DemoMobx);
 
 // Redux的基础测试DemoRedux
-import DemoFlatList from './src/samples/basic/list/DemoFlatList';
+// import DemoFlatList from './src/samples/basic/list/DemoFlatList';
+//
+// AppRegistry.registerComponent(appName, () => DemoFlatList);
 
-AppRegistry.registerComponent(appName, () => DemoFlatList);
 
+// Redux的基础测试DemoRedux
+import DemoTimeoutManager from './src/samples/basic/DemoTimeoutManager';
+
+AppRegistry.registerComponent(appName, () => DemoTimeoutManager);
