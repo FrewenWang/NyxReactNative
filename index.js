@@ -28,6 +28,16 @@ import {name as appName} from './app.json';
 
 
 // Redux的基础测试DemoRedux
-import DemoTimeoutManager from './src/samples/basic/DemoTimeoutManager';
+// import DemoTimeoutManager from './src/samples/basic/DemoTimeoutManager';
+//
+// AppRegistry.registerComponent(appName, () => DemoTimeoutManager);
 
-AppRegistry.registerComponent(appName, () => DemoTimeoutManager);
+
+// DemeNavigation
+// import DemoNavigation from './src/samples/navigation/DemoNavigation';
+//
+// AppRegistry.registerComponent(appName, () => DemoNavigation);
+
+import App from './src/samples/navigation/DemoDrawerNavigation';
+
+AppRegistry.registerComponent(appName, () => App);
