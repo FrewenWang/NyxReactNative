@@ -1,15 +1,13 @@
 import {Component} from 'react';
 import Logger from "../utils/Logger";
 
-const TAG = 'BaseComponent';
-
 export abstract class BaseComponent<ViewProps, State> extends Component<ViewProps, State> {
-
+    private TAG = this.constructor.toString();
     protected isDidMounted = false;
 
     protected constructor(props: ViewProps) {
         super(props);
-        Logger.info(TAG, 'constructor called');
+        Logger.info(this.TAG, 'constructor called');
     }
 
     /**
@@ -19,17 +17,17 @@ export abstract class BaseComponent<ViewProps, State> extends Component<ViewProp
      * 这个方法从React16.3就已经过时了。
      */
     public componentWillMount(): void {
-        Logger.info(TAG, 'componentWillMount called');
+        Logger.info(this.TAG, 'componentWillMount called');
     }
 
     public componentDidMount(): void {
         this.isDidMounted = true
-        Logger.info(TAG, 'componentDidMount called');
+        Logger.info(this.TAG, 'componentDidMount called');
     }
 
     public componentWillUnmount(): void {
         this.isDidMounted = false;
-        Logger.info(TAG, 'componentWillUnmount called');
+        Logger.info(this.TAG, 'componentWillUnmount called');
     }
 
     public didMounted(): boolean {

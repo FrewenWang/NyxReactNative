@@ -15,11 +15,30 @@ export default function App() {
     return (
         <NavigationContainer>
             <Tab.Navigator
+                screenOptions={({route}) => ({
+                    tabBarIcon: ({focused, color, size}) => {
+                        let iconName;
+
+                        if (route.name === 'Home') {
+                            iconName = focused
+                                ? 'ios-information-circle'
+                                : 'ios-information-circle-outline';
+                        } else if (route.name === 'Settings') {
+                            iconName = focused ? 'ios-list-box' : 'ios-list';
+                        }
+                        // You can return any component that you like here!
+                        return null;
+                    },
+                })}
+                tabBarOptions={{
+                    activeTintColor: 'tomato',
+                    inactiveTintColor: 'purple',
+                }}
             >
-                <Tab.Screen name="HomePage" component={HomePage}/>
-                <Tab.Screen name="RecommendPage" component={RecommendPage}/>
-                <Tab.Screen name="DiscoveryPage" component={DiscoveryPage}/>
-                <Tab.Screen name="MyProfile" component={MyProfile}/>
+                <Tab.Screen name="首页" component={HomePage}/>
+                <Tab.Screen name="推荐" component={RecommendPage}/>
+                <Tab.Screen name="发现" component={DiscoveryPage}/>
+                <Tab.Screen name="我的" component={MyProfile}/>
             </Tab.Navigator>
         </NavigationContainer>
     );
