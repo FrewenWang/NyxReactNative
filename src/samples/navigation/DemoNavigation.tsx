@@ -1,33 +1,23 @@
 import * as React from 'react';
-import {Text, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-
-function HomeScreen() {
-  return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Home!</Text>
-    </View>
-  );
-}
-
-function SettingsScreen() {
-  return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
+import HomePage from "./HomePage";
+import DiscoveryPage from "./DiscoveryPage";
+import RecommendPage from "./RecommendPage";
+import MyProfile from "./MyProfilePage";
 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
-  return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
-  );
+
+    return (
+        <NavigationContainer>
+            <Tab.Navigator>
+                <Tab.Screen name="HomePage" component={HomePage}/>
+                <Tab.Screen name="RecommendPage" component={RecommendPage}/>
+                <Tab.Screen name="DiscoveryPage" component={DiscoveryPage}/>
+                <Tab.Screen name="MyProfile" component={MyProfile}/>
+            </Tab.Navigator>
+        </NavigationContainer>
+    );
 }

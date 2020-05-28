@@ -34,10 +34,10 @@ import {name as appName} from './app.json';
 
 
 // DemeNavigation
-// import DemoNavigation from './src/samples/navigation/DemoNavigation';
+import DemoNavigation from './src/samples/navigation/DemoNavigation';
+
+AppRegistry.registerComponent(appName, () => DemoNavigation);
+
+// import App from './src/samples/navigation/DemoDrawerNavigation';
 //
-// AppRegistry.registerComponent(appName, () => DemoNavigation);
-
-import App from './src/samples/navigation/DemoDrawerNavigation';
-
-AppRegistry.registerComponent(appName, () => App);
+// AppRegistry.registerComponent(appName, () => App);
