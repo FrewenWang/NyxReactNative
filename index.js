@@ -4,6 +4,9 @@
 
 import {AppRegistry} from 'react-native';
 import {name as appName} from './app.json';
+import {ignoreYellowWarning} from './src/aura/utils/DebugUtils';
+// 移除调试模式的警告
+ignoreYellowWarning();
 
 // import OriginalApp from './src/samples/basic/OriginalApp';
 // import App from './App';
