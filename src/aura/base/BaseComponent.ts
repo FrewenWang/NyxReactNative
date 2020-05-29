@@ -2,7 +2,7 @@ import {Component} from 'react';
 import Logger from "../utils/Logger";
 
 export abstract class BaseComponent<ViewProps, State> extends Component<ViewProps, State> {
-    private TAG = this.constructor.toString();
+    public TAG = this.constructor.toString();
     protected isDidMounted = false;
 
     protected constructor(props: ViewProps) {
