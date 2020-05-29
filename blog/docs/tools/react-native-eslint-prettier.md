@@ -4,6 +4,9 @@
 
 文章参考：https://github.com/syanbo/blog/issues/3
 
+文章参考：https://www.cnblogs.com/qiqi715/p/10247598.html
+
+
 ESLint 可以对你代码进行检查
 Prettier 代码格式化工具，能够统一你或者团队的代码风格（酷爱）
 Pre-commit Hook 在代码进行Git提交的时候进行格式化，如果有错误并终止push
