@@ -1,6 +1,6 @@
 import {action, computed, observable} from 'mobx';
 import ToDoState from './ToDoState';
-import Logger from "../../aura/utils/Logger";
+import Logger from '../../aura/utils/Logger';
 
 export default class TodoList {
   @observable todoList: ToDoState[] = [];
@@ -9,7 +9,7 @@ export default class TodoList {
    * 计算属性:computed
    */
   @computed get unfinishedTodoCount() {
-    let length = this.todoList.filter(todo => !todo.finished).length;
+    let length = this.todoList.filter((todo) => !todo.finished).length;
     Logger.log('TodoList', `unfinishedTodoCount ${length}`);
     return length;
   }

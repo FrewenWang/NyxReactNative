@@ -4,14 +4,14 @@ import {BackHandler} from 'react-native';
 export default function PageBackUtils() {
   let hasTip = false;
   let ts: number;
-  return function() {
+  return function () {
     if (Actions.state.routes[0].index > 0) {
       Actions.pop();
       return true;
     }
     ts = Date.now();
     if (!hasTip) {
-      let handler = function() {
+      let handler = function () {
         let now = Date.now();
         if (now - ts < 1000) {
           requestAnimationFrame(handler);

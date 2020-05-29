@@ -1,2 +1,2 @@
-export * from "./StringsResCH";
-export * from "./StringsResEN";
+export * from './StringsResCH';
+export * from './StringsResEN';

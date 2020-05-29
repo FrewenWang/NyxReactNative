@@ -12,18 +12,18 @@ const middleWares = [thunk];
 
 // 静态对象
 const persistConfig = {
-    key: 'root',
-    storage: AsyncStorage,
+  key: 'root',
+  storage: AsyncStorage,
 };
 
 // TODO 这个地方需要好好学习 Redux的基础学习
 export default function Store() {
-    const enhancer = compose(applyMiddleware(...middleWares));
-    const persistedReducer = persistReducer(persistConfig, reducer);
-    // 创建Store
-    const store = createStore(persistedReducer, enhancer);
-    // 持久化Store
-    // @ts-ignore
-    const persist = persistStore(store);
-    return {store, persist};
+  const enhancer = compose(applyMiddleware(...middleWares));
+  const persistedReducer = persistReducer(persistConfig, reducer);
+  // 创建Store
+  const store = createStore(persistedReducer, enhancer);
+  // 持久化Store
+  // @ts-ignore
+  const persist = persistStore(store);
+  return {store, persist};
 }

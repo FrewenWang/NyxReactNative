@@ -1,3 +1,3 @@
-export * from "./ListItemStyles";
-export * from "./SplashStyles";
-export * from "./DiscoveryPageStyle"
+export * from './ListItemStyles';
+export * from './SplashStyles';
+export * from './DiscoveryPageStyle';
