@@ -13,5 +13,6 @@ export default {
         discoverySelected: require("./src/main/tabbar_discover_selected.png"),
         myProfile: require("./src/main/tabbar_mine.png"),
         myProfileSelected: require("./src/main/tabbar_mine_selected.png"),
+        search: require("./src/main/search_icon.png"),
     },
 };

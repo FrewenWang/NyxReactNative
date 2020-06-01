@@ -1,9 +1,11 @@
 import {Component} from 'react';
 import Logger from '../utils/Logger';
 
-export abstract class BaseComponent<ViewProps, State> extends Component<ViewProps,
-    State> {
-    public TAG = this.constructor.toString();
+export abstract class BaseComponent<ViewProps, State>
+    extends Component<ViewProps, State> {
+    // 不能用这个作为TAG，打印是这个类的构造函数，内容会比较多
+    // public TAG = this.constructor.toString();
+    public TAG = this.getClassName(this);
     protected isDidMounted = false;
 
     protected constructor(props: ViewProps) {
@@ -40,4 +42,28 @@ export abstract class BaseComponent<ViewProps, State> extends Component<ViewProp
     public didMounted(): boolean {
         return this.isDidMounted;
     }
+
+    /**
+     * 获取类的名称
+     * @param obj
+     */
+    public getClassName(obj: any) {
+        if (obj && obj.constructor && obj.constructor.toString()) {
+            if (obj.constructor.name) {
+                return obj.constructor.name;
+            }
+            let str = obj.constructor.toString();
+            let arr;
+            if (str.charAt(0) == '[') {
+                arr = str.match(/\[\w+\s*(\w+)\]/);
+            } else {
+                arr = str.match(/function\s*(\w+)/);
+            }
+            if (arr && arr.length == 2) {
+                return arr[1];
+            }
+        }
+        return undefined;
+    }
+
 }
