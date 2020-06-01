@@ -1,9 +1,13 @@
 import React from "react";
-import {Text, View} from "react-native";
+import {Text, View, ViewProps} from "react-native";
 import {BaseComponent} from "../aura/base/BaseComponent";
 
 
-export default class HomePage extends BaseComponent<any, any> {
+export default class RecommendPage extends BaseComponent<ViewProps, any> {
+
+    constructor(props: ViewProps) {
+        super(props);
+    }
 
     public render(): React.ReactNode {
         return (

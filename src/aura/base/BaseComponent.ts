@@ -19,9 +19,9 @@ export abstract class BaseComponent<ViewProps, State> extends Component<
    * will stop working in React 17
    * 这个方法从React16.3就已经过时了。
    */
-  public componentWillMount(): void {
-    Logger.info(this.TAG, 'componentWillMount called');
-  }
+  // public componentWillMount(): void {
+  //   Logger.info(this.TAG, 'componentWillMount called');
+  // }
 
   public componentDidMount(): void {
     this.isDidMounted = true;
