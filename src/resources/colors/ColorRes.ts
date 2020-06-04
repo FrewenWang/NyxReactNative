@@ -1,5 +1,6 @@
 export default {
     common: {
+        black: "black",
         primary: '#06C1AE',
         chatBrandBgColor: '#092B77FF',
         containerBg: '#FFFFFF',
