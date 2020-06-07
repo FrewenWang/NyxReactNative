@@ -9,9 +9,16 @@ module.exports = {
         "no-useless-constructor": 0
     },
     extends: [
-        'standard', //使用standard做代码规范
+        // 'standard', //使用standard做代码规范
         "prettier",
-        "react-app",
+        // "react-app",
         "plugin:prettier/recommended"
     ],
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "modules": true
+        }
+    },
 };
