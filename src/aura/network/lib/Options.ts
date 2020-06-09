@@ -1,15 +1,17 @@
-import AuraHttp from "./AuraHttp";
+import AuraHttp from './AuraHttp';
 
 export enum Method {
     GET = 'GET',
-    POST = 'POST'
+    POST = 'POST',
+    DELETE = 'DELETE',
+    PUT = 'PUT',
 }
 
 export default interface Options {
+    debug?: boolean;
     baseUrl?: string;
     method?: Method;
     headers?: any;
-    body?: any;
     params?: any;
     connectTimeout?: number;
     readTimeout?: number;
@@ -17,6 +19,7 @@ export default interface Options {
 }
 
 export class OptionBuilder {
+    private _debug?: boolean;
     private _method?: Method;
     private _baseUrl?: string;
     private _headers?: any;
@@ -28,6 +31,11 @@ export class OptionBuilder {
 
     public method(value: Method): OptionBuilder {
         this._method = value;
+        return this;
+    }
+
+    public debug(debug: boolean): OptionBuilder {
+        this._debug = debug;
         return this;
     }
 
@@ -68,6 +76,7 @@ export class OptionBuilder {
 
     public build(): AuraHttp {
         let options: Options = {
+            debug: this._debug,
             baseUrl: this._baseUrl,
             method: this._method,
             connectTimeout: this._connectTimeout,
@@ -75,7 +84,6 @@ export class OptionBuilder {
             writeTimeout: this._writeTimeout,
             headers: this._headers,
             params: this._params,
-            body: this._body
         };
         return new AuraHttp(options);
     }

@@ -1,8 +1,7 @@
-import Options from "./lib/Options";
+import Options from './lib/Options';
 
-const TAG = 'HttpEngineUtils';
+const TAG = 'FetchHelper';
 export default class FetchHelper {
-
     public static releaseResponse(response: Response): void {
         try {
             // @ts-ignore
@@ -15,9 +14,7 @@ export default class FetchHelper {
     public static handleUrl(url: string, param: any): string {
         if (param) {
             let paramsArray: any = [];
-            Object.keys(param).forEach((key: string) =>
-                paramsArray.push(key + '=' + encodeURIComponent(param[key]))
-            );
+            Object.keys(param).forEach((key: string) => paramsArray.push(key + '=' + encodeURIComponent(param[key])));
             if (url.search(/\?/) === -1) {
                 if (typeof param === 'object') {
                     url += '?' + paramsArray.join('&');
@@ -38,18 +35,13 @@ export default class FetchHelper {
         return options;
     }
 
-
     /**
      * 默认Fetch请求的最长超时时间，默认是30秒
      * @param originFetch
      * @param timeout
      */
-    public static timeoutFetch = (
-        originFetch: Promise<any>,
-        timeout = 30000
-    ) => {
-        let timeoutBlock = (): any => {
-        };
+    public static timeoutFetch = (originFetch: Promise<any>, timeout = 30000) => {
+        let timeoutBlock = (): any => {};
         let timer = setTimeout(() => {
             timeoutBlock();
         }, timeout);
@@ -65,7 +57,7 @@ export default class FetchHelper {
                 timer && clearTimeout(timer);
                 return result;
             }),
-            timeoutPromise
+            timeoutPromise,
         ]);
 
         return racePromise;

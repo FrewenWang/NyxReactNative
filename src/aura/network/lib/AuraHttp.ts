@@ -1,48 +1,63 @@
-import Options, {Method} from "./Options";
-import Logger from "../../utils/Logger";
-import FetchHelper from "../FetchHelper";
+import Options, {Method} from './Options';
+import Logger from '../../utils/Logger';
+import {FetchMainRequest} from '../interceptors/FetchMainRequest';
+import RegExgUtils from '../../utils/RegExgUtils';
+import {RequestInterceptor} from '../interceptors/RequestInterceptor';
+import {ResponseInterceptor} from '../interceptors/ResponseInterceptor';
+import {RequestInterceptorProcessor} from '../interceptors/processer/RequestInterceptorProcessor';
 
-const TAG = "AuraHttp";
+const TAG = 'AuraHttp';
 export default class AuraHttp {
+    private requestInterceptors: Set<RequestInterceptor>;
+    private responseInterceptors: Set<ResponseInterceptor>;
     /**
      * 网络请求的配置
      */
-    private readonly options: Options = {
+    private options: Options = {
+        debug: false,
         method: Method.GET,
         connectTimeout: 10 * 1000,
         readTimeout: 10 * 1000,
         writeTimeout: 10 * 1000,
         headers: {
-            Accept: 'application/json'
-        }
+            Accept: 'application/json',
+        },
     };
 
-    public constructor(options?: Options) {
+    public constructor(options: Options) {
         this.options = Object.assign({}, this.options, options);
         Logger.log(TAG, `constructor options = ${JSON.stringify(this.options)}`);
+        this.requestInterceptors = new Set<RequestInterceptor>();
+        this.responseInterceptors = new Set<ResponseInterceptor>();
     }
 
     /**
-     * get请求
+     * get  请求
      * @param url
      */
     public get(url: string, options?: Options): Promise<any> {
-        let getOption = {
-            method: Method.GET
-        };
-        options = Object.assign({}, options, getOption);
+        if (options) {
+            options.method = Method.GET;
+        } else {
+            options = {
+                method: Method.GET,
+            };
+        }
         return this.request(url, options);
     }
 
     /**
-     * post请求
+     * post 请求
      * @param url
      */
     public post(url: string, options?: Options): Promise<any> {
-        let postOption = {
-            method: Method.POST
-        };
-        options = Object.assign({}, options, postOption);
+        if (options) {
+            options.method = Method.POST;
+        } else {
+            options = {
+                method: Method.POST,
+            };
+        }
         return this.request(url, options);
     }
 
@@ -53,63 +68,70 @@ export default class AuraHttp {
      */
     public async request(url: string, options: Options): Promise<any> {
         options = Object.assign({}, this.options, options);
+
         try {
-            if (this.options.baseUrl || options.baseUrl) {
-                url = options.baseUrl
-                    ? options.baseUrl + url
-                    : this.options.baseUrl + url;
+            if (!RegExgUtils.validURL(url) && (this.options.baseUrl || options.baseUrl)) {
+                url = options.baseUrl ? options.baseUrl + url : this.options.baseUrl + url;
             }
-            let requestTime = Date.now();
-            let response;
-            if (options.method === Method.GET) {
-                response = await this.requestGet(url, options);
-            } else if (options.method === Method.POST) {
-                response = await this.requestPost(url, options);
-            } else {
-                throw 'request method should not be null';
+            if (options.debug) {
+                Logger.log(TAG, `request: url: ${url}, options: ${JSON.stringify(options)}`);
             }
 
-            let costTime = Date.now() - requestTime;
-            // 返回结果日志打印
-            console.log(TAG, `request success:${response.ok},status:${response.status},cost:${costTime}`);
+            let requestBeginTime = Date.now();
 
-            if (response && response.ok) {
-                let result = response.json();
-                return result;
+            options = new RequestInterceptorProcessor().process();
+
+            // http的请求的主要逻辑
+            let response = await new FetchMainRequest().process(url, options);
+
+            let requestEndTime = Date.now();
+
+            if (options.debug) {
+                Logger.log(
+                    TAG,
+                    `httpRequest response: url: ${url}, response: ${unescape(JSON.stringify(response))}, const:${
+                        requestEndTime - requestBeginTime
+                    }`,
+                );
             } else {
-                Logger.log(TAG, `request failed url = ${url}`);
-
+                // 返回结果日志打印
+                console.log(
+                    TAG,
+                    `httpRequest success: ${response.ok},status = ${response.status},url = ${unescape(
+                        response.url,
+                    )}, const:${requestEndTime - requestBeginTime}`,
+                );
             }
         } catch (e) {
-            Logger.log(TAG, `request failed url = ${url} , error : ${e}`);
+            Logger.log(TAG, `httpRequest failed url = ${url} , error : ${e}`);
             let response = {
                 code: -1,
-                msg: `error:${e}`
+                msg: `error:${e}`,
             };
             return Promise.reject(JSON.stringify(response));
         }
     }
 
-    private requestGet(url: string, options: Options): Promise<any> {
-        url = FetchHelper.handleUrl(url, options.params);
-        Logger.log(TAG, `url = ${url}, options = ${JSON.stringify(options)}`);
-        return FetchHelper.timeoutFetch(
-            fetch(url, {
-                method: options.method,
-                headers: options.headers
-            })
-        );
+    public addRequestInterceptor(interceptor: RequestInterceptor): void {
+        this.requestInterceptors.add(interceptor);
     }
 
-    private requestPost(url: string, options: Options): Promise<any> {
-        Logger.log(TAG, `url = ${url}, options = ${JSON.stringify(options)}`);
+    public addResponseInterceptor(interceptor: ResponseInterceptor): void {
+        this.responseInterceptors.add(interceptor);
+    }
 
-        return FetchHelper.timeoutFetch(
-            fetch(url, {
-                method: options.method,
-                headers: options.headers,
-                body: options.body
-            })
-        );
+    /**
+     * 获取HttpEngine的默认配置
+     */
+    public getDefaultOptions(): Options {
+        return this.options;
+    }
+
+    /**
+     * 更新HttpEngine的默认配置
+     */
+    public updateDefaultOptions(options: Options): void {
+        options = Object.assign({}, this.options, options);
+        this.options = options;
     }
 }
