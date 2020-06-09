@@ -1,0 +1,542 @@
+[
+  {
+    "id": 100000,
+    "path": "index.js"
+  },
+  {
+    "id": 100001,
+    "path": "app.json"
+  },
+  {
+    "id": 100002,
+    "path": "src/aura/utils/DebugUtils.ts"
+  },
+  {
+    "id": 100003,
+    "path": "src/aura/utils/Logger.ts"
+  },
+  {
+    "id": 100004,
+    "path": "App.tsx"
+  },
+  {
+    "id": 100005,
+    "path": "node_modules/@react-navigation/bottom-tabs/src/index.tsx"
+  },
+  {
+    "id": 100006,
+    "path": "node_modules/@react-navigation/bottom-tabs/src/navigators/createBottomTabNavigator.tsx"
+  },
+  {
+    "id": 100007,
+    "path": "node_modules/@react-navigation/native/src/index.tsx"
+  },
+  {
+    "id": 100008,
+    "path": "node_modules/@react-navigation/core/src/index.tsx"
+  },
+  {
+    "id": 100009,
+    "path": "node_modules/@react-navigation/routers/src/index.tsx"
+  },
+  {
+    "id": 100010,
+    "path": "node_modules/@react-navigation/routers/src/CommonActions.tsx"
+  },
+  {
+    "id": 100011,
+    "path": "node_modules/@react-navigation/routers/src/BaseRouter.tsx"
+  },
+  {
+    "id": 100012,
+    "path": "node_modules/nanoid/non-secure/index.js"
+  },
+  {
+    "id": 100013,
+    "path": "node_modules/@react-navigation/routers/src/StackRouter.tsx"
+  },
+  {
+    "id": 100014,
+    "path": "node_modules/@react-navigation/routers/src/TabRouter.tsx"
+  },
+  {
+    "id": 100015,
+    "path": "node_modules/@react-navigation/routers/src/DrawerRouter.tsx"
+  },
+  {
+    "id": 100016,
+    "path": "node_modules/@react-navigation/routers/src/types.tsx"
+  },
+  {
+    "id": 100017,
+    "path": "node_modules/@react-navigation/core/src/BaseNavigationContainer.tsx"
+  },
+  {
+    "id": 100018,
+    "path": "node_modules/@react-navigation/core/src/EnsureSingleNavigator.tsx"
+  },
+  {
+    "id": 100019,
+    "path": "node_modules/@react-navigation/core/src/NavigationBuilderContext.tsx"
+  },
+  {
+    "id": 100020,
+    "path": "node_modules/@react-navigation/core/src/useScheduleUpdate.tsx"
+  },
+  {
+    "id": 100021,
+    "path": "node_modules/@react-navigation/core/src/useFocusedListeners.tsx"
+  },
+  {
+    "id": 100022,
+    "path": "node_modules/@react-navigation/core/src/useDevTools.tsx"
+  },
+  {
+    "id": 100023,
+    "path": "node_modules/@react-navigation/core/src/useStateGetters.tsx"
+  },
+  {
+    "id": 100024,
+    "path": "node_modules/@react-navigation/core/src/useOptionsGetters.tsx"
+  },
+  {
+    "id": 100025,
+    "path": "node_modules/@react-navigation/core/src/NavigationStateContext.tsx"
+  },
+  {
+    "id": 100026,
+    "path": "node_modules/@react-navigation/core/src/useEventEmitter.tsx"
+  },
+  {
+    "id": 100027,
+    "path": "node_modules/@react-navigation/core/src/useSyncState.tsx"
+  },
+  {
+    "id": 100028,
+    "path": "node_modules/@react-navigation/core/src/isSerializable.tsx"
+  },
+  {
+    "id": 100029,
+    "path": "node_modules/@react-navigation/core/src/createNavigatorFactory.tsx"
+  },
+  {
+    "id": 100030,
+    "path": "node_modules/@react-navigation/core/src/Screen.tsx"
+  },
+  {
+    "id": 100031,
+    "path": "node_modules/@react-navigation/core/src/NavigationHelpersContext.tsx"
+  },
+  {
+    "id": 100032,
+    "path": "node_modules/@react-navigation/core/src/NavigationContext.tsx"
+  },
+  {
+    "id": 100033,
+    "path": "node_modules/@react-navigation/core/src/NavigationRouteContext.tsx"
+  },
+  {
+    "id": 100034,
+    "path": "node_modules/@react-navigation/core/src/CurrentRenderContext.tsx"
+  },
+  {
+    "id": 100035,
+    "path": "node_modules/@react-navigation/core/src/useNavigationBuilder.tsx"
+  },
+  {
+    "id": 100036,
+    "path": "node_modules/react-is/index.js"
+  },
+  {
+    "id": 100037,
+    "path": "node_modules/react-is/cjs/react-is.production.min.js"
+  },
+  {
+    "id": 100038,
+    "path": "node_modules/@react-navigation/core/src/useRegisterNavigator.tsx"
+  },
+  {
+    "id": 100039,
+    "path": "node_modules/@react-navigation/core/src/useDescriptors.tsx"
+  },
+  {
+    "id": 100040,
+    "path": "node_modules/@react-navigation/core/src/SceneView.tsx"
+  },
+  {
+    "id": 100041,
+    "path": "node_modules/@react-navigation/core/src/StaticContainer.tsx"
+  },
+  {
+    "id": 100042,
+    "path": "node_modules/@react-navigation/core/src/useNavigationCache.tsx"
+  },
+  {
+    "id": 100043,
+    "path": "node_modules/@react-navigation/core/src/useNavigationHelpers.tsx"
+  },
+  {
+    "id": 100044,
+    "path": "node_modules/@react-navigation/core/src/types.tsx"
+  },
+  {
+    "id": 100045,
+    "path": "node_modules/@react-navigation/core/src/useOnAction.tsx"
+  },
+  {
+    "id": 100046,
+    "path": "node_modules/@react-navigation/core/src/useFocusEvents.tsx"
+  },
+  {
+    "id": 100047,
+    "path": "node_modules/@react-navigation/core/src/useOnRouteFocus.tsx"
+  },
+  {
+    "id": 100048,
+    "path": "node_modules/@react-navigation/core/src/useChildActionListeners.tsx"
+  },
+  {
+    "id": 100049,
+    "path": "node_modules/@react-navigation/core/src/useFocusedListenersChildrenAdapter.tsx"
+  },
+  {
+    "id": 100050,
+    "path": "node_modules/@react-navigation/core/src/useOnGetState.tsx"
+  },
+  {
+    "id": 100051,
+    "path": "node_modules/@react-navigation/core/src/useCurrentRender.tsx"
+  },
+  {
+    "id": 100052,
+    "path": "node_modules/@react-navigation/core/src/useNavigation.tsx"
+  },
+  {
+    "id": 100053,
+    "path": "node_modules/@react-navigation/core/src/useRoute.tsx"
+  },
+  {
+    "id": 100054,
+    "path": "node_modules/@react-navigation/core/src/useFocusEffect.tsx"
+  },
+  {
+    "id": 100055,
+    "path": "node_modules/@react-navigation/core/src/useIsFocused.tsx"
+  },
+  {
+    "id": 100056,
+    "path": "node_modules/@react-navigation/core/src/useNavigationState.tsx"
+  },
+  {
+    "id": 100057,
+    "path": "node_modules/@react-navigation/core/src/getStateFromPath.tsx"
+  },
+  {
+    "id": 100058,
+    "path": "node_modules/@react-navigation/core/node_modules/escape-string-regexp/index.js"
+  },
+  {
+    "id": 100059,
+    "path": "node_modules/query-string/index.js"
+  },
+  {
+    "id": 100060,
+    "path": "node_modules/strict-uri-encode/index.js"
+  },
+  {
+    "id": 100061,
+    "path": "node_modules/decode-uri-component/index.js"
+  },
+  {
+    "id": 100062,
+    "path": "node_modules/split-on-first/index.js"
+  },
+  {
+    "id": 100063,
+    "path": "node_modules/@react-navigation/core/src/getPathFromState.tsx"
+  },
+  {
+    "id": 100064,
+    "path": "node_modules/@react-navigation/core/src/getActionFromState.tsx"
+  },
+  {
+    "id": 100065,
+    "path": "node_modules/@react-navigation/native/src/NavigationContainer.tsx"
+  },
+  {
+    "id": 100066,
+    "path": "node_modules/@react-navigation/native/src/theming/ThemeProvider.tsx"
+  },
+  {
+    "id": 100067,
+    "path": "node_modules/@react-navigation/native/src/theming/ThemeContext.tsx"
+  },
+  {
+    "id": 100068,
+    "path": "node_modules/@react-navigation/native/src/theming/DefaultTheme.tsx"
+  },
+  {
+    "id": 100069,
+    "path": "node_modules/@react-navigation/native/src/LinkingContext.tsx"
+  },
+  {
+    "id": 100070,
+    "path": "node_modules/@react-navigation/native/src/useThenable.tsx"
+  },
+  {
+    "id": 100071,
+    "path": "node_modules/@react-navigation/native/src/useLinking.native.tsx"
+  },
+  {
+    "id": 100072,
+    "path": "node_modules/@react-navigation/native/src/useBackButton.tsx"
+  },
+  {
+    "id": 100073,
+    "path": "node_modules/@react-navigation/native/src/useScrollToTop.tsx"
+  },
+  {
+    "id": 100074,
+    "path": "node_modules/@react-navigation/native/src/theming/DarkTheme.tsx"
+  },
+  {
+    "id": 100075,
+    "path": "node_modules/@react-navigation/native/src/theming/useTheme.tsx"
+  },
+  {
+    "id": 100076,
+    "path": "node_modules/@react-navigation/native/src/Link.tsx"
+  },
+  {
+    "id": 100077,
+    "path": "node_modules/@react-navigation/native/src/useLinkProps.tsx"
+  },
+  {
+    "id": 100078,
+    "path": "node_modules/@react-navigation/native/src/useLinkTo.tsx"
+  },
+  {
+    "id": 100079,
+    "path": "node_modules/@react-navigation/native/src/useLinkBuilder.tsx"
+  },
+  {
+    "id": 100080,
+    "path": "node_modules/@react-navigation/native/src/ServerContainer.tsx"
+  },
+  {
+    "id": 100081,
+    "path": "node_modules/@react-navigation/native/src/ServerContext.tsx"
+  },
+  {
+    "id": 100082,
+    "path": "node_modules/@react-navigation/native/src/types.tsx"
+  },
+  {
+    "id": 100083,
+    "path": "node_modules/@react-navigation/bottom-tabs/src/views/BottomTabView.tsx"
+  },
+  {
+    "id": 100084,
+    "path": "node_modules/react-native-screens/src/screens.native.js"
+  },
+  {
+    "id": 100085,
+    "path": "node_modules/react-native/Libraries/Core/ReactNativeVersion.js"
+  },
+  {
+    "id": 100086,
+    "path": "node_modules/@react-navigation/bottom-tabs/src/views/SafeAreaProviderCompat.tsx"
+  },
+  {
+    "id": 100087,
+    "path": "node_modules/react-native-safe-area-context/src/index.tsx"
+  },
+  {
+    "id": 100088,
+    "path": "node_modules/react-native-safe-area-context/src/SafeAreaContext.tsx"
+  },
+  {
+    "id": 100089,
+    "path": "node_modules/react-native-safe-area-context/src/NativeSafeAreaView.native.tsx"
+  },
+  {
+    "id": 100090,
+    "path": "node_modules/react-native-safe-area-context/src/SafeAreaView.tsx"
+  },
+  {
+    "id": 100091,
+    "path": "node_modules/react-native-safe-area-context/src/InitialWindow.native.ts"
+  },
+  {
+    "id": 100092,
+    "path": "node_modules/react-native-safe-area-context/src/SafeArea.types.ts"
+  },
+  {
+    "id": 100093,
+    "path": "node_modules/react-native-iphone-x-helper/index.js"
+  },
+  {
+    "id": 100094,
+    "path": "node_modules/@react-navigation/bottom-tabs/src/views/ResourceSavingScene.tsx"
+  },
+  {
+    "id": 100095,
+    "path": "node_modules/@react-navigation/bottom-tabs/src/views/BottomTabBar.tsx"
+  },
+  {
+    "id": 100096,
+    "path": "node_modules/@react-navigation/bottom-tabs/src/views/BottomTabItem.tsx"
+  },
+  {
+    "id": 100097,
+    "path": "node_modules/color/index.js"
+  },
+  {
+    "id": 100098,
+    "path": "node_modules/color-string/index.js"
+  },
+  {
+    "id": 100099,
+    "path": "node_modules/color-name/index.js"
+  },
+  {
+    "id": 100100,
+    "path": "node_modules/simple-swizzle/index.js"
+  },
+  {
+    "id": 100101,
+    "path": "node_modules/simple-swizzle/node_modules/is-arrayish/index.js"
+  },
+  {
+    "id": 100102,
+    "path": "node_modules/color-convert/index.js"
+  },
+  {
+    "id": 100103,
+    "path": "node_modules/color-convert/conversions.js"
+  },
+  {
+    "id": 100104,
+    "path": "node_modules/color-convert/route.js"
+  },
+  {
+    "id": 100105,
+    "path": "node_modules/@react-navigation/bottom-tabs/src/views/TabBarIcon.tsx"
+  },
+  {
+    "id": 100106,
+    "path": "src/pages/HomePage.tsx"
+  },
+  {
+    "id": 100107,
+    "path": "src/aura/base/BaseComponent.ts"
+  },
+  {
+    "id": 100108,
+    "path": "src/pages/RecommendPage.tsx"
+  },
+  {
+    "id": 100109,
+    "path": "src/aura/network/index.js"
+  },
+  {
+    "id": 100110,
+    "path": "src/aura/network/lib/AuraHttp.ts"
+  },
+  {
+    "id": 100111,
+    "path": "src/aura/network/lib/Options.ts"
+  },
+  {
+    "id": 100112,
+    "path": "src/aura/network/FetchHelper.ts"
+  },
+  {
+    "id": 100113,
+    "path": "src/network/RequestUrl.ts"
+  },
+  {
+    "id": 100114,
+    "path": "src/resources/images/ImageRes.ts"
+  },
+  {
+    "id": 100115,
+    "path": "src/resources/images/src/main/tabbar_homepage.png"
+  },
+  {
+    "id": 100116,
+    "path": "src/resources/images/src/main/tabbar_homepage_selected.png"
+  },
+  {
+    "id": 100117,
+    "path": "src/resources/images/src/main/tabbar_recommend.png"
+  },
+  {
+    "id": 100118,
+    "path": "src/resources/images/src/main/tabbar_recommend_selected.png"
+  },
+  {
+    "id": 100119,
+    "path": "src/resources/images/src/main/tabbar_discover.png"
+  },
+  {
+    "id": 100120,
+    "path": "src/resources/images/src/main/tabbar_discover_selected.png"
+  },
+  {
+    "id": 100121,
+    "path": "src/resources/images/src/main/tabbar_mine.png"
+  },
+  {
+    "id": 100122,
+    "path": "src/resources/images/src/main/tabbar_mine_selected.png"
+  },
+  {
+    "id": 100123,
+    "path": "src/resources/images/src/main/search_icon.png"
+  },
+  {
+    "id": 100124,
+    "path": "src/resources/styles/CommonStyles.ts"
+  },
+  {
+    "id": 100125,
+    "path": "src/resources/colors/ColorRes.ts"
+  },
+  {
+    "id": 100126,
+    "path": "src/resources/dimensions/ScreenDimensions.ts"
+  },
+  {
+    "id": 100127,
+    "path": "src/resources/styles/RecommendStyles.ts"
+  },
+  {
+    "id": 100128,
+    "path": "src/pages/DiscoveryPage.tsx"
+  },
+  {
+    "id": 100129,
+    "path": "src/resources/styles/index.ts"
+  },
+  {
+    "id": 100130,
+    "path": "src/resources/styles/ListItemStyles.ts"
+  },
+  {
+    "id": 100131,
+    "path": "src/resources/styles/SplashStyles.ts"
+  },
+  {
+    "id": 100132,
+    "path": "src/resources/styles/DiscoveryPageStyle.ts"
+  },
+  {
+    "id": 100133,
+    "path": "src/pages/MyProfilePage.tsx"
+  },
+  {
+    "id": 100134,
+    "path": "src/components/ItemBottomTabBar.tsx"
+  }
+]
