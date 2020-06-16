@@ -168,8 +168,8 @@ public abstract class AsyncReactActivity extends FragmentActivity implements Def
                 tvv.setGravity(Gravity.CENTER);
                 tvv.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
                 dialogBuilder.setView(tvv);
-                mProgressDialog = dialogBuilder.create();
-                mProgressDialog.show();
+//                mProgressDialog = dialogBuilder.create();
+//                mProgressDialog.show();
                 break;
         }
     }
