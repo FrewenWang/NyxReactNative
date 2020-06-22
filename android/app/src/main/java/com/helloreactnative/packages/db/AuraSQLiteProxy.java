@@ -1,4 +1,4 @@
-package com.helloreactnative.packages;
+package com.helloreactnative.packages.db;
 
 import android.content.ContentValues;
 
@@ -15,11 +15,11 @@ import android.util.Log;
  * @time: 2020/6/18 23:52
  * @copyright Copyright ©2020 Frewen.Wong. All Rights Reserved.
  */
-public class DataBaseProxy {
+public class AuraSQLiteProxy {
 
     private SQLiteDatabase mDatabase;
 
-    public DataBaseProxy(String path, byte[] psw) {
+    public AuraSQLiteProxy(String path, byte[] psw) {
         Log.i("DataBase", "create database:" + path);
         mDatabase = SQLiteDatabase.openOrCreateDatabase(path, null);
     }

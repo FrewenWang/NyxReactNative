@@ -1,12 +1,11 @@
 import React from 'react';
 import {Text, View, ViewProps} from 'react-native';
-import {BaseComponent} from '../aura/base/BaseComponent';
-import Logger from '../aura/utils/Logger';
-import DataBaseUtils from '../utils/DataBaseUtils';
-import FileUtils from '../aura/utils/FileUtils';
+import {BaseComponent} from '../../aura/base/BaseComponent';
+import Logger from '../../aura/utils/Logger';
+import DataBaseUtils from '../../utils/DataBaseUtils';
 
-const TAG = 'MyDataBasePage';
-export default class MyProfilePage extends BaseComponent<ViewProps, any> {
+const TAG = 'MyProfilePage';
+export default class MyDataBasePage extends BaseComponent<ViewProps, any> {
     constructor(props: ViewProps) {
         super(props);
     }
@@ -14,8 +13,7 @@ export default class MyProfilePage extends BaseComponent<ViewProps, any> {
     public componentDidMount() {
         super.componentDidMount();
 
-        //this.testTransformTime();
-        this.testDataBase();
+        this.testTransformTime();
     }
 
     public render(): React.ReactNode {
@@ -31,22 +29,23 @@ export default class MyProfilePage extends BaseComponent<ViewProps, any> {
      */
     private testTransformTime(): void {
         let path = '/sdcard/shop.txt';
-        FileUtils.readFileByPath('file://' + path).then((result: string) => {
-            Logger.info(TAG, 'result ==' + result.length);
-            Logger.debug(TAG, 'transformString Begin');
-            DataBaseUtils.transformString(result).then((response: any) => {
-                Logger.debug(TAG, 'transformString success', response);
-            });
-
-            let resultArray: string[] = result.split(';');
-
-            setTimeout(() => {
-                Logger.debug(TAG, 'transformArray Begin');
-                DataBaseUtils.transformArray(resultArray).then((response: any) => {
-                    Logger.debug(TAG, 'transformArray success', response);
-                });
-            }, 3000);
-        });
+        // FileUtils.readFileByPath('file://' + path).then((result: string) => {
+        //     Logger.info(TAG, 'result ==' + result.length);
+        //     Logger.debug(TAG, 'transformString Begin');
+        //     DataBaseUtils.transformString(result).then((response: any) => {
+        //         Logger.debug(TAG, 'transformString success', response);
+        //     });
+        //
+        //     let resultArray: string[] = result.split(';');
+        //
+        //     setTimeout(() => {
+        //         Logger.debug(TAG, 'transformArray Begin');
+        //         DataBaseUtils.transformArray(resultArray).then((response: any) => {
+        //             Logger.debug(TAG, 'transformArray success', response);
+        //         });
+        //     }, 3000);
+        //
+        // });
 
         /**
          * 100条数据：      字符串：4   数组：2
@@ -56,7 +55,7 @@ export default class MyProfilePage extends BaseComponent<ViewProps, any> {
          * 500000条数据：   字符串：内存溢出   数组： 内存溢出
          * 1000000条数据：  字符串：内存溢出   数组： 内存溢出
          * 差距并不大
-         **/
+         */
         let content = '你好你好你好你好你好你好你好你好你好';
         for (let i = 0; i <= 500000; i++) {
             let addStr = '你好你好你好你好你好你好你好你好你好' + i + ';';
@@ -76,23 +75,5 @@ export default class MyProfilePage extends BaseComponent<ViewProps, any> {
                 Logger.debug(TAG, 'transformArray success', response);
             });
         }, 3000);
-    }
-
-    /**
-     *
-     */
-    private testDataBase(): void {
-        let path = '/sdcard/shop.txt';
-        FileUtils.readFileByPath('file://' + path).then((result: string) => {
-            Logger.info(TAG, 'result ==' + result.length);
-            let resultArray: string[] = result.split(';');
-            DataBaseUtils.execSQList('shop', resultArray)
-                .then((response) => {
-                    Logger.debug(TAG, 'execSQList success', response);
-                })
-                .catch((error: any) => {
-                    Logger.debug(TAG, 'execSQList error', error);
-                });
-        });
     }
 }

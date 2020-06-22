@@ -20,6 +20,12 @@ import org.json.JSONObject;
 import java.util.Iterator;
 import java.util.Map;
 
+import static android.database.Cursor.FIELD_TYPE_BLOB;
+import static android.database.Cursor.FIELD_TYPE_FLOAT;
+import static android.database.Cursor.FIELD_TYPE_INTEGER;
+import static android.database.Cursor.FIELD_TYPE_NULL;
+import static android.database.Cursor.FIELD_TYPE_STRING;
+
 /**
  * @filename: DataBindUtil
  * @introduction:
@@ -60,6 +66,23 @@ public class DataBindUtil {
         JSONObject object;
         while (cursor.moveToNext()) {
             object = convertCursorToObject(columns, cursor);
+            all.put(object);
+        }
+        return all;
+    }
+
+    /**
+     * 将 cursor 读取完毕，并转换成 JSONArray 对象
+     *
+     * @param cursor
+     */
+    @NotNull
+    public static JSONArray convertCursorToJsonArray(Cursor cursor) {
+        JSONArray all = new JSONArray();
+
+        JSONObject object;
+        while (cursor.moveToNext()) {
+            object = convertCursorToObject(cursor);
             all.put(object);
         }
         return all;
@@ -109,6 +132,52 @@ public class DataBindUtil {
                         case DBConsts.TYPE_MAP:
                             String map = cursor.getString(columnIndex);
                             object.put(key, new JSONObject(map));
+                            break;
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }
+        return object;
+    }
+
+    /**
+     * 读取一行数据，并将数据转换成 JSONObject
+     *
+     * @param cursor
+     */
+    @NotNull
+    public static JSONObject convertCursorToObject(Cursor cursor) {
+
+        JSONObject object = new JSONObject();
+        String key;
+        int type;
+
+        int count = cursor.getColumnCount();
+        for (int index = 0; index < count; index++) {
+            type = cursor.getType(index);
+            key = cursor.getColumnName(index);
+
+            if (index != -1) {
+                try {
+                    switch (type) {
+                        case FIELD_TYPE_NULL:
+                            object.put(key, null);
+                            break;
+                        case FIELD_TYPE_INTEGER:
+                            object.put(key, cursor.getInt(index));
+                            break;
+                        case FIELD_TYPE_FLOAT:
+                            object.put(key, cursor.getFloat(index));
+                            break;
+                        case FIELD_TYPE_STRING:
+                            object.put(key, cursor.getString(index));
+                            break;
+                        case FIELD_TYPE_BLOB:
+                            object.put(key, cursor.getBlob(index));
                             break;
                     }
 

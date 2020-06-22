@@ -8,6 +8,10 @@ import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
+import com.frewen.aura.toolkits.core.FreeToolKits;
+import com.helloreactnative.packages.AuraDataBasePackage;
+import com.helloreactnative.packages.DataBaseBridgeModule;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
@@ -22,11 +26,12 @@ public class MainApplication extends Application implements ReactApplication {
 
         @Override
         protected List<ReactPackage> getPackages() {
-          @SuppressWarnings("UnnecessaryLocalVariable")
-          List<ReactPackage> packages = new PackageList(this).getPackages();
-          // Packages that cannot be autolinked yet can be added manually here, for example:
-          // packages.add(new MyReactNativePackage());
-          return packages;
+            @SuppressWarnings("UnnecessaryLocalVariable")
+            List<ReactPackage> packages = new PackageList(this).getPackages();
+            // Packages that cannot be autolinked yet can be added manually here, for example:
+            // packages.add(new MyReactNativePackage());
+            packages.add(new AuraDataBasePackage());
+            return packages;
         }
 
         @Override
@@ -43,6 +48,7 @@ public class MainApplication extends Application implements ReactApplication {
   @Override
   public void onCreate() {
     super.onCreate();
+      FreeToolKits.init(this, "HelloReactNative");
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
   }

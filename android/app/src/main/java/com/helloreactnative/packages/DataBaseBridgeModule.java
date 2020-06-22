@@ -23,20 +23,22 @@ import javax.annotation.Nonnull;
  */
 public class DataBaseBridgeModule extends ReactContextBaseJavaModule {
     private static final String TAG = "DataBaseBridgeModule";
-    private DbHelper mDbApi = new DbHelper();
-
-    private DbThreadPool mPool;
+    private final DbHelper mDbApi;
+    private final DbThreadPool mPool;
 
     private HashMap<String, Handler> mHandlerMap = new HashMap<>();
 
     public DataBaseBridgeModule(@Nonnull ReactApplicationContext reactContext) {
         super(reactContext);
+        Log.d(TAG, "FMsg:DataBaseBridgeModule() called ");
         mPool = new DbThreadPool();
+        mDbApi = new DbHelper(reactContext);
     }
 
     @Override
     public void onCatalystInstanceDestroy() {
         super.onCatalystInstanceDestroy();
+        Log.d(TAG, "FMsg:onCatalystInstanceDestroy() called");
         if (mPool != null) {
             mPool.shutdown();
         }
@@ -57,7 +59,7 @@ public class DataBaseBridgeModule extends ReactContextBaseJavaModule {
     @Nonnull
     @Override
     public String getName() {
-        return "DataBase";
+        return "AuraRNDataBase";
     }
 
     /**
@@ -67,9 +69,9 @@ public class DataBaseBridgeModule extends ReactContextBaseJavaModule {
      * @param promise
      */
     @ReactMethod
-    public void execSQL(String sql, Promise promise) {
+    public void execSQL(String tableName, String sql, Promise promise) {
         Log.d(TAG, "execSQL Begin");
-        mPool.execute(new Runnable() {
+        getTableHandler(tableName).post(new Runnable() {
             @Override
             public void run() {
                 mDbApi.execSQL(sql, promise);
@@ -80,17 +82,18 @@ public class DataBaseBridgeModule extends ReactContextBaseJavaModule {
     /**
      * 批量执行SQL的脚本
      *
-     * @param sqlArray
+     * @param tableName 数据库表名
+     * @param sqlArray  数据库执行脚本的数组
      * @param promise
      */
     @ReactMethod
-    public void execSQLS(ReadableArray sqlArray, Promise promise) {
-        long currentTime = System.currentTimeMillis();
+    public void execSQList(String tableName, ReadableArray sqlArray, Promise promise) {
         Log.d(TAG, "execSQLS Begin == " + sqlArray.size());
-        mPool.execute(new Runnable() {
+        long currentTime = System.currentTimeMillis();
+        getTableHandler(tableName).post(new Runnable() {
             @Override
             public void run() {
-                mDbApi.execSQLS(sqlArray, promise);
+                mDbApi.execSQList(sqlArray, promise);
                 Log.d(TAG, "execSQLS End  cost:" + (System.currentTimeMillis() - currentTime));
             }
         });
@@ -130,7 +133,6 @@ public class DataBaseBridgeModule extends ReactContextBaseJavaModule {
                 promise.resolve("");
             }
         });
-
     }
 
     @ReactMethod
@@ -307,4 +309,29 @@ public class DataBaseBridgeModule extends ReactContextBaseJavaModule {
             }
         });
     }
+
+
+    /**
+     * 测试RN和Native之间传递String的耗时时长
+     *
+     * @param params
+     */
+    @ReactMethod
+    public void transformString(String params, Promise promise) {
+        Log.d(TAG, "FMsg:transformString() called with: params = [" + params.length() + "]");
+        promise.resolve("success ==" + params.length());
+    }
+
+    /**
+     * 测试RN和Native之间传递ReadableArray的耗时时长
+     *
+     * @param params
+     */
+    @ReactMethod
+    public void transformArray(ReadableArray params, Promise promise) {
+        Log.d(TAG, "FMsg:transformArray() called with: params = [" + params.size() + "]");
+        promise.resolve("success ==" + params.size());
+    }
+
+
 }

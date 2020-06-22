@@ -7,10 +7,13 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.facebook.react.bridge.Promise;
+import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
 
 import com.frewen.aura.toolkits.core.FreeToolKits;
+import com.helloreactnative.packages.db.AuraSQLiteProxy;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -25,26 +28,26 @@ import java.util.Map;
  * 功能描述:
  *
  * @author: panxianrong
- * 创建时间: 2020-01-09
- * 责任人: panxianrong
- * 备份责任人:
- * 修改人:
- * 修改内容:
- * 修改时间:
- * Copyright (C) 2020 cmcm
+ *         创建时间: 2020-01-09
+ *         责任人: panxianrong
+ *         备份责任人:
+ *         修改人:
+ *         修改内容:
+ *         修改时间:
+ *         Copyright (C) 2020 cmcm
  */
 public class DbHelper {
 
-    private DataBaseProxy mDb;
+    private AuraSQLiteProxy mDb;
 
     private static final String TAG = "DataBase";
     private static final String DB_NAME = "rn.db";
 
     private Map<String, Map<String, String>> mTableKeyMap = new HashMap<>();
 
-    public DbHelper() {
-        String path = FreeToolKits.getAppContext().getFilesDir().getAbsolutePath() + File.separator + DB_NAME;
-        mDb = new DataBaseProxy(path, "vase".getBytes());
+    public DbHelper(ReactApplicationContext reactContext) {
+        String path = reactContext.getFilesDir().getAbsolutePath() + File.separator + DB_NAME;
+        mDb = new AuraSQLiteProxy(path, "vase".getBytes());
     }
 
     public void execSQL(String sql, Promise promise) {
@@ -57,13 +60,16 @@ public class DbHelper {
     }
 
 
-    public void execSQLS(ReadableArray sqlArray, Promise promise) {
+    public void execSQList(ReadableArray sqlArray, Promise promise) {
         Log.d(TAG, "execSQLS Begin == " + sqlArray.size());
         mDb.beginTransaction();
         try {
             if (sqlArray != null) {
                 for (int i = 0; i < sqlArray.size(); i++) {
-                    String sql = sqlArray.getString(i);
+                    String sql = sqlArray.getString(i).trim();
+                    if (TextUtils.isEmpty(sql)) {
+                        continue;
+                    }
                     Log.d(TAG, "execSQLS sql == " + sql);
                     mDb.execSQL(sql);
                 }
@@ -111,21 +117,16 @@ public class DbHelper {
         Log.i(TAG, "createTable");
         try {
             StringBuilder builder = new StringBuilder("CREATE TABLE IF NOT EXISTS ").append(tableName).append("(");
-
             if (data != null) {
                 int size = data.size();
                 LinkedHashMap<String, String> keyMap = new LinkedHashMap<>(size);
                 mTableKeyMap.put(tableName, keyMap);
                 for (int idx = 0; idx < size; idx++) {
-
                     ReadableMap column = data.getMap(idx);
                     String key = column.getString("key");
-
                     String type = column.getString("type");
                     String extend = column.getString("extend");
-
                     keyMap.put(key, type);
-
                     builder.append(key).append(" ").append(type);
                     builder.append(" ").append(extend);
                     if (idx < size - 1) {
@@ -134,11 +135,8 @@ public class DbHelper {
                 }
             }
             builder.append(");");
-
             String sql = builder.toString();
-
             Log.i(TAG, "create table: " + sql);
-
             mDb.execSQL(sql);
         } catch (Exception e) {
             e.printStackTrace();
@@ -209,7 +207,6 @@ public class DbHelper {
                     JSONObject object = jsonArray.getJSONObject(idx);
 
                     DataBindUtil.bindData(insertSql, object, columns);
-
                     insertSql.execute();
                     insertSql.clearBindings();
                 }
