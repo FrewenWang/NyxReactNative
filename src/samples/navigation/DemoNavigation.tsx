@@ -1,13 +1,14 @@
 import * as React from 'react';
-// @ts-ignore
 import {NavigationContainer} from '@react-navigation/native';
-// @ts-ignore
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+
+// 添加react-native-vector-icons的相关依赖
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
 import HomePage from '../../pages/HomePage';
 import DiscoveryPage from '../../pages/DiscoveryPage';
 import RecommendPage from '../../pages/RecommendPage';
 import MyProfile from '../../pages/MyProfilePage';
-
 const Tab = createBottomTabNavigator();
 /**
  * 1、createStackNavigator 类似于普通的navigator，屏幕上方的导航栏

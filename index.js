@@ -36,9 +36,9 @@ import App from './App';
 
 
 // DemeNavigation
-import DemoNavigation from './src/samples/navigation/DemoNavigation';
+import DemoStackNavigation from './src/samples/navigation/DemoStackNavigation';
 
-AppRegistry.registerComponent(appName, () => DemoNavigation);
+AppRegistry.registerComponent(appName, () => DemoStackNavigation);
 
 // import App from './src/samples/navigation/DemoDrawerNavigation';
 //
