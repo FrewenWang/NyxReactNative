@@ -1,4 +1,4 @@
-import {FlatList, Text, View, ViewProps} from 'react-native';
+import {ActivityIndicator, FlatList, RefreshControl, Text, View, ViewProps} from 'react-native';
 import React from 'react';
 import {BaseComponent} from '../../../aura/base/BaseComponent';
 import ItemDemoFlatList from './ItemDemoFlatList';
@@ -32,10 +32,27 @@ export default class FlatListDemo extends BaseComponent<ViewProps, FlatListState
         };
     }
 
+    /**
+     * item的是一个实例对象：所以我们传入给Item布局的数据其实是item.item
+     * { item: 15,
+     *  index: 15,
+     *   separators:
+     *   { highlight: [Function: highlight],
+     *     unhighlight: [Function: unhighlight],
+     *     updateProps: [Function: updateProps] } }
+     * @param item
+     */
     private renderItem = (item: any) => {
-        return <ItemDemoFlatList data={item} />;
+        Logger.info(TAG, 'renderItem', item.item);
+        return <ItemDemoFlatList data={item.item} />;
+        // return (
+        //     <View>
+        //         <Text>{item.item}</Text>
+        //     </View>
+        // );
     };
-    private _getItemLayout = (item: {num: number}, index: number) => {
+
+    private _getItemLayout = (item: any, index: number) => {
         return {length: 200, offset: 200, index};
     };
     /**
@@ -70,7 +87,7 @@ export default class FlatListDemo extends BaseComponent<ViewProps, FlatListState
      *              如果你的行高是固定的，getItemLayout用起来既高效又简单
      */
     public render(): React.ReactNode {
-        Logger.log(TAG, 'FlatListDemo render');
+        Logger.log(TAG, '===========FlatListDemo render================');
         return (
             <View style={{flex: 1}}>
                 <FlatList
@@ -82,7 +99,7 @@ export default class FlatListDemo extends BaseComponent<ViewProps, FlatListState
                             }}
                         />
                     )}
-                    data={this.originData}
+                    data={this.state.data}
                     renderItem={(item) => this.renderItem(item)}
                     // getItemLayout={this._getItemLayout}
                     initialNumToRender={1} // 一开始渲染的元素数量。我们最好将这个数量调整为整个屏幕元素的个数。
@@ -98,9 +115,19 @@ export default class FlatListDemo extends BaseComponent<ViewProps, FlatListState
                     ListEmptyComponent={this._emptyPageComponent}
                     ListHeaderComponent={this._headerPageComponent}
                     ListFooterComponent={this._footerPageComponent}
-                    refreshing={this.state.isLoading}
-                    onRefresh={this._onRefresh} //如果提供，将为“拉动刷新”功能添加标准的RefreshControl。确保还正确设置了刷新道具
-                    onEndReached={this._onEndReached}></FlatList>
+                    onEndReached={this._onEndReached}
+                    // refreshing={this.state.isLoading}
+                    // onRefresh={this._onRefresh} //如果提供，将为“拉动刷新”功能添加标准的RefreshControl。确保还正确设置了刷新道具
+                    // 不使用上面默认的下拉刷新的样式，我们可以自定义一个下拉刷新组件
+                    refreshControl={
+                        <RefreshControl
+                            title={'页面刷新中'} //只在iOS有用
+                            progressBackgroundColor={'orange'}
+                            colors={['red']}
+                            refreshing={this.state.isLoading}
+                            titleColor={'red'}
+                            onRefresh={this._onRefresh}></RefreshControl>
+                    }></FlatList>
             </View>
         );
     }
@@ -146,16 +173,51 @@ export default class FlatListDemo extends BaseComponent<ViewProps, FlatListState
                     height: 120,
                     backgroundColor: ColorRes.common.chatBrandBgColor,
                 }}>
-                <Text style={{color: ColorRes.common.white}}>尾部组件</Text>
+                <ActivityIndicator size={'large'} animating={true} color={'red'} />
+                <Text style={{color: ColorRes.common.white}}>正在上拉加载中</Text>
             </View>
         );
     };
 
     private _onRefresh = () => {
         Logger.info(TAG, '_onRefresh Called');
+        this.refreshData();
     };
 
     private _onEndReached = () => {
         Logger.info(TAG, '_onEndReached Called');
+        this.loadMoreData();
     };
+
+    private loadMoreData(): void {
+        /// 执行一个2秒的延迟任务，模拟异步加载数据
+        setTimeout(() => {
+            let dataArray = [];
+            dataArray = this.state.data.concat(this.originData);
+            this.setState({
+                isLoading: false,
+                data: dataArray,
+            });
+        }, 2000);
+    }
+
+    /**
+     * 进行数据的刷新
+     */
+    private refreshData(): void {
+        this.setState({
+            isLoading: true,
+        });
+        /// 执行一个2秒的延迟任务，模拟异步加载数据
+        setTimeout(() => {
+            let dataArray = [];
+            for (let i = this.state.data.length - 1; i >= 0; i--) {
+                dataArray.push(this.state.data[i]);
+            }
+            this.setState({
+                isLoading: false,
+                data: dataArray,
+            });
+        }, 2000);
+    }
 }

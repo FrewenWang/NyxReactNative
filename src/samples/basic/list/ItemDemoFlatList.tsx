@@ -8,7 +8,6 @@ interface ItemDemoFlatListProps {
 }
 
 interface ItemDemoFlatListState {
-    isLoading: boolean;
 }
 
 const TAG = 'ItemDemoFlatList';
@@ -21,11 +20,11 @@ export default class ItemDemoFlatList extends React.Component<ItemDemoFlatListPr
     }
 
     public componentDidMount(): void {
-        Logger.info(TAG, 'componentDidMount', this.data.item);
+        Logger.info(TAG, 'componentDidMount', this.data);
     }
 
     public render(): React.ReactNode {
-        Logger.info(TAG, 'render', this.data.item);
+        Logger.info(TAG, 'render', this.data);
         return (
             <View
                 style={{
@@ -35,7 +34,7 @@ export default class ItemDemoFlatList extends React.Component<ItemDemoFlatListPr
                     height: 100,
                     backgroundColor: ColorRes.common.primary,
                 }}>
-                <Text>这是第{this.data.item}个Item</Text>
+                <Text>这是第{this.data}个Item</Text>
             </View>
         );
     }
