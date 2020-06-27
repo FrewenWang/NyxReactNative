@@ -1,6 +1,7 @@
 export default {
     common: {
-        black: "black",
+        black: 'black',
+        white: 'white',
         primary: '#06C1AE',
         chatBrandBgColor: '#092B77FF',
         containerBg: '#FFFFFF',
@@ -9,5 +10,4 @@ export default {
     home: {
         weatherBgColor: '#092B77FF',
     },
-
 };
