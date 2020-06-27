@@ -24,9 +24,9 @@ import App from './App';
 // AppRegistry.registerComponent(appName, () => DemoMobx);
 
 // Redux的基础测试DemoRedux
-import DemoFlatList from './src/samples/basic/list/DemoFlatList';
-
-AppRegistry.registerComponent(appName, () => DemoFlatList);
+// import DemoFlatList from './src/samples/basic/list/DemoFlatList';
+//
+// AppRegistry.registerComponent(appName, () => DemoFlatList);
 
 
 // Redux的基础测试DemoRedux
@@ -36,9 +36,9 @@ AppRegistry.registerComponent(appName, () => DemoFlatList);
 
 
 // DemeNavigation
-// import DemoNavigation from './src/samples/navigation/DemoNavigation';
-//
-// AppRegistry.registerComponent(appName, () => DemoNavigation);
+import DemoNavigation from './src/samples/navigation/DemoNavigation';
+
+AppRegistry.registerComponent(appName, () => DemoNavigation);
 
 // import App from './src/samples/navigation/DemoDrawerNavigation';
 //
