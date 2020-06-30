@@ -23,6 +23,10 @@ export default class ItemDemoFlatList extends React.Component<ItemDemoFlatListPr
         Logger.info(TAG, 'componentDidMount', this.data);
     }
 
+    public componentWillUnmount(): void {
+        Logger.info(TAG, 'componentWillUnmount', this.data);
+    }
+
     public render(): React.ReactNode {
         Logger.info(TAG, 'render', this.data);
         return (
