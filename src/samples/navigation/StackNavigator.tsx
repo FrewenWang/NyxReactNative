@@ -10,41 +10,41 @@ import navigationHelper from '../../utils/NavigationHelper';
 
 const Stack = createStackNavigator();
 /**
+ * 这个页面AuraStackNavigator
  * 具体的demo。我们后来学习：
  * https://github.com/laowenlu/react-navigation-5.x-demo
  * @constructor
  */
-export default function App() {
+export default function AuraStackNavigator() {
     /**
      * NavigationContainer是导航容器。将导航前转化成为页面的Component的元素
-     *
+     * 我们AuraStackNavigator的可以存放在NavigationContainer组件中
      *
      * Stack.Navigator可以传递其他参数，这个我们后续继续学习：
      * initialRouteName：初始渲染的路由名称。
      * screenOptions：该导航器下所有屏幕的默认配置
      *
      */
+    // @ts-ignore
     return (
-        <NavigationContainer>
-            <Stack.Navigator
-                initialRouteName="Page1"
-                screenOptions={{
-                    headerStyle: styles.header,
-                    headerTintColor: '#fff', // 返回按钮和标题都使用这个属性作为它们的颜色
-                    headerTitleStyle: styles.headerTitle,
-                    headerBackTitleVisible: false,
-                    headerTitleAlign: 'center',
-                    cardStyle: styles.card,
-                    gestureEnabled: true,
-                    headerLeft: _backButton,
-                    ...TransitionPresets.SlideFromRightIOS,
-                }}>
-                <Stack.Screen name="Page1" component={DemoPage1} />
-                <Stack.Screen name="Page2" component={DemoPage2} />
-                <Stack.Screen name="Page3" component={DemoPage3} options={{headerLeft: null, headerShown: false}} />
-                <Stack.Screen name="Page4" component={DemoPage4} />
-            </Stack.Navigator>
-        </NavigationContainer>
+        <Stack.Navigator
+            initialRouteName="Page1"
+            screenOptions={{
+                headerStyle: styles.header, // 顶部标题栏的Style
+                headerTintColor: '#fff', // 返回按钮和标题都使用这个属性作为它们的颜色
+                headerTitleStyle: styles.headerTitle, // 顶部标题栏的Style
+                headerBackTitleVisible: false, // 顶部标题栏返回标题的显示状态
+                headerTitleAlign: 'center',
+                cardStyle: styles.card,
+                gestureEnabled: true,
+                headerLeft: _backButton,
+                ...TransitionPresets.SlideFromRightIOS,
+            }}>
+            <Stack.Screen name="Page1" component={DemoPage1} />
+            <Stack.Screen name="Page2" component={DemoPage2} />
+            <Stack.Screen name="Page3" component={DemoPage3} options={{headerLeft: null, headerShown: false}} />
+            <Stack.Screen name="Page4" component={DemoPage4} />
+        </Stack.Navigator>
     );
 }
 

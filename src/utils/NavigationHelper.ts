@@ -1,6 +1,9 @@
 import {CommonActions, StackActions, NavigationContainerRef} from '@react-navigation/native';
 import {Keyboard, ToastAndroid, BackHandler, Platform} from 'react-native';
 
+/**
+ * 路由导航帮助类
+ */
 class NavigationHelper {
     navigator: NavigationContainerRef | undefined;
     private _pushing: boolean;

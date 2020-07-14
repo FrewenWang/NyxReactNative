@@ -9,14 +9,21 @@ import Logger from './Logger';
 const TAG = 'DebugUtils';
 
 export function ignoreYellowWarning() {
-  Logger.log(TAG, `Remove Warnings for DEBUG mode.`);
-  ToastAndroid.show('调试模式中~~~~', 2000);
-  // 关闭其中某些yellow警告
-  console.ignoredYellowBox = [
-    'Warning: BackAndroid is deprecated. Please use BackHandler instead.',
-    'source.uri should not be an empty string',
-    'Invalid props.style key',
-  ];
-  // 关闭全部yellow警告
-  console.disableYellowBox = true;
+    Logger.log(TAG, `Remove Warnings for DEBUG mode.`);
+    ToastAndroid.show('调试模式中~~~~', 2000);
+    // 关闭其中某些yellow警告
+    console.ignoredYellowBox = [
+        'Warning: BackAndroid is deprecated. Please use BackHandler instead.',
+        'source.uri should not be an empty string',
+        'Invalid props.style key',
+    ];
+    // 关闭全部yellow警告
+    console.disableYellowBox = true;
+}
+
+/**
+ * 判断是否是Debug模式下
+ */
+export function debug() {
+    return __DEV__;
 }

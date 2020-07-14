@@ -8,7 +8,8 @@ import {ignoreYellowWarning} from './src/aura/utils/DebugUtils';
 // 移除调试模式的警告
 ignoreYellowWarning();
 //
-import App from './App';
+// import App from './App';
+
 // AppRegistry.registerComponent(appName, () => App);
 
 
@@ -24,9 +25,9 @@ import App from './App';
 // AppRegistry.registerComponent(appName, () => DemoMobx);
 
 // Redux的基础测试DemoRedux
-import DemoFlatList from './src/samples/basic/list/DemoFlatList';
-
-AppRegistry.registerComponent(appName, () => DemoFlatList);
+// import DemoFlatList from './src/samples/basic/list/DemoFlatList';
+//
+// AppRegistry.registerComponent(appName, () => DemoFlatList);
 
 
 // Redux的基础测试DemoRedux
@@ -35,10 +36,10 @@ AppRegistry.registerComponent(appName, () => DemoFlatList);
 // AppRegistry.registerComponent(appName, () => DemoTimeoutManager);
 
 
-// DemeNavigation
-// import DemoStackNavigation from './src/samples/navigation/DemoStackNavigation';
-//
-// AppRegistry.registerComponent(appName, () => DemoStackNavigation);
+// DemoNavigation
+import DemeNavigation from './src/samples/navigation/DemoNavigation';
+
+AppRegistry.registerComponent(appName, () => DemeNavigation);
 
 // import App from './src/samples/navigation/DemoDrawerNavigation';
 //
