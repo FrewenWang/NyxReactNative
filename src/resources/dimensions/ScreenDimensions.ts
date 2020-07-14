@@ -1,12 +1,14 @@
 import {Dimensions, PixelRatio, StatusBar} from 'react-native';
 import {isIOS, isIPhoneX, isIPhoneXR, overAndroid5} from '../../aura/utils/DeviceUtils';
 
+const window = Dimensions.get('window');
+
 export default {
     /**
      * TODO 目前的计算不准，我的548，计算为500
      */
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height,
+    width: window.width,
+    height: window.height,
     onePixel: 1 / PixelRatio.get(),
     /**
      * StatusBar高度

@@ -7,6 +7,7 @@ import DemoPage3 from './pages/DemoPage3';
 import DemoPage4 from './pages/DemoPage4';
 import {Button, StyleSheet} from 'react-native';
 import navigationHelper from '../../utils/NavigationHelper';
+import BottomTabNavigator from './BottomTabNavigator';
 
 const Stack = createStackNavigator();
 /**
@@ -28,7 +29,7 @@ export default function AuraStackNavigator() {
     // @ts-ignore
     return (
         <Stack.Navigator
-            initialRouteName="Page1"
+            initialRouteName="HomePage"
             screenOptions={{
                 headerStyle: styles.header, // 顶部标题栏的Style
                 headerTintColor: '#fff', // 返回按钮和标题都使用这个属性作为它们的颜色
@@ -40,6 +41,11 @@ export default function AuraStackNavigator() {
                 headerLeft: _backButton,
                 ...TransitionPresets.SlideFromRightIOS,
             }}>
+            <Stack.Screen
+                name={'HomePage'}
+                component={BottomTabNavigator}
+                options={{headerLeft: null, headerShown: false}}
+            />
             <Stack.Screen name="Page1" component={DemoPage1} />
             <Stack.Screen name="Page2" component={DemoPage2} />
             <Stack.Screen name="Page3" component={DemoPage3} options={{headerLeft: null, headerShown: false}} />

@@ -1,13 +1,12 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
-import BottomTabNavigator from "../samples/navigation/BottomTabNavigator";
-import DemoPage1 from "../samples/navigation/pages/DemoPage1";
-import DemoPage3 from "../samples/navigation/pages/DemoPage3";
-import DemoPage4 from "../samples/navigation/pages/DemoPage4";
-import DemoPage2 from "../samples/navigation/pages/DemoPage2";
-import {Button, StyleSheet} from "react-native";
-import navigationHelper from "../utils/NavigationHelper";
+import DemoPage1 from '../samples/navigation/pages/DemoPage1';
+import DemoPage3 from '../samples/navigation/pages/DemoPage3';
+import DemoPage4 from '../samples/navigation/pages/DemoPage4';
+import DemoPage2 from '../samples/navigation/pages/DemoPage2';
+import {Button, StyleSheet} from 'react-native';
+import navigationHelper from '../utils/NavigationHelper';
+import AuraBottomTabNavigator from './AuraBottomTabNavigator';
 
 const Stack = createStackNavigator();
 /**
@@ -25,10 +24,9 @@ export default function AuraStackNavigator() {
      * screenOptions：该导航器下所有屏幕的默认配置
      *
      */
-    // @ts-ignore
     return (
         <Stack.Navigator
-            initialRouteName="HomePage"
+            initialRouteName="MainPage"
             screenOptions={{
                 headerStyle: styles.header, // 顶部标题栏的Style
                 headerTintColor: '#fff', // 返回按钮和标题都使用这个属性作为它们的颜色
@@ -41,14 +39,20 @@ export default function AuraStackNavigator() {
                 ...TransitionPresets.SlideFromRightIOS,
             }}>
             <Stack.Screen
-                name={'HomePage'}
-                component={BottomTabNavigator}
+                name={'MainPage'}
+                component={AuraBottomTabNavigator}
+                // @ts-ignore
                 options={{headerLeft: null, headerShown: false}}
             />
-            <Stack.Screen name="Page1" component={DemoPage1}/>
-            <Stack.Screen name="Page2" component={DemoPage2}/>
-            <Stack.Screen name="Page3" component={DemoPage3} options={{headerLeft: null, headerShown: false}}/>
-            <Stack.Screen name="Page4" component={DemoPage4}/>
+            <Stack.Screen name="Page1" component={DemoPage1} />
+            <Stack.Screen name="Page2" component={DemoPage2} />
+            <Stack.Screen
+                name="Page3"
+                component={DemoPage3}
+                // @ts-ignore
+                options={{headerLeft: null, headerShown: false}}
+            />
+            <Stack.Screen name="Page4" component={DemoPage4} />
         </Stack.Navigator>
     );
 }
@@ -62,7 +66,7 @@ const styles = StyleSheet.create({
     },
     headerTitle: {
         color: '#fff',
-        fontSize: px2dp(32),
+        fontSize: 32,
         alignSelf: 'center',
         textAlign: 'center',
     },
@@ -72,4 +76,4 @@ const styles = StyleSheet.create({
     },
 });
 
-const _backButton = () => <Button title="返回" onPress={navigationHelper.backAction}/>;
+const _backButton = () => <Button title="返回" onPress={navigationHelper.backAction} />;

@@ -5,14 +5,28 @@ import ImageRes from '../resources/images/ImageRes';
 import RecommendPage from '../pages/RecommendPage';
 import DiscoveryPage from '../pages/DiscoveryPage';
 import MyProfilePage from '../pages/MyProfilePage';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {BottomTabBarOptions, createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {PureComponent, ReactElement} from 'react';
 import BottomTabBarItem from '../components/ItemBottomTabBar';
 import navigationHelper from '../utils/NavigationHelper';
+import Logger from '../aura/utils/Logger';
+import {StackHeaderOptions} from '@react-navigation/stack/lib/typescript/src/types';
 
 const Tab = createBottomTabNavigator();
-const TAG = 'BottomTabNavigator';
-export default class BottomTabNavigator<ViewProps, State> extends PureComponent<ViewProps, State> {
+const TAG = 'AuraBottomTabNavigator';
+export default class AuraBottomTabNavigator<ViewProps, State> extends PureComponent<ViewProps, State> {
+    public constructor(props: ViewProps) {
+        super(props);
+        // @ts-ignore
+        let navigation = props.navigation;
+        // @ts-ignore
+        let route = props.route;
+        Logger.log(TAG, `navigation:${navigation},route:${route}`);
+        // React.useLayoutEffect(() => {
+        //     navigation.setOptions(_getHeaderOptions(route));
+        // }, [navigation, route]);
+    }
+
     public render(): ReactElement {
         return (
             <Tab.Navigator
@@ -45,6 +59,9 @@ export default class BottomTabNavigator<ViewProps, State> extends PureComponent<
                         );
                     },
                 })}>
+                {/*backBehavior={'none'}*/}
+                {/* 下面是TabBar的配置选项的配置参数 可以配置很多个性配置*/}
+                {/*tabBarOptions={_tabBarOptions}  */}
                 {/* 遍历我们底部导航栏的配置数据*/}
                 {Object.keys(tabBottomConfigs).map((key: any, index: number) => {
                     // @ts-ignore
@@ -72,6 +89,26 @@ export default class BottomTabNavigator<ViewProps, State> extends PureComponent<
         );
     }
 }
+
+const _getHeaderOptions = (route: any): StackHeaderOptions => {
+    if (!route.state) return {};
+
+    const routeName = route.state.routes[route.state.index].name;
+    const {routes = [], index = 0} = route.state;
+    if (!routes || routes.length === 0) return {};
+
+    const params = routes[index].params || {};
+    if (params.title) {
+        params['headerTitle'] = params.title;
+    }
+    params['headerShown'] = routeName !== 'home';
+    return params;
+};
+
+const _tabBarOptions: BottomTabBarOptions = {
+    activeTintColor: '#800080',
+    inactiveTintColor: '#999999',
+};
 
 const tabBottomConfigs = {
     home: {

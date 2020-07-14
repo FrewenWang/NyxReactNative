@@ -5,7 +5,7 @@ export default {
         borderColor: '#cccccc',
     },
     main: {
-        home: require("./src/main/tabbar_homepage.png"),
+        home: require('./src/main/tabbar_homepage.png'),
         homeSelected: require("./src/main/tabbar_homepage_selected.png"),
         recommend: require("./src/main/tabbar_recommend.png"),
         recommendSelected: require("./src/main/tabbar_recommend_selected.png"),
