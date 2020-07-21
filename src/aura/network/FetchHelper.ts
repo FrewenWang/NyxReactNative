@@ -1,65 +1,114 @@
-import Options from './lib/Options';
+import Options, {Method} from './lib/Options';
+import HttpEngineUtils from './utils/FetchUtils';
+import Logger from '../utils/Logger';
+import {ErrorCode} from './response/ErrorCode';
+import {HttpResponse} from './response/HttpResponse';
+import FetchUtils from './utils/FetchUtils';
 
 const TAG = 'FetchHelper';
 export default class FetchHelper {
-    public static releaseResponse(response: Response): void {
+    /**
+     * Fetch网络请求的Request
+     * @param url
+     * @param options
+     */
+    public static async request(url: string, options: Options): Promise<any> {
+        if (options.debug) {
+            Logger.log(TAG, `request:url: ${url}, options: ${JSON.stringify(options)}`);
+        }
+        let response: any;
         try {
-            // @ts-ignore
-            response && response._bodyInit && response._bodyInit.close();
-        } catch (e) {
-            console.log(TAG, e);
-        }
-    }
-
-    public static handleUrl(url: string, param: any): string {
-        if (param) {
-            let paramsArray: any = [];
-            Object.keys(param).forEach((key: string) => paramsArray.push(key + '=' + encodeURIComponent(param[key])));
-            if (url.search(/\?/) === -1) {
-                if (typeof param === 'object') {
-                    url += '?' + paramsArray.join('&');
-                }
+            if (options.method === Method.GET) {
+                response = await this.requestGet(url, options);
+            } else if (options.method === Method.POST) {
+                response = await this.requestPost(url, options);
             } else {
-                url += '&' + paramsArray.join('&');
+                throw 'request method should not be null';
             }
+        } catch (e) {
+            Logger.log(TAG, 'Fetch Request error:', e);
+            response = {
+                errCode: ErrorCode.FETCH_ERROR,
+                message: e.toString(),
+                data: '',
+            };
+            return response;
         }
-        return url;
-    }
-
-    public static addDefaultHeaders(options: Options): Options {
-        if (!options.headers) {
-            options.headers = {Accept: 'application/json'};
+        if (options.debug) {
+            Logger.log(TAG, `response: ${JSON.stringify(response)}`);
         } else {
-            options.headers = 'application/json';
+            Logger.log(TAG, `response: ${response.code},msg: ${response.msg},url:${response.url}`);
         }
-        return options;
+        return response;
     }
 
     /**
-     * 默认Fetch请求的最长超时时间，默认是30秒
-     * @param originFetch
-     * @param timeout
+     * Get请求处理
+     * @param url
+     * @param options
      */
-    public static timeoutFetch = (originFetch: Promise<any>, timeout = 30000) => {
-        let timeoutBlock = (): any => {};
-        let timer = setTimeout(() => {
-            timeoutBlock();
-        }, timeout);
+    private static async requestGet(url: string, options: Options): Promise<any> {
+        url = HttpEngineUtils.handleUrl(url, options.params);
+        return await FetchUtils.timeoutFetch(
+            fetch(url, {
+                method: options.method,
+                headers: options.headers,
+            })
+                .then((response: Response): any => {
+                    if (response && response.ok) {
+                        let result = response.json();
+                        HttpEngineUtils.releaseResponse(response);
+                        return result;
+                    } else if (response) {
+                        let errorResp: HttpResponse = {
+                            code: response.status,
+                            message: response.statusText,
+                            data: '',
+                            debug: options.debug,
+                            url: response.url,
+                        };
+                        HttpEngineUtils.releaseResponse(response);
+                        return Promise.reject(errorResp);
+                    }
+                })
+                .then((data: any): any => {
+                    return data;
+                }),
+        );
+    }
 
-        let timeoutPromise = new Promise((resolve, reject) => {
-            timeoutBlock = () => {
-                reject('HttpEngine3 Timeout of no Response');
-            };
+    private static async requestPost(url: string, options: Options): Promise<any> {
+        let formData = new FormData();
+        let param = options.params ? options.params : {};
+        Object.keys(param).forEach((key) => {
+            formData.append(key, param[key]);
         });
-
-        let racePromise = Promise.race([
-            originFetch.then((result: any) => {
-                timer && clearTimeout(timer);
-                return result;
-            }),
-            timeoutPromise,
-        ]);
-
-        return racePromise;
-    };
+        return await FetchUtils.timeoutFetch(
+            fetch(url, {
+                method: options.method,
+                headers: options.headers,
+                body: formData,
+            })
+                .then((response: Response): any => {
+                    if (response && response.ok) {
+                        let result = response.json();
+                        HttpEngineUtils.releaseResponse(response);
+                        return result;
+                    } else if (response) {
+                        let httpResp: HttpResponse = {
+                            code: response.status,
+                            message: response.statusText,
+                            data: '',
+                            debug: options.debug,
+                            url: response.url,
+                        };
+                        HttpEngineUtils.releaseResponse(response);
+                        return Promise.reject(JSON.stringify(httpResp));
+                    }
+                })
+                .then((data: any): any => {
+                    return data;
+                }),
+        );
+    }
 }

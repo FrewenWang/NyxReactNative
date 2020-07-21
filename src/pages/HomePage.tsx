@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlatList, Image, Text, ToastAndroid, TouchableOpacity, View, ViewProps} from 'react-native';
+import {FlatList, Image, ToastAndroid, TouchableOpacity, View, ViewProps} from 'react-native';
 import {BaseComponent} from '../aura/base/BaseComponent';
 import ImageRes from '../resources/images/ImageRes';
 import {Paragraph} from '../aura/widgets/AuraText';
@@ -11,6 +11,9 @@ import Logger from '../aura/utils/Logger';
 import ItemDemoFlatList from '../samples/basic/list/ItemDemoFlatList';
 import CommonGridMenuView from '../components/CommonGridMenuVIew';
 import {menuInfos} from '../api/HomeGridMenuInfos';
+import FetchHelper from '../aura/network/FetchHelper';
+import {Method} from '../aura/network/lib/Options';
+import Animated from "react-native-reanimated";
 
 /**
  * 定义首页的State
@@ -28,12 +31,14 @@ export default class HomePage extends BaseComponent<ViewProps, HomeState> {
     static navigationOptions = ({navigation}: any) => ({
         headerTitle: () => (
             <TouchableOpacity style={CommonStyles.searchBar}>
-                <Image source={ImageRes.main.search} style={CommonStyles.searchIcon} />
-                <Paragraph>搜索</Paragraph>
+                <Image source={ImageRes.main.search} style={CommonStyles.searchIcon}/>
+                <Paragraph style={{color: 'red'}}>搜索</Paragraph>
             </TouchableOpacity>
         ),
-        headerRight: () => <TopNavigationItem icon={ImageRes.home.message} onPress={() => {}} />,
-        headerLeft: () => <TopNavigationItem title="福州" titleStyle={{color: 'white'}} onPress={() => {}} />,
+        headerRight: () => <TopNavigationItem icon={ImageRes.home.message} onPress={() => {
+        }}/>,
+        headerLeft: () => <TopNavigationItem title="福州" titleStyle={{color: 'white'}} onPress={() => {
+        }}/>,
         headerStyle: {backgroundColor: ColorRes.common.primary},
     });
 
@@ -78,7 +83,13 @@ export default class HomePage extends BaseComponent<ViewProps, HomeState> {
      * 中间的推荐位的请求
      */
     private requestMiddleRecommend(): void {
-        // TODO
+        FetchHelper.request('', {
+            method: Method.GET,
+        })
+            .then((response: any) => {
+            })
+            .catch((error: any) => {
+            });
     }
 
     /**
@@ -97,7 +108,7 @@ export default class HomePage extends BaseComponent<ViewProps, HomeState> {
          * ItemDemoFlatList最好使用React.PureComponent
          * 否则每次渲染的时候，都会将上面的Item进行重复渲染
          */
-        return <ItemDemoFlatList data={item.item} />;
+        return <ItemDemoFlatList data={item.item}/>;
         // return (
         //     <View>
         //         <Text>{item.item}</Text>
@@ -126,7 +137,7 @@ export default class HomePage extends BaseComponent<ViewProps, HomeState> {
      * @private
      */
     private _headerPageComponent = () => {
-        return <CommonGridMenuView menuItems={menuInfos} onItemSelected={this.onGridMenuSelected} />;
+        return <CommonGridMenuView menuItems={menuInfos} onItemSelected={this.onGridMenuSelected}/>;
     };
 
     private onGridMenuSelected(index: number): void {

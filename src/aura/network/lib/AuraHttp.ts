@@ -78,9 +78,6 @@ export default class AuraHttp {
             }
 
             let requestBeginTime = Date.now();
-
-            options = new RequestInterceptorProcessor().process();
-
             // http的请求的主要逻辑
             let response = await new FetchMainRequest().process(url, options);
 
