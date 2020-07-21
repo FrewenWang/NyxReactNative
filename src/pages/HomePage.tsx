@@ -13,14 +13,13 @@ import CommonGridMenuView from '../components/CommonGridMenuVIew';
 import {menuInfos} from '../api/HomeGridMenuInfos';
 import FetchHelper from '../aura/network/FetchHelper';
 import {Method} from '../aura/network/lib/Options';
-import Animated from "react-native-reanimated";
 
 /**
  * 定义首页的State
  */
 export interface HomeState {
     discounts: Array<Object>;
-    dataList: Array<Object>;
+    recommendList: Array<Object>;
     refreshing: boolean;
 }
 
@@ -31,14 +30,12 @@ export default class HomePage extends BaseComponent<ViewProps, HomeState> {
     static navigationOptions = ({navigation}: any) => ({
         headerTitle: () => (
             <TouchableOpacity style={CommonStyles.searchBar}>
-                <Image source={ImageRes.main.search} style={CommonStyles.searchIcon}/>
+                <Image source={ImageRes.main.search} style={CommonStyles.searchIcon} />
                 <Paragraph style={{color: 'red'}}>搜索</Paragraph>
             </TouchableOpacity>
         ),
-        headerRight: () => <TopNavigationItem icon={ImageRes.home.message} onPress={() => {
-        }}/>,
-        headerLeft: () => <TopNavigationItem title="福州" titleStyle={{color: 'white'}} onPress={() => {
-        }}/>,
+        headerRight: () => <TopNavigationItem icon={ImageRes.home.message} onPress={() => {}} />,
+        headerLeft: () => <TopNavigationItem title="福州" titleStyle={{color: 'white'}} onPress={() => {}} />,
         headerStyle: {backgroundColor: ColorRes.common.primary},
     });
 
@@ -49,7 +46,7 @@ export default class HomePage extends BaseComponent<ViewProps, HomeState> {
 
         this.state = {
             discounts: [],
-            dataList: [],
+            recommendList: [],
             refreshing: false,
         };
     }
@@ -63,7 +60,7 @@ export default class HomePage extends BaseComponent<ViewProps, HomeState> {
         return (
             <View style={HomeStyles.container}>
                 <FlatList
-                    data={this.state.dataList}
+                    data={this.state.recommendList}
                     renderItem={this.renderItem}
                     keyExtractor={this._keyExtractor}
                     onRefresh={this.requestData}
@@ -83,12 +80,25 @@ export default class HomePage extends BaseComponent<ViewProps, HomeState> {
      * 中间的推荐位的请求
      */
     private requestMiddleRecommend(): void {
-        FetchHelper.request('', {
-            method: Method.GET,
-        })
+        FetchHelper.request(
+            'https://raw.githubusercontent.com/FrewenWong/HelloReactNative/dev/src/resources/json/home_middle_recommend.json',
+            {
+                method: Method.GET,
+            },
+        )
             .then((response: any) => {
+                //Logger.log(TAG, `response = ${JSON.stringify(response)}`);
+
+                this.setState({
+                    recommendList: response.data,
+                    refreshing: false,
+                });
             })
             .catch((error: any) => {
+                Logger.log(TAG, `error = ${error}`);
+                this.setState({
+                    refreshing: false,
+                });
             });
     }
 
@@ -108,7 +118,7 @@ export default class HomePage extends BaseComponent<ViewProps, HomeState> {
          * ItemDemoFlatList最好使用React.PureComponent
          * 否则每次渲染的时候，都会将上面的Item进行重复渲染
          */
-        return <ItemDemoFlatList data={item.item}/>;
+        return <ItemDemoFlatList data={item.item} />;
         // return (
         //     <View>
         //         <Text>{item.item}</Text>
@@ -137,7 +147,7 @@ export default class HomePage extends BaseComponent<ViewProps, HomeState> {
      * @private
      */
     private _headerPageComponent = () => {
-        return <CommonGridMenuView menuItems={menuInfos} onItemSelected={this.onGridMenuSelected}/>;
+        return <CommonGridMenuView menuItems={menuInfos} onItemSelected={this.onGridMenuSelected} />;
     };
 
     private onGridMenuSelected(index: number): void {
