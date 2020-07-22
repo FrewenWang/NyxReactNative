@@ -1,6 +1,18 @@
-import React, {PureComponent, ReactChild} from 'react';
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import React, {PureComponent} from 'react';
+import {
+    Image,
+    NativeScrollEvent,
+    NativeSyntheticEvent,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
+} from 'react-native';
 import ScreenDimensions from '../resources/dimensions/ScreenDimensions';
+import ColorRes from '../resources/colors/ColorRes';
+import PageControl from 'react-native-page-control';
+import Logger from '../aura/utils/Logger';
 
 /**
  * GridMenuVIewProps属性共有两个字段：
@@ -14,6 +26,11 @@ export interface GridMenuVIewState {
     currentPage: number;
 }
 
+const TAG = 'CommonGridMenuView';
+
+/**
+ * 这个是九宫格样式的GridView的Demo
+ */
 class CommonGridMenuView extends PureComponent<GridMenuVIewProps, GridMenuVIewState> {
     public constructor(props: GridMenuVIewProps) {
         super(props);
@@ -24,10 +41,12 @@ class CommonGridMenuView extends PureComponent<GridMenuVIewProps, GridMenuVIewSt
     }
 
     public render(): React.ReactChild {
+        // 解构传入的属性
         let {menuItems, onItemSelected} = this.props;
-        let menus = menuItems.map((item: any, index) => {
+        // 针对每个传入的Item进行逐个处理
+        let menusView = menuItems.map((item: any, index) => {
+            Logger.log(TAG, `${JSON.stringify(item)}`);
             <ItemGridMenuView
-                key={item.title}
                 title={item.title}
                 icon={item.icon}
                 onPressed={() => {
@@ -36,21 +55,43 @@ class CommonGridMenuView extends PureComponent<GridMenuVIewProps, GridMenuVIewSt
             />;
         });
 
-        let menuViews = [];
-        let pageCount = Math.ceil(menuItems.length / 10);
+        let menuPageViews = [];
+        let pageCount = Math.ceil(menusView.length / 10);
 
         for (let i = 0; i < pageCount; i++) {
-            let items = menuItems.slice(i * 10, i * 10 + 10);
-
+            let items = menusView.slice(i * 10, i * 10 + 10);
             let menuView = (
                 <View style={styles.itemsView} key={i}>
                     {items}
                 </View>
             );
-            menuViews.push(menuView);
+            menuPageViews.push(menuView);
         }
+        return (
+            <View style={styles.homeContainer}>
+                {/*定义一个横向的ScrollView*/}
+                <ScrollView
+                    horizontal
+                    showsHorizontalScrollIndicator={false}
+                    pagingEnabled
+                    onScroll={(event) => this.onScroll(event)}>
+                    <View style={styles.menuContainer}>{menuPageViews}</View>
+                </ScrollView>
 
-        return <Text>你好</Text>;
+                <PageControl
+                    style={styles.pageControl}
+                    numberOfPages={pageCount}
+                    currentPage={this.state.currentPage}
+                    hidesForSinglePage
+                    pageIndicatorTintColor="gray"
+                    currentPageIndicatorTintColor={ColorRes.common.primary}
+                    indicatorSize={{width: 8, height: 8}}
+                />
+            </View>
+        );
+    }
+
+    private onScroll(event: NativeSyntheticEvent<NativeScrollEvent>) {
     }
 }
 
@@ -58,8 +99,8 @@ export default CommonGridMenuView;
 
 type ItemProps = {
     onPressed: Function;
-    icon: any;
-    title: string;
+    icon?: any;
+    title?: string;
 };
 
 /**
@@ -67,10 +108,13 @@ type ItemProps = {
  */
 class ItemGridMenuView extends PureComponent<ItemProps, any> {
     public render(): React.ReactChild {
+        Logger.log(TAG, `ItemGridMenuView：${JSON.stringify(this.props)}`);
+
         return (
+            // @ts-ignore
             <TouchableOpacity style={styles.itemContainer} onPress={this.props.onPressed}>
-                <Image source={this.props.icon} resizeMode="contain" style={styles.icon} />
-                <Text>{this.props.title}</Text>
+                {this.props.icon ? <Image source={this.props.icon} resizeMode="contain" style={styles.icon}/> : null}
+                {this.props.title ? <Text>{this.props.title}</Text> : null}
             </TouchableOpacity>
         );
     }
@@ -78,10 +122,12 @@ class ItemGridMenuView extends PureComponent<ItemProps, any> {
 
 const styles = StyleSheet.create({
     homeContainer: {
-        backgroundColor: 'white',
+        backgroundColor: 'red',
     },
     menuContainer: {
         flexDirection: 'row',
+        backgroundColor: 'blue',
+        width: ScreenDimensions.width,
     },
     itemsView: {
         flexDirection: 'row',

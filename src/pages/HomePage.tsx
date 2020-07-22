@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlatList, Image, ToastAndroid, TouchableOpacity, View, ViewProps} from 'react-native';
+import {FlatList, Image, ToastAndroid, TouchableOpacity, View, ViewProps, Text, StatusBar} from 'react-native';
 import {BaseComponent} from '../aura/base/BaseComponent';
 import ImageRes from '../resources/images/ImageRes';
 import {Paragraph} from '../aura/widgets/AuraText';
@@ -13,6 +13,8 @@ import CommonGridMenuView from '../components/CommonGridMenuVIew';
 import {menuInfos} from '../api/HomeGridMenuInfos';
 import FetchHelper from '../aura/network/FetchHelper';
 import {Method} from '../aura/network/lib/Options';
+import {recommend} from '../api/HomeFlatListData';
+import HomeFlatList from '../components/HomeFlatList';
 
 /**
  * 定义首页的State
@@ -54,6 +56,7 @@ export default class HomePage extends BaseComponent<ViewProps, HomeState> {
     public componentDidMount() {
         super.componentDidMount();
         this.requestData();
+        this.requestFlatListData();
     }
 
     public render(): React.ReactNode {
@@ -72,8 +75,8 @@ export default class HomePage extends BaseComponent<ViewProps, HomeState> {
     }
 
     private requestData(): void {
-        this.setState({refreshing: true});
-        this.requestMiddleRecommend();
+        // this.setState({refreshing: true});
+        // this.requestMiddleRecommend();
     }
 
     /**
@@ -87,7 +90,7 @@ export default class HomePage extends BaseComponent<ViewProps, HomeState> {
             },
         )
             .then((response: any) => {
-                //Logger.log(TAG, `response = ${JSON.stringify(response)}`);
+                Logger.log(TAG, `response = ${JSON.stringify(response)}`);
 
                 this.setState({
                     recommendList: response.data,
@@ -118,10 +121,10 @@ export default class HomePage extends BaseComponent<ViewProps, HomeState> {
          * ItemDemoFlatList最好使用React.PureComponent
          * 否则每次渲染的时候，都会将上面的Item进行重复渲染
          */
-        return <ItemDemoFlatList data={item.item} />;
+        return <HomeFlatList info={item.item} onPress={this.onCellSelected} />;
         // return (
         //     <View>
-        //         <Text>{item.item}</Text>
+        //         <Text>{2}</Text>
         //     </View>
         // );
     };
@@ -153,4 +156,26 @@ export default class HomePage extends BaseComponent<ViewProps, HomeState> {
     private onGridMenuSelected(index: number): void {
         ToastAndroid.show(String(index), 1000);
     }
+
+    private requestFlatListData(): void {
+        let dataList = recommend.data.map((info, index) => {
+            return {
+                id: info.id,
+                imageUrl: info.squareimgurl,
+                title: info.mname,
+                subtitle: `[${info.range}]${info.title}`,
+                price: info.price,
+            };
+        });
+        Logger.log(TAG, `${JSON.stringify(dataList)}`);
+        this.setState({
+            recommendList: dataList,
+            refreshing: false,
+        });
+    }
+
+    onCellSelected = (info: Object) => {
+        StatusBar.setBarStyle('default', false);
+        this.props.navigation.navigate('GroupPurchase', {info: info});
+    };
 }
