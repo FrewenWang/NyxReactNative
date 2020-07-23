@@ -5478,6 +5478,11 @@ react-native-iphone-x-helper@^1.2.1:
   resolved "https://registry.npm.taobao.org/react-native-iphone-x-helper/download/react-native-iphone-x-helper-1.2.1.tgz#645e2ffbbb49e80844bb4cbbe34a126fda1e6772"
   integrity sha1-ZF4v+7tJ6AhEu0y740oSb9oeZ3I=
 
+react-native-linear-gradient@^2.5.6:
+  version "2.5.6"
+  resolved "https://registry.npmjs.org/react-native-linear-gradient/-/react-native-linear-gradient-2.5.6.tgz#96215cbc5ec7a01247a20890888aa75b834d44a0"
+  integrity sha512-HDwEaXcQIuXXCV70O+bK1rizFong3wj+5Q/jSyifKFLg0VWF95xh8XQgfzXwtq0NggL9vNjPKXa016KuFu+VFg==
+
 react-native-page-control@^1.1.2:
   version "1.1.2"
   resolved "https://registry.npm.taobao.org/react-native-page-control/download/react-native-page-control-1.1.2.tgz#5845915641996541d46864f9198a4e63b4abb106"

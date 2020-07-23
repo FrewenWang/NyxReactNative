@@ -14,9 +14,15 @@ export default {
         myProfile: require('./src/main/tabbar_mine.png'),
         myProfileSelected: require('./src/main/tabbar_mine_selected.png'),
         search: require('./src/main/search_icon.png'),
+        bgImage: require('./src/main/main_bg_img.png'),
+        // 惊叹号
+        iconExclamationMark: require('./src/main/icon_exclamation_mark.png'),
     },
     home: {
         message: require('./src/home/icon_navigation_item_message_white.png'),
         itemIcon: require('./src/main/icon_item_home_page.png'),
+    },
+    shopInfo: {
+        shopTitleLineImg: require('./src/shopinfo/shop_info_title.png'),
     },
 };

@@ -7,6 +7,7 @@ import DemoPage2 from '../samples/navigation/pages/DemoPage2';
 import {Button, StyleSheet} from 'react-native';
 import navigationHelper from '../utils/NavigationHelper';
 import AuraBottomTabNavigator from './AuraBottomTabNavigator';
+import SwipeRecommendShopPage from '../pages/shop_recomend/SwipeRecommendShopPage';
 
 const Stack = createStackNavigator();
 /**
@@ -44,6 +45,8 @@ export default function AuraStackNavigator() {
                 // @ts-ignore
                 options={{headerLeft: null, headerShown: false}}
             />
+            {/*带有滑动效果的店铺列表配置页面*/}
+            <Stack.Screen name="SwipeRecommendShopPage" component={SwipeRecommendShopPage} />
             <Stack.Screen name="Page1" component={DemoPage1} />
             <Stack.Screen name="Page2" component={DemoPage2} />
             <Stack.Screen

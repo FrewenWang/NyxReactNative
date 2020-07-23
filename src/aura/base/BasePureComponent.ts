@@ -1,7 +1,7 @@
 import {PureComponent} from 'react';
 import Logger from '../utils/Logger';
 
-export abstract class BaseComponent<ViewProps, State> extends PureComponent<ViewProps, State> {
+export abstract class BasePureComponent<ViewProps, State> extends PureComponent<ViewProps, State> {
     // 不能用这个作为TAG，打印是这个类的构造函数，内容会比较多
     // public TAG = this.constructor.toString();
     public TAG = this.getClassName(this);
