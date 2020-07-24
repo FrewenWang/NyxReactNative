@@ -17,7 +17,6 @@ import NavigationPageProps from '../../navigation/NavigationPageProps';
 import ScreenDimensions from '../../resources/dimensions/ScreenDimensions';
 import ImageRes from '../../resources/images/ImageRes';
 import Logger from '../../aura/utils/Logger';
-import ShopInfoFlatList from '../../components/ShopInfoFlatList';
 import ShopInfoRecommendPage from './ShopInfoRecommendPage';
 
 /**
