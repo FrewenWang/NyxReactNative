@@ -8,7 +8,7 @@ import {ignoreYellowWarning} from './src/aura/utils/DebugUtils';
 // 移除调试模式的警告
 ignoreYellowWarning();
 
-// import App from './App';
+import App from './App';
 
 // Redux的基础测试DemoRedux
 // import DemoRedux from './src/samples/redux/demo_redux';
@@ -30,8 +30,8 @@ ignoreYellowWarning();
 //
 // AppRegistry.registerComponent(appName, () => DemoTimeoutManager);
 
-//ReactNative的Navigatio DemoNavigation
-import App from './src/samples/navigation/DemoNavigation';
+//ReactNative的Navigation DemoNavigation
+// import App from './src/samples/navigation/DemoNavigation';
 
 // import App from './src/samples/vectorIcons/DemoVectorIcons';
 

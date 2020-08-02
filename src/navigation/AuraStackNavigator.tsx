@@ -8,6 +8,7 @@ import {Button, StyleSheet} from 'react-native';
 import navigationHelper from '../utils/NavigationHelper';
 import AuraBottomTabNavigator from './AuraBottomTabNavigator';
 import SwipeRecommendShopPage from '../pages/shop_recomend/SwipeRecommendShopPage';
+import {stackNavigationRouter} from './NavigationRouter';
 
 const Stack = createStackNavigator();
 /**
@@ -27,7 +28,7 @@ export default function AuraStackNavigator() {
      */
     return (
         <Stack.Navigator
-            initialRouteName="MainPage"
+            initialRouteName={stackNavigationRouter.MainPage.pageName}
             screenOptions={{
                 headerStyle: styles.header, // 顶部标题栏的Style
                 headerTintColor: '#fff', // 返回按钮和标题都使用这个属性作为它们的颜色
@@ -39,14 +40,27 @@ export default function AuraStackNavigator() {
                 headerLeft: _backButton,
                 ...TransitionPresets.SlideFromRightIOS,
             }}>
+
+            {/*栈管理路由器包含的是一个底部标签的路由容器*/}
             <Stack.Screen
-                name={'MainPage'}
+                name={stackNavigationRouter.MainPage.pageName}
+                component={AuraBottomTabNavigator}
+                // @ts-ignore
+                options={{headerLeft: null, headerShown: false}}
+            />
+
+            {/*栈管理路由器包含的是一个底部标签的路由容器*/}
+            <Stack.Screen
+                name={stackNavigationRouter.MainPage.pageName}
                 component={AuraBottomTabNavigator}
                 // @ts-ignore
                 options={{headerLeft: null, headerShown: false}}
             />
             {/*带有滑动效果的店铺列表配置页面*/}
-            <Stack.Screen name="SwipeRecommendShopPage" component={SwipeRecommendShopPage} />
+            <Stack.Screen
+                name={stackNavigationRouter.SwipeRecommendShopPage.pageName}
+                component={SwipeRecommendShopPage}
+            />
             <Stack.Screen name="Page1" component={DemoPage1} />
             <Stack.Screen name="Page2" component={DemoPage2} />
             <Stack.Screen
