@@ -2,11 +2,11 @@ import React, {ReactChild} from 'react';
 import {Button, StyleSheet, Text, View, ViewProps} from 'react-native';
 import {BaseComponent} from '../../../aura/base/BaseComponent';
 
-export default class DemoPage1 extends BaseComponent<ViewProps, any> {
+export default class BottomTabPage4 extends BaseComponent<ViewProps, any> {
     //TODO 在5.X已经失效
     // 定义页面的导航配置
     static navigationOptions = {
-        title: '测试页面1',
+        title: '页面1',
     };
 
     constructor(props: ViewProps) {
@@ -18,9 +18,9 @@ export default class DemoPage1 extends BaseComponent<ViewProps, any> {
         const {navigation}: any = this.props;
         return (
             <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-                <Text style={styles.text}>欢迎来到页面1</Text>
-                <Button onPress={() => navigation.navigate('Page2')} title="前往页面2" />
-                <Button onPress={() => navigation.goBack()} title="返回上个页面" />
+                <Text style={styles.text}>底部标签栏页面4</Text>
+                <Button onPress={() => navigation.navigate('Page2')} title="前往页面2"/>
+                <Button onPress={() => navigation.goBack()} title="返回上个页面"/>
             </View>
         );
     }

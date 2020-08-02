@@ -2,6 +2,9 @@ import React, {ReactChildren, ReactElement} from 'react';
 import {Text, Button, ViewProps, View, StyleSheet, ToastAndroid} from 'react-native';
 import {BaseComponent} from '../../aura/base/BaseComponent';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import Foundation from 'react-native-vector-icons/Foundation';
+import Fontisto from 'react-native-vector-icons/Fontisto';
 
 const TAG = 'DemoFlexbox';
 /**
@@ -23,6 +26,11 @@ export default class DemoVectorIcons extends BaseComponent<ViewProps, {}> {
                 <Icon.Button name="facebook" backgroundColor="#3b5998">
                     <Text style={{fontFamily: 'Arial', fontSize: 15}}>登录Facebook</Text>
                 </Icon.Button>
+                {/*我们可以通过name属性来选择图标，通过size属性设置大小*/}
+                <Ionicons name={'chatbubbles-outline'} size={50} style={styles.itemIcons}></Ionicons>
+
+                <Foundation name={'social-apple'} size={50} style={styles.itemIcons}></Foundation>
+                <Fontisto name={'save'} size={50} style={styles.itemIcons}></Fontisto>
             </View>
         );
     }
@@ -37,5 +45,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         width: '100%',
         height: '100%',
+    },
+    itemIcons: {
+        color: 'white',
+        justifyContent: 'center',
+        backgroundColor: 'red',
+        width: '100%',
+        height: 100,
     },
 });

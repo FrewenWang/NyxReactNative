@@ -30,12 +30,9 @@ ignoreYellowWarning();
 //
 // AppRegistry.registerComponent(appName, () => DemoTimeoutManager);
 
-// DemoNavigation
-// import DemeNavigation from './src/samples/navigation/DemoNavigation';
-//
-// AppRegistry.registerComponent(appName, () => DemeNavigation);
+//ReactNative的Navigatio DemoNavigation
+import App from './src/samples/navigation/DemoNavigation';
 
-// import App from './src/samples/navigation/DemoDrawerNavigation';
+// import App from './src/samples/vectorIcons/DemoVectorIcons';
 
-import App from './src/samples/vectorIcons/DemoVectorIcons';
 AppRegistry.registerComponent(appName, () => App);

@@ -18,7 +18,7 @@ export default class DemoPage1 extends BaseComponent<ViewProps, any> {
         const {navigation}: any = this.props;
         return (
             <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-                <Text style={styles.text}>欢迎来到页面1</Text>
+                <Text style={styles.text}>底部标签栏页面1</Text>
                 <Button onPress={() => navigation.navigate('Page2')} title="前往页面2" />
                 <Button onPress={() => navigation.goBack()} title="返回上个页面" />
             </View>

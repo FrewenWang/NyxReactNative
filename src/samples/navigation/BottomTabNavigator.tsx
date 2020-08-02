@@ -1,43 +1,46 @@
 import * as React from 'react';
-import {Text} from 'react-native';
 import {PureComponent, ReactElement} from 'react';
-import HomePage from '../../pages/HomePage';
-import RecommendPage from '../../pages/RecommendPage';
-import DiscoveryPage from '../../pages/DiscoveryPage';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import BottomTabBarItem from '../../components/ItemBottomTabBar';
 import ImageRes from '../../resources/images/ImageRes';
-import MyProfilePage from '../../pages/MyProfilePage';
 import navigationHelper from '../../utils/NavigationHelper';
+import BottomTabPage1 from './pages/BottomTabPage1';
+import BottomTabPage2 from './pages/BottomTabPage2';
+import BottomTabPage3 from './pages/BottomTabPage3';
+import BottomTabPage4 from './pages/BottomTabPage4';
 
+/**
+ * 定义每个页面的配置。
+ * bottomTabPage1和pageName保持一致
+ */
 const tabBottomConfigs = {
-    home: {
-        tabName: 'home',
-        screen: HomePage,
+    bottomTabPage1: {
+        pageName: 'bottomTabPage1',
+        screen: BottomTabPage1,
         tintColor: 'purple',
         activeIcon: ImageRes.main.homeSelected,
         inActiveIcon: ImageRes.main.home,
-        options: {tabBarLabel: '首页', headerShown: false},
+        options: {tabBarLabel: '页面1', headerShown: false},
     },
-    recommend: {
-        screen: RecommendPage,
-        tabName: 'recommend',
+    bottomTabPage2: {
+        pageName: 'bottomTabPage2',
+        screen: BottomTabPage2,
         tintColor: 'purple',
         activeIcon: ImageRes.main.recommendSelected,
         inActiveIcon: ImageRes.main.recommend,
         options: {tabBarLabel: '推荐'},
     },
-    discovery: {
-        screen: DiscoveryPage,
-        tabName: 'recommend',
+    bottomTabPage3: {
+        pageName: 'bottomTabPage3',
+        screen: BottomTabPage3,
         tintColor: 'purple',
         activeIcon: ImageRes.main.discoverySelected,
         inActiveIcon: ImageRes.main.discovery,
         options: {tabBarLabel: '发现'},
     },
-    profile: {
-        tabName: 'myProfile',
-        screen: MyProfilePage,
+    bottomTabPage4: {
+        pageName: 'bottomTabPage4',
+        screen: BottomTabPage4,
         tintColor: 'purple',
         activeIcon: ImageRes.main.myProfileSelected,
         inActiveIcon: ImageRes.main.myProfile,
@@ -46,25 +49,20 @@ const tabBottomConfigs = {
 };
 
 const Tab = createBottomTabNavigator();
+/**
+ * https://reactnavigation.org/docs/stack-navigator/#options
+ *
+ */
 export default class BottomTabNavigator<ViewProps, State> extends PureComponent<ViewProps, State> {
     public render(): ReactElement {
         return (
+            //The Stack.Navigator component accepts following props:
+            // 下面我们依次来介绍一下他的属性：
+            // initialRouteName:导航器第一次加载时要呈现的路由名称。
+            // screenOptions:导航器中用于屏幕的默认选项
             <Tab.Navigator
-                initialRouteName={'home'}
+                initialRouteName={tabBottomConfigs.bottomTabPage1.pageName}
                 screenOptions={({route, navigation}) => ({
-                    tabBarLabel: ({focused, color}) => {
-                        switch (route.name) {
-                            case 'HomePage':
-                                return <Text>首页</Text>;
-                            case 'RecommendPage':
-                                return <Text>推荐</Text>;
-                            case 'DiscoveryPage':
-                                return <Text>发现</Text>;
-                            case 'MyProfilePage':
-                                return <Text>我的</Text>;
-                        }
-                        return <Text>首页</Text>;
-                    },
                     tabBarIcon: ({focused, color, size}) => {
                         return (
                             <BottomTabBarItem
@@ -85,7 +83,7 @@ export default class BottomTabNavigator<ViewProps, State> extends PureComponent<
                     const item = tabBottomConfigs[key];
                     return (
                         <Tab.Screen
-                            name={key}
+                            name={item.pageName}
                             component={item.screen}
                             options={item.options}
                             key={`${index}`}
