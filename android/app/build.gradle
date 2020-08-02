@@ -1,5 +1,8 @@
 apply plugin: "com.android.application"
 
+// 矢量添加对应的gradle文件。放在App的Module下
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
 import com.android.build.OutputFile
 
 /**
