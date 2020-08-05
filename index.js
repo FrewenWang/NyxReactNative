@@ -9,7 +9,7 @@ import {ignoreYellowWarning} from './src/aura/utils/DebugUtils';
 ignoreYellowWarning();
 
 // 初始化的APP入口
-import App from './src/samples/basic/OriginalApp';
+// import App from './src/samples/basic/OriginalApp';
 
 // Redux的基础测试DemoRedux
 // import DemoRedux from './src/samples/redux/demo_redux';
@@ -35,6 +35,9 @@ import App from './src/samples/basic/OriginalApp';
 // import App from './src/samples/navigation/DemoNavigation';
 
 // import App from './src/samples/vectorIcons/DemoVectorIcons';
+
+
+import App from './src/samples/decorators/DemoDecorators';
 
 console.log('HelloReactNative', 'Enter App');
 AppRegistry.registerComponent(appName, () => App);
