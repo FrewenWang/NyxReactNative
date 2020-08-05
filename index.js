@@ -8,7 +8,8 @@ import {ignoreYellowWarning} from './src/aura/utils/DebugUtils';
 // 移除调试模式的警告
 ignoreYellowWarning();
 
-import App from './App';
+// 初始化的APP入口
+import App from './src/samples/basic/OriginalApp';
 
 // Redux的基础测试DemoRedux
 // import DemoRedux from './src/samples/redux/demo_redux';
@@ -35,4 +36,5 @@ import App from './App';
 
 // import App from './src/samples/vectorIcons/DemoVectorIcons';
 
+console.log('HelloReactNative', 'Enter App');
 AppRegistry.registerComponent(appName, () => App);
