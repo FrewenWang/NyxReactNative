@@ -120,14 +120,15 @@ public abstract class AsyncReactActivity extends FragmentActivity implements Def
     protected abstract RnBundle getBundle();
 
     /**
-     * JSBundle的加载逻辑的实现
+     * JSBundle的加载逻辑的实现。完成实现加载JSBundle的逻辑
      *
      * @param loadListener
      */
     protected void loadScript(final LoadScriptListener loadListener) {
-        // TODO JSBundle的加载逻辑
         final RnBundle bundle = getBundle();
-        /** all buz module is loaded when in debug mode*/
+        /**
+         * all Biz module is loaded when in debug mode
+         **/
         if (ReactNativeUtils.MULTI_DEBUG) {//当设置成debug模式时，所有需要的业务代码已经都加载好了
             loadListener.onLoadComplete(true, null);
             return;

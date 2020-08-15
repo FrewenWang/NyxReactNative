@@ -30,6 +30,12 @@ public class ReactNativeUtils {
      */
     public static final boolean MULTI_DEBUG = false;
 
+    /**
+     * 获取催化剂实例，
+     * 催化剂实例创建与否代表着我们的ReactContext是否已经实例化完成
+     *
+     * @param host
+     */
     @Nullable
     public static CatalystInstance getCatalystInstance(ReactNativeHost host) {
         ReactInstanceManager manager = host.getReactInstanceManager();
@@ -49,7 +55,7 @@ public class ReactNativeUtils {
     /**
      * 从Asset目录下在加载Bundle文件
      *
-     * @param context
+     * @param context   上下文环境
      * @param instance
      * @param assetName
      * @param isSync

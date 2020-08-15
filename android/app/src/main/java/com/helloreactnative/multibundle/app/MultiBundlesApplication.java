@@ -1,4 +1,4 @@
-package com.helloreactnative;
+package com.helloreactnative.multibundle.app;
 
 import android.app.Application;
 import android.content.Context;
@@ -10,12 +10,18 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
 import com.frewen.aura.toolkits.core.FreeToolKits;
+import com.helloreactnative.BuildConfig;
 import com.helloreactnative.packages.AuraDataBasePackage;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
-public class MainApplication extends Application implements ReactApplication {
+import javax.annotation.Nullable;
+
+/**
+ * 多Bundle的Application
+ */
+public class MultiBundlesApplication extends Application implements ReactApplication {
 
     private final ReactNativeHost mReactNativeHost =
             new ReactNativeHost(this) {
@@ -33,6 +39,13 @@ public class MainApplication extends Application implements ReactApplication {
                     packages.add(new AuraDataBasePackage());
                     return packages;
                 }
+
+                @Nullable
+                @Override
+                protected String getBundleAssetName() {
+                    return "platform.android.bundle";
+                }
+
 
                 @Override
                 protected String getJSMainModuleName() {
