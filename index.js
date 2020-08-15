@@ -36,8 +36,9 @@ ignoreYellowWarning();
 
 // import App from './src/samples/vectorIcons/DemoVectorIcons';
 
+// import App from './src/samples/decorators/DemoDecorators';
 
-import App from './src/samples/decorators/DemoDecorators';
+import App from './App';
 
 console.log('HelloReactNative', 'Enter App');
 AppRegistry.registerComponent(appName, () => App);

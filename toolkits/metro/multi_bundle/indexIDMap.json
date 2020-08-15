@@ -5,538 +5,2530 @@
   },
   {
     "id": 100001,
-    "path": "app.json"
+    "path": "node_modules/@babel/runtime/helpers/interopRequireDefault.js"
   },
   {
     "id": 100002,
-    "path": "src/aura/utils/DebugUtils.ts"
+    "path": "node_modules/react-native/index.js"
   },
   {
     "id": 100003,
-    "path": "src/aura/utils/Logger.ts"
+    "path": "node_modules/invariant/browser.js"
   },
   {
     "id": 100004,
-    "path": "App.tsx"
+    "path": "node_modules/react-native/Libraries/Utilities/warnOnce.js"
   },
   {
     "id": 100005,
-    "path": "node_modules/@react-navigation/bottom-tabs/src/index.tsx"
+    "path": "node_modules/fbjs/lib/warning.js"
   },
   {
     "id": 100006,
-    "path": "node_modules/@react-navigation/bottom-tabs/src/navigators/createBottomTabNavigator.tsx"
+    "path": "node_modules/fbjs/lib/emptyFunction.js"
   },
   {
     "id": 100007,
-    "path": "node_modules/@react-navigation/native/src/index.tsx"
+    "path": "node_modules/react-native/Libraries/Components/AccessibilityInfo/AccessibilityInfo.android.js"
   },
   {
     "id": 100008,
-    "path": "node_modules/@react-navigation/core/src/index.tsx"
+    "path": "node_modules/react-native/Libraries/Components/AccessibilityInfo/NativeAccessibilityInfo.js"
   },
   {
     "id": 100009,
-    "path": "node_modules/@react-navigation/routers/src/index.tsx"
+    "path": "node_modules/@babel/runtime/helpers/interopRequireWildcard.js"
   },
   {
     "id": 100010,
-    "path": "node_modules/@react-navigation/routers/src/CommonActions.tsx"
+    "path": "node_modules/@babel/runtime/helpers/typeof.js"
   },
   {
     "id": 100011,
-    "path": "node_modules/@react-navigation/routers/src/BaseRouter.tsx"
+    "path": "node_modules/react-native/Libraries/TurboModule/TurboModuleRegistry.js"
   },
   {
     "id": 100012,
-    "path": "node_modules/nanoid/non-secure/index.js"
+    "path": "node_modules/react-native/Libraries/BatchedBridge/NativeModules.js"
   },
   {
     "id": 100013,
-    "path": "node_modules/@react-navigation/routers/src/StackRouter.tsx"
+    "path": "node_modules/@babel/runtime/helpers/extends.js"
   },
   {
     "id": 100014,
-    "path": "node_modules/@react-navigation/routers/src/TabRouter.tsx"
+    "path": "node_modules/@babel/runtime/helpers/slicedToArray.js"
   },
   {
     "id": 100015,
-    "path": "node_modules/@react-navigation/routers/src/DrawerRouter.tsx"
+    "path": "node_modules/@babel/runtime/helpers/arrayWithHoles.js"
   },
   {
     "id": 100016,
-    "path": "node_modules/@react-navigation/routers/src/types.tsx"
+    "path": "node_modules/@babel/runtime/helpers/iterableToArrayLimit.js"
   },
   {
     "id": 100017,
-    "path": "node_modules/@react-navigation/core/src/BaseNavigationContainer.tsx"
+    "path": "node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js"
   },
   {
     "id": 100018,
-    "path": "node_modules/@react-navigation/core/src/EnsureSingleNavigator.tsx"
+    "path": "node_modules/@babel/runtime/helpers/arrayLikeToArray.js"
   },
   {
     "id": 100019,
-    "path": "node_modules/@react-navigation/core/src/NavigationBuilderContext.tsx"
+    "path": "node_modules/@babel/runtime/helpers/nonIterableRest.js"
   },
   {
     "id": 100020,
-    "path": "node_modules/@react-navigation/core/src/useScheduleUpdate.tsx"
+    "path": "node_modules/react-native/Libraries/BatchedBridge/BatchedBridge.js"
   },
   {
     "id": 100021,
-    "path": "node_modules/@react-navigation/core/src/useFocusedListeners.tsx"
+    "path": "node_modules/react-native/Libraries/BatchedBridge/MessageQueue.js"
   },
   {
     "id": 100022,
-    "path": "node_modules/@react-navigation/core/src/useDevTools.tsx"
+    "path": "node_modules/@babel/runtime/helpers/toConsumableArray.js"
   },
   {
     "id": 100023,
-    "path": "node_modules/@react-navigation/core/src/useStateGetters.tsx"
+    "path": "node_modules/@babel/runtime/helpers/arrayWithoutHoles.js"
   },
   {
     "id": 100024,
-    "path": "node_modules/@react-navigation/core/src/useOptionsGetters.tsx"
+    "path": "node_modules/@babel/runtime/helpers/iterableToArray.js"
   },
   {
     "id": 100025,
-    "path": "node_modules/@react-navigation/core/src/NavigationStateContext.tsx"
+    "path": "node_modules/@babel/runtime/helpers/nonIterableSpread.js"
   },
   {
     "id": 100026,
-    "path": "node_modules/@react-navigation/core/src/useEventEmitter.tsx"
+    "path": "node_modules/@babel/runtime/helpers/classCallCheck.js"
   },
   {
     "id": 100027,
-    "path": "node_modules/@react-navigation/core/src/useSyncState.tsx"
+    "path": "node_modules/@babel/runtime/helpers/createClass.js"
   },
   {
     "id": 100028,
-    "path": "node_modules/@react-navigation/core/src/isSerializable.tsx"
+    "path": "node_modules/react-native/Libraries/vendor/core/ErrorUtils.js"
   },
   {
     "id": 100029,
-    "path": "node_modules/@react-navigation/core/src/createNavigatorFactory.tsx"
+    "path": "node_modules/react-native/Libraries/Performance/Systrace.js"
   },
   {
     "id": 100030,
-    "path": "node_modules/@react-navigation/core/src/Screen.tsx"
+    "path": "node_modules/react-native/Libraries/Utilities/deepFreezeAndThrowOnMutationInDev.js"
   },
   {
     "id": 100031,
-    "path": "node_modules/@react-navigation/core/src/NavigationHelpersContext.tsx"
+    "path": "node_modules/react-native/Libraries/Utilities/stringifySafe.js"
   },
   {
     "id": 100032,
-    "path": "node_modules/@react-navigation/core/src/NavigationContext.tsx"
+    "path": "node_modules/react-native/Libraries/Utilities/defineLazyObjectProperty.js"
   },
   {
     "id": 100033,
-    "path": "node_modules/@react-navigation/core/src/NavigationRouteContext.tsx"
+    "path": "node_modules/react-native/Libraries/EventEmitter/RCTDeviceEventEmitter.js"
   },
   {
     "id": 100034,
-    "path": "node_modules/@react-navigation/core/src/CurrentRenderContext.tsx"
+    "path": "node_modules/@babel/runtime/helpers/get.js"
   },
   {
     "id": 100035,
-    "path": "node_modules/@react-navigation/core/src/useNavigationBuilder.tsx"
+    "path": "node_modules/@babel/runtime/helpers/superPropBase.js"
   },
   {
     "id": 100036,
-    "path": "node_modules/react-is/index.js"
+    "path": "node_modules/@babel/runtime/helpers/getPrototypeOf.js"
   },
   {
     "id": 100037,
-    "path": "node_modules/react-is/cjs/react-is.production.min.js"
+    "path": "node_modules/@babel/runtime/helpers/inherits.js"
   },
   {
     "id": 100038,
-    "path": "node_modules/@react-navigation/core/src/useRegisterNavigator.tsx"
+    "path": "node_modules/@babel/runtime/helpers/setPrototypeOf.js"
   },
   {
     "id": 100039,
-    "path": "node_modules/@react-navigation/core/src/useDescriptors.tsx"
+    "path": "node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"
   },
   {
     "id": 100040,
-    "path": "node_modules/@react-navigation/core/src/SceneView.tsx"
+    "path": "node_modules/@babel/runtime/helpers/assertThisInitialized.js"
   },
   {
     "id": 100041,
-    "path": "node_modules/@react-navigation/core/src/StaticContainer.tsx"
+    "path": "node_modules/react-native/Libraries/vendor/emitter/EventEmitter.js"
   },
   {
     "id": 100042,
-    "path": "node_modules/@react-navigation/core/src/useNavigationCache.tsx"
+    "path": "node_modules/react-native/Libraries/vendor/emitter/EmitterSubscription.js"
   },
   {
     "id": 100043,
-    "path": "node_modules/@react-navigation/core/src/useNavigationHelpers.tsx"
+    "path": "node_modules/react-native/Libraries/vendor/emitter/EventSubscription.js"
   },
   {
     "id": 100044,
-    "path": "node_modules/@react-navigation/core/src/types.tsx"
+    "path": "node_modules/react-native/Libraries/vendor/emitter/EventSubscriptionVendor.js"
   },
   {
     "id": 100045,
-    "path": "node_modules/@react-navigation/core/src/useOnAction.tsx"
+    "path": "node_modules/react-native/Libraries/ReactNative/UIManager.js"
   },
   {
     "id": 100046,
-    "path": "node_modules/@react-navigation/core/src/useFocusEvents.tsx"
+    "path": "node_modules/react-native/Libraries/ReactNative/DummyUIManager.js"
   },
   {
     "id": 100047,
-    "path": "node_modules/@react-navigation/core/src/useOnRouteFocus.tsx"
+    "path": "node_modules/react-native/Libraries/ReactNative/PaperUIManager.js"
   },
   {
     "id": 100048,
-    "path": "node_modules/@react-navigation/core/src/useChildActionListeners.tsx"
+    "path": "node_modules/@babel/runtime/helpers/defineProperty.js"
   },
   {
     "id": 100049,
-    "path": "node_modules/@react-navigation/core/src/useFocusedListenersChildrenAdapter.tsx"
+    "path": "node_modules/react-native/Libraries/ReactNative/NativeUIManager.js"
   },
   {
     "id": 100050,
-    "path": "node_modules/@react-navigation/core/src/useOnGetState.tsx"
+    "path": "node_modules/react-native/Libraries/Utilities/Platform.android.js"
   },
   {
     "id": 100051,
-    "path": "node_modules/@react-navigation/core/src/useCurrentRender.tsx"
+    "path": "node_modules/react-native/Libraries/Utilities/NativePlatformConstantsAndroid.js"
   },
   {
     "id": 100052,
-    "path": "node_modules/@react-navigation/core/src/useNavigation.tsx"
+    "path": "node_modules/react-native/Libraries/ReactNative/UIManagerProperties.js"
   },
   {
     "id": 100053,
-    "path": "node_modules/@react-navigation/core/src/useRoute.tsx"
+    "path": "node_modules/react-native/Libraries/Components/ActivityIndicator/ActivityIndicator.js"
   },
   {
     "id": 100054,
-    "path": "node_modules/@react-navigation/core/src/useFocusEffect.tsx"
+    "path": "node_modules/@babel/runtime/helpers/objectWithoutProperties.js"
   },
   {
     "id": 100055,
-    "path": "node_modules/@react-navigation/core/src/useIsFocused.tsx"
+    "path": "node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js"
   },
   {
     "id": 100056,
-    "path": "node_modules/@react-navigation/core/src/useNavigationState.tsx"
+    "path": "node_modules/react/index.js"
   },
   {
     "id": 100057,
-    "path": "node_modules/@react-navigation/core/src/getStateFromPath.tsx"
+    "path": "node_modules/react/cjs/react.production.min.js"
   },
   {
     "id": 100058,
-    "path": "node_modules/@react-navigation/core/node_modules/escape-string-regexp/index.js"
+    "path": "node_modules/object-assign/index.js"
   },
   {
     "id": 100059,
-    "path": "node_modules/query-string/index.js"
+    "path": "node_modules/react-native/Libraries/StyleSheet/StyleSheet.js"
   },
   {
     "id": 100060,
-    "path": "node_modules/strict-uri-encode/index.js"
+    "path": "node_modules/react-native/Libraries/Utilities/PixelRatio.js"
   },
   {
     "id": 100061,
-    "path": "node_modules/decode-uri-component/index.js"
+    "path": "node_modules/react-native/Libraries/Utilities/Dimensions.js"
   },
   {
     "id": 100062,
-    "path": "node_modules/split-on-first/index.js"
+    "path": "node_modules/react-native/Libraries/Utilities/NativeDeviceInfo.js"
   },
   {
     "id": 100063,
-    "path": "node_modules/@react-navigation/core/src/getPathFromState.tsx"
+    "path": "node_modules/react-native/Libraries/Components/View/ReactNativeStyleAttributes.js"
   },
   {
     "id": 100064,
-    "path": "node_modules/@react-navigation/core/src/getActionFromState.tsx"
+    "path": "node_modules/react-native/Libraries/DeprecatedPropTypes/DeprecatedImageStylePropTypes.js"
   },
   {
     "id": 100065,
-    "path": "node_modules/@react-navigation/native/src/NavigationContainer.tsx"
+    "path": "node_modules/react-native/Libraries/DeprecatedPropTypes/DeprecatedColorPropType.js"
   },
   {
     "id": 100066,
-    "path": "node_modules/@react-navigation/native/src/theming/ThemeProvider.tsx"
+    "path": "node_modules/react-native/Libraries/StyleSheet/normalizeColor.js"
   },
   {
     "id": 100067,
-    "path": "node_modules/@react-navigation/native/src/theming/ThemeContext.tsx"
+    "path": "node_modules/react-native/Libraries/DeprecatedPropTypes/DeprecatedLayoutPropTypes.js"
   },
   {
     "id": 100068,
-    "path": "node_modules/@react-navigation/native/src/theming/DefaultTheme.tsx"
+    "path": "node_modules/prop-types/index.js"
   },
   {
     "id": 100069,
-    "path": "node_modules/@react-navigation/native/src/LinkingContext.tsx"
+    "path": "node_modules/prop-types/factoryWithThrowingShims.js"
   },
   {
     "id": 100070,
-    "path": "node_modules/@react-navigation/native/src/useThenable.tsx"
+    "path": "node_modules/prop-types/lib/ReactPropTypesSecret.js"
   },
   {
     "id": 100071,
-    "path": "node_modules/@react-navigation/native/src/useLinking.native.tsx"
+    "path": "node_modules/react-native/Libraries/DeprecatedPropTypes/DeprecatedShadowPropTypesIOS.js"
   },
   {
     "id": 100072,
-    "path": "node_modules/@react-navigation/native/src/useBackButton.tsx"
+    "path": "node_modules/react-native/Libraries/DeprecatedPropTypes/DeprecatedTransformPropTypes.js"
   },
   {
     "id": 100073,
-    "path": "node_modules/@react-navigation/native/src/useScrollToTop.tsx"
+    "path": "node_modules/react-native/Libraries/Utilities/deprecatedPropType.js"
   },
   {
     "id": 100074,
-    "path": "node_modules/@react-navigation/native/src/theming/DarkTheme.tsx"
+    "path": "node_modules/react-native/Libraries/DeprecatedPropTypes/DeprecatedTextStylePropTypes.js"
   },
   {
     "id": 100075,
-    "path": "node_modules/@react-navigation/native/src/theming/useTheme.tsx"
+    "path": "node_modules/react-native/Libraries/DeprecatedPropTypes/DeprecatedViewStylePropTypes.js"
   },
   {
     "id": 100076,
-    "path": "node_modules/@react-navigation/native/src/Link.tsx"
+    "path": "node_modules/react-native/Libraries/StyleSheet/processColor.js"
   },
   {
     "id": 100077,
-    "path": "node_modules/@react-navigation/native/src/useLinkProps.tsx"
+    "path": "node_modules/react-native/Libraries/StyleSheet/processTransform.js"
   },
   {
     "id": 100078,
-    "path": "node_modules/@react-navigation/native/src/useLinkTo.tsx"
+    "path": "node_modules/react-native/Libraries/Utilities/MatrixMath.js"
   },
   {
     "id": 100079,
-    "path": "node_modules/@react-navigation/native/src/useLinkBuilder.tsx"
+    "path": "node_modules/react-native/Libraries/Utilities/differ/sizesDiffer.js"
   },
   {
     "id": 100080,
-    "path": "node_modules/@react-navigation/native/src/ServerContainer.tsx"
+    "path": "node_modules/react-native/Libraries/StyleSheet/StyleSheetValidation.js"
   },
   {
     "id": 100081,
-    "path": "node_modules/@react-navigation/native/src/ServerContext.tsx"
+    "path": "node_modules/react-native/Libraries/StyleSheet/flattenStyle.js"
   },
   {
     "id": 100082,
-    "path": "node_modules/@react-navigation/native/src/types.tsx"
+    "path": "node_modules/react-native/Libraries/Components/View/View.js"
   },
   {
     "id": 100083,
-    "path": "node_modules/@react-navigation/bottom-tabs/src/views/BottomTabView.tsx"
+    "path": "node_modules/react-native/Libraries/Components/View/ViewNativeComponent.js"
   },
   {
     "id": 100084,
-    "path": "node_modules/react-native-screens/src/screens.native.js"
+    "path": "node_modules/react-native/Libraries/Utilities/codegenNativeCommands.js"
   },
   {
     "id": 100085,
-    "path": "node_modules/react-native/Libraries/Core/ReactNativeVersion.js"
+    "path": "node_modules/react-native/Libraries/Renderer/shims/ReactNative.js"
   },
   {
     "id": 100086,
-    "path": "node_modules/@react-navigation/bottom-tabs/src/views/SafeAreaProviderCompat.tsx"
+    "path": "node_modules/react-native/Libraries/Renderer/implementations/ReactNativeRenderer-prod.js"
   },
   {
     "id": 100087,
-    "path": "node_modules/react-native-safe-area-context/src/index.tsx"
+    "path": "node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInitializeCore.js"
   },
   {
     "id": 100088,
-    "path": "node_modules/react-native-safe-area-context/src/SafeAreaContext.tsx"
+    "path": "node_modules/react-native/Libraries/Core/InitializeCore.js"
   },
   {
     "id": 100089,
-    "path": "node_modules/react-native-safe-area-context/src/NativeSafeAreaView.native.tsx"
+    "path": "node_modules/react-native/Libraries/Core/setUpGlobals.js"
   },
   {
     "id": 100090,
-    "path": "node_modules/react-native-safe-area-context/src/SafeAreaView.tsx"
+    "path": "node_modules/react-native/Libraries/Core/setUpSystrace.js"
   },
   {
     "id": 100091,
-    "path": "node_modules/react-native-safe-area-context/src/InitialWindow.native.ts"
+    "path": "node_modules/react-native/Libraries/Core/setUpErrorHandling.js"
   },
   {
     "id": 100092,
-    "path": "node_modules/react-native-safe-area-context/src/SafeArea.types.ts"
+    "path": "node_modules/react-native/Libraries/Core/ExceptionsManager.js"
   },
   {
     "id": 100093,
-    "path": "node_modules/react-native-iphone-x-helper/index.js"
+    "path": "node_modules/@babel/runtime/helpers/wrapNativeSuper.js"
   },
   {
     "id": 100094,
-    "path": "node_modules/@react-navigation/bottom-tabs/src/views/ResourceSavingScene.tsx"
+    "path": "node_modules/@babel/runtime/helpers/isNativeFunction.js"
   },
   {
     "id": 100095,
-    "path": "node_modules/@react-navigation/bottom-tabs/src/views/BottomTabBar.tsx"
+    "path": "node_modules/@babel/runtime/helpers/construct.js"
   },
   {
     "id": 100096,
-    "path": "node_modules/@react-navigation/bottom-tabs/src/views/BottomTabItem.tsx"
+    "path": "node_modules/@babel/runtime/helpers/isNativeReflectConstruct.js"
   },
   {
     "id": 100097,
-    "path": "node_modules/color/index.js"
+    "path": "node_modules/react-native/Libraries/LogBox/Data/LogBoxData.js"
   },
   {
     "id": 100098,
-    "path": "node_modules/color-string/index.js"
+    "path": "node_modules/react-native/Libraries/LogBox/Data/LogBoxLog.js"
   },
   {
     "id": 100099,
-    "path": "node_modules/color-name/index.js"
+    "path": "node_modules/react-native/Libraries/LogBox/Data/LogBoxSymbolication.js"
   },
   {
     "id": 100100,
-    "path": "node_modules/simple-swizzle/index.js"
+    "path": "node_modules/react-native/Libraries/Core/Devtools/symbolicateStackTrace.js"
   },
   {
     "id": 100101,
-    "path": "node_modules/simple-swizzle/node_modules/is-arrayish/index.js"
+    "path": "node_modules/@babel/runtime/regenerator/index.js"
   },
   {
     "id": 100102,
-    "path": "node_modules/color-convert/index.js"
+    "path": "node_modules/regenerator-runtime/runtime.js"
   },
   {
     "id": 100103,
-    "path": "node_modules/color-convert/conversions.js"
+    "path": "node_modules/react-native/Libraries/NativeModules/specs/NativeSourceCode.js"
   },
   {
     "id": 100104,
-    "path": "node_modules/color-convert/route.js"
+    "path": "node_modules/react-native/Libraries/Core/Devtools/getDevServer.js"
   },
   {
     "id": 100105,
-    "path": "node_modules/@react-navigation/bottom-tabs/src/views/TabBarIcon.tsx"
+    "path": "node_modules/react-native/Libraries/Network/fetch.js"
   },
   {
     "id": 100106,
-    "path": "src/pages/HomePage.tsx"
+    "path": "node_modules/whatwg-fetch/dist/fetch.umd.js"
   },
   {
     "id": 100107,
-    "path": "src/aura/base/BaseComponent.ts"
+    "path": "node_modules/react-native/Libraries/LogBox/Data/parseLogBoxLog.js"
   },
   {
     "id": 100108,
-    "path": "src/pages/RecommendPage.tsx"
+    "path": "node_modules/react-native/Libraries/UTFSequence.js"
   },
   {
     "id": 100109,
-    "path": "src/aura/network/index.js"
+    "path": "node_modules/react-native/Libraries/Core/Devtools/parseErrorStack.js"
   },
   {
     "id": 100110,
-    "path": "src/aura/network/lib/AuraHttp.ts"
+    "path": "node_modules/react-native/Libraries/Core/Devtools/parseHermesStack.js"
   },
   {
     "id": 100111,
-    "path": "src/aura/network/lib/Options.ts"
+    "path": "node_modules/stacktrace-parser/dist/stack-trace-parser.cjs.js"
   },
   {
     "id": 100112,
-    "path": "src/aura/network/FetchHelper.ts"
+    "path": "node_modules/react-native/Libraries/NativeModules/specs/NativeLogBox.js"
   },
   {
     "id": 100113,
-    "path": "src/network/RequestUrl.ts"
+    "path": "node_modules/react-native/Libraries/Core/NativeExceptionsManager.js"
   },
   {
     "id": 100114,
-    "path": "src/resources/images/ImageRes.ts"
+    "path": "node_modules/react-native/Libraries/Core/polyfillPromise.js"
   },
   {
     "id": 100115,
-    "path": "src/resources/images/src/main/tabbar_homepage.png"
+    "path": "node_modules/react-native/Libraries/Utilities/PolyfillFunctions.js"
   },
   {
     "id": 100116,
-    "path": "src/resources/images/src/main/tabbar_homepage_selected.png"
+    "path": "node_modules/react-native/Libraries/Promise.js"
   },
   {
     "id": 100117,
-    "path": "src/resources/images/src/main/tabbar_recommend.png"
+    "path": "node_modules/promise/setimmediate/es6-extensions.js"
   },
   {
     "id": 100118,
-    "path": "src/resources/images/src/main/tabbar_recommend_selected.png"
+    "path": "node_modules/promise/setimmediate/core.js"
   },
   {
     "id": 100119,
-    "path": "src/resources/images/src/main/tabbar_discover.png"
+    "path": "node_modules/promise/setimmediate/done.js"
   },
   {
     "id": 100120,
-    "path": "src/resources/images/src/main/tabbar_discover_selected.png"
+    "path": "node_modules/promise/setimmediate/finally.js"
   },
   {
     "id": 100121,
-    "path": "src/resources/images/src/main/tabbar_mine.png"
+    "path": "node_modules/react-native/Libraries/Core/setUpRegeneratorRuntime.js"
   },
   {
     "id": 100122,
-    "path": "src/resources/images/src/main/tabbar_mine_selected.png"
+    "path": "node_modules/react-native/Libraries/Core/setUpTimers.js"
   },
   {
     "id": 100123,
-    "path": "src/resources/images/src/main/search_icon.png"
+    "path": "node_modules/react-native/Libraries/Core/Timers/JSTimers.js"
   },
   {
     "id": 100124,
-    "path": "src/resources/styles/CommonStyles.ts"
+    "path": "node_modules/react-native/Libraries/Core/Timers/NativeTiming.js"
   },
   {
     "id": 100125,
-    "path": "src/resources/colors/ColorRes.ts"
+    "path": "node_modules/fbjs/lib/performanceNow.js"
   },
   {
     "id": 100126,
-    "path": "src/resources/dimensions/ScreenDimensions.ts"
+    "path": "node_modules/fbjs/lib/performance.js"
   },
   {
     "id": 100127,
-    "path": "src/resources/styles/RecommendStyles.ts"
+    "path": "node_modules/fbjs/lib/ExecutionEnvironment.js"
   },
   {
     "id": 100128,
-    "path": "src/pages/DiscoveryPage.tsx"
+    "path": "node_modules/react-native/Libraries/Core/setUpXHR.js"
   },
   {
     "id": 100129,
-    "path": "src/resources/styles/index.ts"
+    "path": "node_modules/react-native/Libraries/Network/XMLHttpRequest.js"
   },
   {
     "id": 100130,
-    "path": "src/resources/styles/ListItemStyles.ts"
+    "path": "node_modules/react-native/Libraries/Blob/BlobManager.js"
   },
   {
     "id": 100131,
-    "path": "src/resources/styles/SplashStyles.ts"
+    "path": "node_modules/react-native/Libraries/Blob/NativeBlobModule.js"
   },
   {
     "id": 100132,
-    "path": "src/resources/styles/DiscoveryPageStyle.ts"
+    "path": "node_modules/react-native/Libraries/Blob/Blob.js"
   },
   {
     "id": 100133,
-    "path": "src/pages/MyProfilePage.tsx"
+    "path": "node_modules/react-native/Libraries/Blob/BlobRegistry.js"
   },
   {
     "id": 100134,
+    "path": "node_modules/event-target-shim/dist/event-target-shim.js"
+  },
+  {
+    "id": 100135,
+    "path": "node_modules/react-native/Libraries/Network/RCTNetworking.android.js"
+  },
+  {
+    "id": 100136,
+    "path": "node_modules/react-native/Libraries/Network/NativeNetworkingAndroid.js"
+  },
+  {
+    "id": 100137,
+    "path": "node_modules/react-native/Libraries/EventEmitter/NativeEventEmitter.js"
+  },
+  {
+    "id": 100138,
+    "path": "node_modules/react-native/Libraries/Network/convertRequestBody.js"
+  },
+  {
+    "id": 100139,
+    "path": "node_modules/react-native/Libraries/Utilities/binaryToBase64.js"
+  },
+  {
+    "id": 100140,
+    "path": "node_modules/base64-js/index.js"
+  },
+  {
+    "id": 100141,
+    "path": "node_modules/react-native/Libraries/Network/FormData.js"
+  },
+  {
+    "id": 100142,
+    "path": "node_modules/react-native/Libraries/WebSocket/WebSocket.js"
+  },
+  {
+    "id": 100143,
+    "path": "node_modules/react-native/Libraries/WebSocket/NativeWebSocketModule.js"
+  },
+  {
+    "id": 100144,
+    "path": "node_modules/react-native/Libraries/WebSocket/WebSocketEvent.js"
+  },
+  {
+    "id": 100145,
+    "path": "node_modules/react-native/Libraries/Blob/File.js"
+  },
+  {
+    "id": 100146,
+    "path": "node_modules/react-native/Libraries/Blob/FileReader.js"
+  },
+  {
+    "id": 100147,
+    "path": "node_modules/react-native/Libraries/Blob/NativeFileReaderModule.js"
+  },
+  {
+    "id": 100148,
+    "path": "node_modules/react-native/Libraries/Blob/URL.js"
+  },
+  {
+    "id": 100149,
+    "path": "node_modules/abort-controller/dist/abort-controller.js"
+  },
+  {
+    "id": 100150,
+    "path": "node_modules/react-native/Libraries/Core/setUpAlert.js"
+  },
+  {
+    "id": 100151,
+    "path": "node_modules/react-native/Libraries/Alert/Alert.js"
+  },
+  {
+    "id": 100152,
+    "path": "node_modules/react-native/Libraries/NativeModules/specs/NativeDialogManagerAndroid.js"
+  },
+  {
+    "id": 100153,
+    "path": "node_modules/react-native/Libraries/Alert/RCTAlertManager.android.js"
+  },
+  {
+    "id": 100154,
+    "path": "node_modules/react-native/Libraries/Core/setUpNavigator.js"
+  },
+  {
+    "id": 100155,
+    "path": "node_modules/react-native/Libraries/Core/setUpBatchedBridge.js"
+  },
+  {
+    "id": 100156,
+    "path": "node_modules/react-native/Libraries/HeapCapture/HeapCapture.js"
+  },
+  {
+    "id": 100157,
+    "path": "node_modules/react-native/Libraries/HeapCapture/NativeHeapCapture.js"
+  },
+  {
+    "id": 100158,
+    "path": "node_modules/react-native/Libraries/Performance/SamplingProfiler.js"
+  },
+  {
+    "id": 100159,
+    "path": "node_modules/react-native/Libraries/Performance/NativeJSCSamplingProfiler.js"
+  },
+  {
+    "id": 100160,
+    "path": "node_modules/react-native/Libraries/Utilities/RCTLog.js"
+  },
+  {
+    "id": 100161,
+    "path": "node_modules/react-native/Libraries/EventEmitter/RCTNativeAppEventEmitter.js"
+  },
+  {
+    "id": 100162,
+    "path": "node_modules/react-native/Libraries/Utilities/GlobalPerformanceLogger.js"
+  },
+  {
+    "id": 100163,
+    "path": "node_modules/react-native/Libraries/Utilities/createPerformanceLogger.js"
+  },
+  {
+    "id": 100164,
+    "path": "node_modules/react-native/Libraries/Utilities/infoLog.js"
+  },
+  {
+    "id": 100165,
+    "path": "node_modules/react-native/Libraries/Utilities/JSDevSupportModule.js"
+  },
+  {
+    "id": 100166,
+    "path": "node_modules/react-native/Libraries/Utilities/NativeJSDevSupport.js"
+  },
+  {
+    "id": 100167,
+    "path": "node_modules/react-native/Libraries/Utilities/HMRClientProdShim.js"
+  },
+  {
+    "id": 100168,
+    "path": "node_modules/react-native/Libraries/Core/setUpSegmentFetcher.js"
+  },
+  {
+    "id": 100169,
+    "path": "node_modules/react-native/Libraries/Core/SegmentFetcher/NativeSegmentFetcher.js"
+  },
+  {
+    "id": 100170,
+    "path": "node_modules/react-native/Libraries/ReactPrivate/ReactNativePrivateInterface.js"
+  },
+  {
+    "id": 100171,
+    "path": "node_modules/react-native/Libraries/EventEmitter/RCTEventEmitter.js"
+  },
+  {
+    "id": 100172,
+    "path": "node_modules/react-native/Libraries/Renderer/shims/ReactNativeViewConfigRegistry.js"
+  },
+  {
+    "id": 100173,
+    "path": "node_modules/react-native/Libraries/Components/TextInput/TextInputState.js"
+  },
+  {
+    "id": 100174,
+    "path": "node_modules/react-native/Libraries/Utilities/differ/deepDiffer.js"
+  },
+  {
+    "id": 100175,
+    "path": "node_modules/react-native/Libraries/Core/ReactFiberErrorDialog.js"
+  },
+  {
+    "id": 100176,
+    "path": "node_modules/scheduler/index.js"
+  },
+  {
+    "id": 100177,
+    "path": "node_modules/scheduler/cjs/scheduler.production.min.js"
+  },
+  {
+    "id": 100178,
+    "path": "node_modules/react-native/Libraries/Components/View/ReactNativeViewViewConfigAndroid.js"
+  },
+  {
+    "id": 100179,
+    "path": "node_modules/react-native/Libraries/Utilities/registerGeneratedViewConfig.js"
+  },
+  {
+    "id": 100180,
+    "path": "node_modules/react-native/Libraries/Utilities/verifyComponentAttributeEquivalence.js"
+  },
+  {
+    "id": 100181,
+    "path": "node_modules/react-native/Libraries/Components/View/ReactNativeViewViewConfig.js"
+  },
+  {
+    "id": 100182,
+    "path": "node_modules/react-native/Libraries/Utilities/differ/insetsDiffer.js"
+  },
+  {
+    "id": 100183,
+    "path": "node_modules/react-native/Libraries/Utilities/differ/matricesDiffer.js"
+  },
+  {
+    "id": 100184,
+    "path": "node_modules/react-native/Libraries/ReactNative/getNativeComponentAttributes.js"
+  },
+  {
+    "id": 100185,
+    "path": "node_modules/react-native/Libraries/Utilities/differ/pointsDiffer.js"
+  },
+  {
+    "id": 100186,
+    "path": "node_modules/react-native/Libraries/StyleSheet/processColorArray.js"
+  },
+  {
+    "id": 100187,
+    "path": "node_modules/react-native/Libraries/Image/resolveAssetSource.js"
+  },
+  {
+    "id": 100188,
+    "path": "node_modules/react-native/Libraries/Image/AssetRegistry.js"
+  },
+  {
+    "id": 100189,
+    "path": "node_modules/react-native/Libraries/Image/AssetSourceResolver.js"
+  },
+  {
+    "id": 100190,
+    "path": "node_modules/react-native/Libraries/Image/assetPathUtils.js"
+  },
+  {
+    "id": 100191,
+    "path": "node_modules/react-native/Libraries/ReactNative/requireNativeComponent.js"
+  },
+  {
+    "id": 100192,
+    "path": "node_modules/react-native/Libraries/Renderer/shims/createReactNativeComponentClass.js"
+  },
+  {
+    "id": 100193,
+    "path": "node_modules/react-native/Libraries/Components/ProgressBarAndroid/ProgressBarAndroid.android.js"
+  },
+  {
+    "id": 100194,
+    "path": "node_modules/react-native/Libraries/Components/ProgressBarAndroid/ProgressBarAndroidNativeComponent.js"
+  },
+  {
+    "id": 100195,
+    "path": "node_modules/react-native/Libraries/Utilities/codegenNativeComponent.js"
+  },
+  {
+    "id": 100196,
+    "path": "node_modules/react-native/Libraries/Components/Button.js"
+  },
+  {
+    "id": 100197,
+    "path": "node_modules/react-native/Libraries/Text/Text.js"
+  },
+  {
+    "id": 100198,
+    "path": "node_modules/react-native/Libraries/DeprecatedPropTypes/DeprecatedTextPropTypes.js"
+  },
+  {
+    "id": 100199,
+    "path": "node_modules/react-native/Libraries/DeprecatedPropTypes/DeprecatedEdgeInsetsPropType.js"
+  },
+  {
+    "id": 100200,
+    "path": "node_modules/react-native/Libraries/DeprecatedPropTypes/DeprecatedStyleSheetPropType.js"
+  },
+  {
+    "id": 100201,
+    "path": "node_modules/react-native/Libraries/DeprecatedPropTypes/deprecatedCreateStrictShapeTypeChecker.js"
+  },
+  {
+    "id": 100202,
+    "path": "node_modules/react-native/Libraries/Components/View/ReactNativeViewAttributes.js"
+  },
+  {
+    "id": 100203,
+    "path": "node_modules/react-native/Libraries/Text/TextAncestor.js"
+  },
+  {
+    "id": 100204,
+    "path": "node_modules/react-native/Libraries/Components/Touchable/Touchable.js"
+  },
+  {
+    "id": 100205,
+    "path": "node_modules/react-native/Libraries/Components/Touchable/BoundingDimensions.js"
+  },
+  {
+    "id": 100206,
+    "path": "node_modules/react-native/Libraries/Components/Touchable/PooledClass.js"
+  },
+  {
+    "id": 100207,
+    "path": "node_modules/react-native/Libraries/Components/Touchable/Position.js"
+  },
+  {
+    "id": 100208,
+    "path": "node_modules/react-native/Libraries/Components/AppleTV/TVEventHandler.js"
+  },
+  {
+    "id": 100209,
+    "path": "node_modules/react-native/Libraries/Components/AppleTV/NativeTVNavigationEventEmitter.js"
+  },
+  {
+    "id": 100210,
+    "path": "node_modules/react-native/Libraries/Components/Sound/SoundManager.js"
+  },
+  {
+    "id": 100211,
+    "path": "node_modules/react-native/Libraries/Components/Sound/NativeSoundManager.js"
+  },
+  {
+    "id": 100212,
+    "path": "node_modules/fbjs/lib/keyMirror.js"
+  },
+  {
+    "id": 100213,
+    "path": "node_modules/fbjs/lib/invariant.js"
+  },
+  {
+    "id": 100214,
+    "path": "node_modules/nullthrows/nullthrows.js"
+  },
+  {
+    "id": 100215,
+    "path": "node_modules/react-native/Libraries/Components/Touchable/TouchableNativeFeedback.js"
+  },
+  {
+    "id": 100216,
+    "path": "node_modules/react-native/Libraries/Pressability/Pressability.js"
+  },
+  {
+    "id": 100217,
+    "path": "node_modules/react-native/Libraries/Pressability/HoverState.js"
+  },
+  {
+    "id": 100218,
+    "path": "node_modules/react-native/Libraries/Pressability/PressabilityDebug.js"
+  },
+  {
+    "id": 100219,
+    "path": "node_modules/react-native/Libraries/Components/Touchable/TVTouchable.js"
+  },
+  {
+    "id": 100220,
+    "path": "node_modules/react-native/Libraries/Components/Touchable/TouchableOpacity.js"
+  },
+  {
+    "id": 100221,
+    "path": "node_modules/react-native/Libraries/Animated/src/Animated.js"
+  },
+  {
+    "id": 100222,
+    "path": "node_modules/react-native/Libraries/Animated/src/AnimatedMock.js"
+  },
+  {
+    "id": 100223,
+    "path": "node_modules/react-native/Libraries/Animated/src/AnimatedEvent.js"
+  },
+  {
+    "id": 100224,
+    "path": "node_modules/react-native/Libraries/Animated/src/nodes/AnimatedValue.js"
+  },
+  {
+    "id": 100225,
+    "path": "node_modules/react-native/Libraries/Animated/src/nodes/AnimatedInterpolation.js"
+  },
+  {
+    "id": 100226,
+    "path": "node_modules/react-native/Libraries/Animated/src/nodes/AnimatedNode.js"
+  },
+  {
+    "id": 100227,
+    "path": "node_modules/react-native/Libraries/Animated/src/NativeAnimatedHelper.js"
+  },
+  {
+    "id": 100228,
+    "path": "node_modules/react-native/Libraries/Animated/src/NativeAnimatedModule.js"
+  },
+  {
+    "id": 100229,
+    "path": "node_modules/react-native/Libraries/Animated/src/nodes/AnimatedWithChildren.js"
+  },
+  {
+    "id": 100230,
+    "path": "node_modules/react-native/Libraries/Interaction/InteractionManager.js"
+  },
+  {
+    "id": 100231,
+    "path": "node_modules/react-native/Libraries/Interaction/TaskQueue.js"
+  },
+  {
+    "id": 100232,
+    "path": "node_modules/react-native/Libraries/Animated/src/AnimatedImplementation.js"
+  },
+  {
+    "id": 100233,
+    "path": "node_modules/react-native/Libraries/Animated/src/nodes/AnimatedAddition.js"
+  },
+  {
+    "id": 100234,
+    "path": "node_modules/react-native/Libraries/Animated/src/nodes/AnimatedDiffClamp.js"
+  },
+  {
+    "id": 100235,
+    "path": "node_modules/react-native/Libraries/Animated/src/nodes/AnimatedDivision.js"
+  },
+  {
+    "id": 100236,
+    "path": "node_modules/react-native/Libraries/Animated/src/nodes/AnimatedModulo.js"
+  },
+  {
+    "id": 100237,
+    "path": "node_modules/react-native/Libraries/Animated/src/nodes/AnimatedMultiplication.js"
+  },
+  {
+    "id": 100238,
+    "path": "node_modules/react-native/Libraries/Animated/src/nodes/AnimatedProps.js"
+  },
+  {
+    "id": 100239,
+    "path": "node_modules/react-native/Libraries/Animated/src/nodes/AnimatedStyle.js"
+  },
+  {
+    "id": 100240,
+    "path": "node_modules/react-native/Libraries/Animated/src/nodes/AnimatedTransform.js"
+  },
+  {
+    "id": 100241,
+    "path": "node_modules/react-native/Libraries/Animated/src/nodes/AnimatedSubtraction.js"
+  },
+  {
+    "id": 100242,
+    "path": "node_modules/react-native/Libraries/Animated/src/nodes/AnimatedTracking.js"
+  },
+  {
+    "id": 100243,
+    "path": "node_modules/react-native/Libraries/Animated/src/nodes/AnimatedValueXY.js"
+  },
+  {
+    "id": 100244,
+    "path": "node_modules/react-native/Libraries/Animated/src/animations/DecayAnimation.js"
+  },
+  {
+    "id": 100245,
+    "path": "node_modules/react-native/Libraries/Animated/src/animations/Animation.js"
+  },
+  {
+    "id": 100246,
+    "path": "node_modules/react-native/Libraries/Animated/src/animations/SpringAnimation.js"
+  },
+  {
+    "id": 100247,
+    "path": "node_modules/react-native/Libraries/Animated/src/SpringConfig.js"
+  },
+  {
+    "id": 100248,
+    "path": "node_modules/react-native/Libraries/Animated/src/animations/TimingAnimation.js"
+  },
+  {
+    "id": 100249,
+    "path": "node_modules/react-native/Libraries/Animated/src/Easing.js"
+  },
+  {
+    "id": 100250,
+    "path": "node_modules/react-native/Libraries/Animated/src/bezier.js"
+  },
+  {
+    "id": 100251,
+    "path": "node_modules/react-native/Libraries/Animated/src/createAnimatedComponent.js"
+  },
+  {
+    "id": 100252,
+    "path": "node_modules/react-native/Libraries/Utilities/setAndForwardRef.js"
+  },
+  {
+    "id": 100253,
+    "path": "node_modules/react-native/Libraries/Animated/src/components/AnimatedFlatList.js"
+  },
+  {
+    "id": 100254,
+    "path": "node_modules/react-native/Libraries/Lists/FlatList.js"
+  },
+  {
+    "id": 100255,
+    "path": "node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js"
+  },
+  {
+    "id": 100256,
+    "path": "node_modules/react-native/Libraries/Components/ScrollView/ScrollViewNativeComponent.js"
+  },
+  {
+    "id": 100257,
+    "path": "node_modules/react-native/Libraries/Components/ScrollView/ScrollViewViewConfig.js"
+  },
+  {
+    "id": 100258,
+    "path": "node_modules/react-native/Libraries/Components/ScrollView/ScrollContentViewNativeComponent.js"
+  },
+  {
+    "id": 100259,
+    "path": "node_modules/react-native/Libraries/Components/ScrollView/AndroidHorizontalScrollViewNativeComponent.js"
+  },
+  {
+    "id": 100260,
+    "path": "node_modules/react-native/Libraries/Components/ScrollView/AndroidHorizontalScrollContentViewNativeComponent.js"
+  },
+  {
+    "id": 100261,
+    "path": "node_modules/react-native/Libraries/Components/ScrollResponder.js"
+  },
+  {
+    "id": 100262,
+    "path": "node_modules/react-native/Libraries/Components/ScrollView/ScrollViewCommands.js"
+  },
+  {
+    "id": 100263,
+    "path": "node_modules/react-native/Libraries/Interaction/FrameRateLogger.js"
+  },
+  {
+    "id": 100264,
+    "path": "node_modules/react-native/Libraries/Interaction/NativeFrameRateLogger.js"
+  },
+  {
+    "id": 100265,
+    "path": "node_modules/react-native/Libraries/Components/Keyboard/Keyboard.js"
+  },
+  {
+    "id": 100266,
+    "path": "node_modules/react-native/Libraries/Components/Keyboard/NativeKeyboardObserver.js"
+  },
+  {
+    "id": 100267,
+    "path": "node_modules/react-native/Libraries/LayoutAnimation/LayoutAnimation.js"
+  },
+  {
+    "id": 100268,
+    "path": "node_modules/react-native/Libraries/Utilities/dismissKeyboard.js"
+  },
+  {
+    "id": 100269,
+    "path": "node_modules/react-native/Libraries/Components/ScrollView/ScrollViewStickyHeader.js"
+  },
+  {
+    "id": 100270,
+    "path": "node_modules/react-native/Libraries/Components/ScrollView/processDecelerationRate.js"
+  },
+  {
+    "id": 100271,
+    "path": "node_modules/react-native/Libraries/StyleSheet/splitLayoutProps.js"
+  },
+  {
+    "id": 100272,
+    "path": "node_modules/react-native/Libraries/Lists/VirtualizedList.js"
+  },
+  {
+    "id": 100273,
+    "path": "node_modules/react-native/Libraries/Interaction/Batchinator.js"
+  },
+  {
+    "id": 100274,
+    "path": "node_modules/react-native/Libraries/Lists/FillRateHelper.js"
+  },
+  {
+    "id": 100275,
+    "path": "node_modules/react-native/Libraries/Components/RefreshControl/RefreshControl.js"
+  },
+  {
+    "id": 100276,
+    "path": "node_modules/react-native/Libraries/Components/RefreshControl/AndroidSwipeRefreshLayoutNativeComponent.js"
+  },
+  {
+    "id": 100277,
+    "path": "node_modules/react-native/Libraries/Components/RefreshControl/PullToRefreshViewNativeComponent.js"
+  },
+  {
+    "id": 100278,
+    "path": "node_modules/react-native/Libraries/Lists/ViewabilityHelper.js"
+  },
+  {
+    "id": 100279,
+    "path": "node_modules/react-native/Libraries/Lists/VirtualizeUtils.js"
+  },
+  {
+    "id": 100280,
+    "path": "node_modules/react-native/Libraries/Animated/src/components/AnimatedImage.js"
+  },
+  {
+    "id": 100281,
+    "path": "node_modules/react-native/Libraries/Image/Image.android.js"
+  },
+  {
+    "id": 100282,
+    "path": "node_modules/react-native/Libraries/Image/NativeImageLoaderAndroid.js"
+  },
+  {
+    "id": 100283,
+    "path": "node_modules/react-native/Libraries/DeprecatedPropTypes/DeprecatedViewPropTypes.js"
+  },
+  {
+    "id": 100284,
+    "path": "node_modules/react-native/Libraries/DeprecatedPropTypes/DeprecatedViewAccessibility.js"
+  },
+  {
+    "id": 100285,
+    "path": "node_modules/react-native/Libraries/Image/ImageViewNativeComponent.js"
+  },
+  {
+    "id": 100286,
+    "path": "node_modules/react-native/Libraries/Image/TextInlineImageNativeComponent.js"
+  },
+  {
+    "id": 100287,
+    "path": "node_modules/react-native/Libraries/Animated/src/components/AnimatedScrollView.js"
+  },
+  {
+    "id": 100288,
+    "path": "node_modules/react-native/Libraries/Animated/src/components/AnimatedSectionList.js"
+  },
+  {
+    "id": 100289,
+    "path": "node_modules/react-native/Libraries/Lists/SectionList.js"
+  },
+  {
+    "id": 100290,
+    "path": "node_modules/react-native/Libraries/Lists/VirtualizedSectionList.js"
+  },
+  {
+    "id": 100291,
+    "path": "node_modules/react-native/Libraries/Animated/src/components/AnimatedText.js"
+  },
+  {
+    "id": 100292,
+    "path": "node_modules/react-native/Libraries/Animated/src/components/AnimatedView.js"
+  },
+  {
+    "id": 100293,
+    "path": "node_modules/react-native/Libraries/Components/CheckBox/CheckBox.android.js"
+  },
+  {
+    "id": 100294,
+    "path": "node_modules/react-native/Libraries/Components/CheckBox/AndroidCheckBoxNativeComponent.js"
+  },
+  {
+    "id": 100295,
+    "path": "node_modules/react-native/Libraries/Components/DatePicker/DatePickerIOS.android.js"
+  },
+  {
+    "id": 100296,
+    "path": "node_modules/react-native/Libraries/Components/DrawerAndroid/DrawerLayoutAndroid.android.js"
+  },
+  {
+    "id": 100297,
+    "path": "node_modules/react-native/Libraries/Components/DrawerAndroid/AndroidDrawerLayoutNativeComponent.js"
+  },
+  {
+    "id": 100298,
+    "path": "node_modules/react-native/Libraries/Components/StatusBar/StatusBar.js"
+  },
+  {
+    "id": 100299,
+    "path": "node_modules/react-native/Libraries/Components/StatusBar/NativeStatusBarManagerAndroid.js"
+  },
+  {
+    "id": 100300,
+    "path": "node_modules/react-native/Libraries/Components/StatusBar/NativeStatusBarManagerIOS.js"
+  },
+  {
+    "id": 100301,
+    "path": "node_modules/react-native/Libraries/Image/ImageBackground.js"
+  },
+  {
+    "id": 100302,
+    "path": "node_modules/react-native/Libraries/Components/TextInput/InputAccessoryView.js"
+  },
+  {
+    "id": 100303,
+    "path": "node_modules/react-native/Libraries/Components/TextInput/RCTInputAccessoryViewNativeComponent.js"
+  },
+  {
+    "id": 100304,
+    "path": "node_modules/react-native/Libraries/Components/Keyboard/KeyboardAvoidingView.js"
+  },
+  {
+    "id": 100305,
+    "path": "node_modules/react-native/Libraries/Components/MaskedView/MaskedViewIOS.android.js"
+  },
+  {
+    "id": 100306,
+    "path": "node_modules/react-native/Libraries/Components/UnimplementedViews/UnimplementedView.js"
+  },
+  {
+    "id": 100307,
+    "path": "node_modules/react-native/Libraries/Modal/Modal.js"
+  },
+  {
+    "id": 100308,
+    "path": "node_modules/react-native/Libraries/Modal/NativeModalManager.js"
+  },
+  {
+    "id": 100309,
+    "path": "node_modules/react-native/Libraries/Modal/RCTModalHostViewNativeComponent.js"
+  },
+  {
+    "id": 100310,
+    "path": "node_modules/react-native/Libraries/ReactNative/AppContainer.js"
+  },
+  {
+    "id": 100311,
+    "path": "node_modules/react-native/Libraries/ReactNative/RootTagContext.js"
+  },
+  {
+    "id": 100312,
+    "path": "node_modules/react-native/Libraries/ReactNative/I18nManager.js"
+  },
+  {
+    "id": 100313,
+    "path": "node_modules/react-native/Libraries/ReactNative/NativeI18nManager.js"
+  },
+  {
+    "id": 100314,
+    "path": "node_modules/react-native/Libraries/Components/Picker/Picker.js"
+  },
+  {
+    "id": 100315,
+    "path": "node_modules/react-native/Libraries/Components/Picker/PickerAndroid.android.js"
+  },
+  {
+    "id": 100316,
+    "path": "node_modules/react-native/Libraries/Components/Picker/AndroidDropdownPickerNativeComponent.js"
+  },
+  {
+    "id": 100317,
+    "path": "node_modules/react-native/Libraries/Components/Picker/AndroidDialogPickerNativeComponent.js"
+  },
+  {
+    "id": 100318,
+    "path": "node_modules/react-native/Libraries/Components/Picker/PickerIOS.android.js"
+  },
+  {
+    "id": 100319,
+    "path": "node_modules/react-native/Libraries/Components/ProgressViewIOS/ProgressViewIOS.android.js"
+  },
+  {
+    "id": 100320,
+    "path": "node_modules/react-native/Libraries/Components/SafeAreaView/SafeAreaView.js"
+  },
+  {
+    "id": 100321,
+    "path": "node_modules/react-native/Libraries/Components/SegmentedControlIOS/SegmentedControlIOS.android.js"
+  },
+  {
+    "id": 100322,
+    "path": "node_modules/react-native/Libraries/Components/Slider/Slider.js"
+  },
+  {
+    "id": 100323,
+    "path": "node_modules/react-native/Libraries/Components/Slider/SliderNativeComponent.js"
+  },
+  {
+    "id": 100324,
+    "path": "node_modules/react-native/Libraries/Components/Switch/Switch.js"
+  },
+  {
+    "id": 100325,
+    "path": "node_modules/react-native/Libraries/Components/Switch/AndroidSwitchNativeComponent.js"
+  },
+  {
+    "id": 100326,
+    "path": "node_modules/react-native/Libraries/Components/Switch/SwitchNativeComponent.js"
+  },
+  {
+    "id": 100327,
+    "path": "node_modules/react-native/Libraries/Components/TextInput/TextInput.js"
+  },
+  {
+    "id": 100328,
+    "path": "node_modules/react-native/Libraries/DeprecatedPropTypes/DeprecatedTextInputPropTypes.js"
+  },
+  {
+    "id": 100329,
+    "path": "node_modules/react-native/Libraries/Components/Touchable/TouchableWithoutFeedback.js"
+  },
+  {
+    "id": 100330,
+    "path": "node_modules/react-native/Libraries/Components/TextInput/AndroidTextInputNativeComponent.js"
+  },
+  {
+    "id": 100331,
+    "path": "node_modules/react-native/Libraries/Components/Touchable/TouchableHighlight.js"
+  },
+  {
+    "id": 100332,
+    "path": "node_modules/react-native/Libraries/ActionSheetIOS/ActionSheetIOS.js"
+  },
+  {
+    "id": 100333,
+    "path": "node_modules/react-native/Libraries/ActionSheetIOS/NativeActionSheetManager.js"
+  },
+  {
+    "id": 100334,
+    "path": "node_modules/react-native/Libraries/Utilities/Appearance.js"
+  },
+  {
+    "id": 100335,
+    "path": "node_modules/react-native/Libraries/Utilities/NativeAppearance.js"
+  },
+  {
+    "id": 100336,
+    "path": "node_modules/react-native/Libraries/Utilities/DebugEnvironment.js"
+  },
+  {
+    "id": 100337,
+    "path": "node_modules/react-native/Libraries/ReactNative/AppRegistry.js"
+  },
+  {
+    "id": 100338,
+    "path": "node_modules/react-native/Libraries/ReactNative/NativeHeadlessJsTaskSupport.js"
+  },
+  {
+    "id": 100339,
+    "path": "node_modules/react-native/Libraries/ReactNative/HeadlessJsTaskError.js"
+  },
+  {
+    "id": 100340,
+    "path": "node_modules/react-native/Libraries/BugReporting/BugReporting.js"
+  },
+  {
+    "id": 100341,
+    "path": "node_modules/react-native/Libraries/BugReporting/NativeBugReporting.js"
+  },
+  {
+    "id": 100342,
+    "path": "node_modules/react-native/Libraries/NativeModules/specs/NativeRedBox.js"
+  },
+  {
+    "id": 100343,
+    "path": "node_modules/react-native/Libraries/BugReporting/dumpReactTree.js"
+  },
+  {
+    "id": 100344,
+    "path": "node_modules/react-native/Libraries/Utilities/SceneTracker.js"
+  },
+  {
+    "id": 100345,
+    "path": "node_modules/react-native/Libraries/ReactNative/renderApplication.js"
+  },
+  {
+    "id": 100346,
+    "path": "node_modules/react-native/Libraries/Utilities/PerformanceLoggerContext.js"
+  },
+  {
+    "id": 100347,
+    "path": "node_modules/react-native/Libraries/Utilities/BackHandler.android.js"
+  },
+  {
+    "id": 100348,
+    "path": "node_modules/react-native/Libraries/NativeModules/specs/NativeDeviceEventManager.js"
+  },
+  {
+    "id": 100349,
+    "path": "node_modules/react-native/Libraries/Renderer/shims/ReactFabric.js"
+  },
+  {
+    "id": 100350,
+    "path": "node_modules/react-native/Libraries/Renderer/implementations/ReactFabric-prod.js"
+  },
+  {
+    "id": 100351,
+    "path": "node_modules/react-native/Libraries/AppState/AppState.js"
+  },
+  {
+    "id": 100352,
+    "path": "node_modules/react-native/Libraries/AppState/NativeAppState.js"
+  },
+  {
+    "id": 100353,
+    "path": "node_modules/react-native/Libraries/Utilities/logError.js"
+  },
+  {
+    "id": 100354,
+    "path": "node_modules/react-native/Libraries/Storage/AsyncStorage.js"
+  },
+  {
+    "id": 100355,
+    "path": "node_modules/react-native/Libraries/Storage/NativeAsyncStorage.js"
+  },
+  {
+    "id": 100356,
+    "path": "node_modules/react-native/Libraries/Components/Clipboard/Clipboard.js"
+  },
+  {
+    "id": 100357,
+    "path": "node_modules/react-native/Libraries/Components/Clipboard/NativeClipboard.js"
+  },
+  {
+    "id": 100358,
+    "path": "node_modules/react-native/Libraries/Components/DatePickerAndroid/DatePickerAndroid.android.js"
+  },
+  {
+    "id": 100359,
+    "path": "node_modules/react-native/Libraries/Components/DatePickerAndroid/NativeDatePickerAndroid.js"
+  },
+  {
+    "id": 100360,
+    "path": "node_modules/react-native/Libraries/Utilities/DeviceInfo.js"
+  },
+  {
+    "id": 100361,
+    "path": "node_modules/react-native/Libraries/Utilities/DevSettings.js"
+  },
+  {
+    "id": 100362,
+    "path": "node_modules/react-native/Libraries/NativeModules/specs/NativeDevSettings.js"
+  },
+  {
+    "id": 100363,
+    "path": "node_modules/react-native/Libraries/Image/ImagePickerIOS.js"
+  },
+  {
+    "id": 100364,
+    "path": "node_modules/react-native/Libraries/Image/NativeImagePickerIOS.js"
+  },
+  {
+    "id": 100365,
+    "path": "node_modules/react-native/Libraries/Linking/Linking.js"
+  },
+  {
+    "id": 100366,
+    "path": "node_modules/react-native/Libraries/Linking/NativeLinking.js"
+  },
+  {
+    "id": 100367,
+    "path": "node_modules/react-native/Libraries/Interaction/PanResponder.js"
+  },
+  {
+    "id": 100368,
+    "path": "node_modules/react-native/Libraries/Interaction/TouchHistoryMath.js"
+  },
+  {
+    "id": 100369,
+    "path": "node_modules/react-native/Libraries/PermissionsAndroid/PermissionsAndroid.js"
+  },
+  {
+    "id": 100370,
+    "path": "node_modules/react-native/Libraries/PermissionsAndroid/NativePermissionsAndroid.js"
+  },
+  {
+    "id": 100371,
+    "path": "node_modules/react-native/Libraries/PushNotificationIOS/PushNotificationIOS.js"
+  },
+  {
+    "id": 100372,
+    "path": "node_modules/react-native/Libraries/PushNotificationIOS/NativePushNotificationManagerIOS.js"
+  },
+  {
+    "id": 100373,
+    "path": "node_modules/react-native/Libraries/Settings/Settings.android.js"
+  },
+  {
+    "id": 100374,
+    "path": "node_modules/react-native/Libraries/Share/Share.js"
+  },
+  {
+    "id": 100375,
+    "path": "node_modules/react-native/Libraries/Share/NativeShareModule.js"
+  },
+  {
+    "id": 100376,
+    "path": "node_modules/react-native/Libraries/Components/StatusBar/StatusBarIOS.js"
+  },
+  {
+    "id": 100377,
+    "path": "node_modules/react-native/Libraries/Components/ToastAndroid/ToastAndroid.android.js"
+  },
+  {
+    "id": 100378,
+    "path": "node_modules/react-native/Libraries/Components/ToastAndroid/NativeToastAndroid.js"
+  },
+  {
+    "id": 100379,
+    "path": "node_modules/react-native/Libraries/Utilities/useColorScheme.js"
+  },
+  {
+    "id": 100380,
+    "path": "node_modules/use-subscription/index.js"
+  },
+  {
+    "id": 100381,
+    "path": "node_modules/use-subscription/cjs/use-subscription.production.min.js"
+  },
+  {
+    "id": 100382,
+    "path": "node_modules/react-native/Libraries/Utilities/useWindowDimensions.js"
+  },
+  {
+    "id": 100383,
+    "path": "node_modules/react-native/Libraries/Vibration/Vibration.js"
+  },
+  {
+    "id": 100384,
+    "path": "node_modules/react-native/Libraries/Vibration/NativeVibration.js"
+  },
+  {
+    "id": 100385,
+    "path": "node_modules/react-native/Libraries/YellowBox/YellowBox.js"
+  },
+  {
+    "id": 100386,
+    "path": "node_modules/react-native/Libraries/YellowBox/Data/YellowBoxWarning.js"
+  },
+  {
+    "id": 100387,
+    "path": "node_modules/react-native/Libraries/YellowBox/Data/YellowBoxCategory.js"
+  },
+  {
+    "id": 100388,
+    "path": "node_modules/react-native/Libraries/YellowBox/Data/YellowBoxSymbolication.js"
+  },
+  {
+    "id": 100389,
+    "path": "node_modules/react-native/Libraries/DeprecatedPropTypes/DeprecatedPointPropType.js"
+  },
+  {
+    "id": 100390,
+    "path": "app.json"
+  },
+  {
+    "id": 100391,
+    "path": "src/aura/utils/DebugUtils.ts"
+  },
+  {
+    "id": 100392,
+    "path": "src/aura/utils/Logger.ts"
+  },
+  {
+    "id": 100393,
+    "path": "App.tsx"
+  },
+  {
+    "id": 100394,
+    "path": "src/navigation/AppNavigator.tsx"
+  },
+  {
+    "id": 100395,
+    "path": "src/utils/NavigationHelper.ts"
+  },
+  {
+    "id": 100396,
+    "path": "node_modules/@react-navigation/native/src/index.tsx"
+  },
+  {
+    "id": 100397,
+    "path": "node_modules/@react-navigation/core/src/index.tsx"
+  },
+  {
+    "id": 100398,
+    "path": "node_modules/@react-navigation/routers/src/index.tsx"
+  },
+  {
+    "id": 100399,
+    "path": "node_modules/@react-navigation/routers/src/CommonActions.tsx"
+  },
+  {
+    "id": 100400,
+    "path": "node_modules/@react-navigation/routers/src/BaseRouter.tsx"
+  },
+  {
+    "id": 100401,
+    "path": "node_modules/nanoid/non-secure/index.js"
+  },
+  {
+    "id": 100402,
+    "path": "node_modules/@react-navigation/routers/src/StackRouter.tsx"
+  },
+  {
+    "id": 100403,
+    "path": "node_modules/@react-navigation/routers/src/TabRouter.tsx"
+  },
+  {
+    "id": 100404,
+    "path": "node_modules/@react-navigation/routers/src/DrawerRouter.tsx"
+  },
+  {
+    "id": 100405,
+    "path": "node_modules/@react-navigation/routers/src/types.tsx"
+  },
+  {
+    "id": 100406,
+    "path": "node_modules/@react-navigation/core/src/BaseNavigationContainer.tsx"
+  },
+  {
+    "id": 100407,
+    "path": "node_modules/@react-navigation/core/src/EnsureSingleNavigator.tsx"
+  },
+  {
+    "id": 100408,
+    "path": "node_modules/@react-navigation/core/src/NavigationBuilderContext.tsx"
+  },
+  {
+    "id": 100409,
+    "path": "node_modules/@react-navigation/core/src/useScheduleUpdate.tsx"
+  },
+  {
+    "id": 100410,
+    "path": "node_modules/@react-navigation/core/src/useFocusedListeners.tsx"
+  },
+  {
+    "id": 100411,
+    "path": "node_modules/@react-navigation/core/src/useDevTools.tsx"
+  },
+  {
+    "id": 100412,
+    "path": "node_modules/@react-navigation/core/src/useStateGetters.tsx"
+  },
+  {
+    "id": 100413,
+    "path": "node_modules/@react-navigation/core/src/useOptionsGetters.tsx"
+  },
+  {
+    "id": 100414,
+    "path": "node_modules/@react-navigation/core/src/NavigationStateContext.tsx"
+  },
+  {
+    "id": 100415,
+    "path": "node_modules/@react-navigation/core/src/useEventEmitter.tsx"
+  },
+  {
+    "id": 100416,
+    "path": "node_modules/@react-navigation/core/src/useSyncState.tsx"
+  },
+  {
+    "id": 100417,
+    "path": "node_modules/@react-navigation/core/src/isSerializable.tsx"
+  },
+  {
+    "id": 100418,
+    "path": "node_modules/@react-navigation/core/src/createNavigatorFactory.tsx"
+  },
+  {
+    "id": 100419,
+    "path": "node_modules/@react-navigation/core/src/Screen.tsx"
+  },
+  {
+    "id": 100420,
+    "path": "node_modules/@react-navigation/core/src/NavigationHelpersContext.tsx"
+  },
+  {
+    "id": 100421,
+    "path": "node_modules/@react-navigation/core/src/NavigationContext.tsx"
+  },
+  {
+    "id": 100422,
+    "path": "node_modules/@react-navigation/core/src/NavigationRouteContext.tsx"
+  },
+  {
+    "id": 100423,
+    "path": "node_modules/@react-navigation/core/src/CurrentRenderContext.tsx"
+  },
+  {
+    "id": 100424,
+    "path": "node_modules/@react-navigation/core/src/useNavigationBuilder.tsx"
+  },
+  {
+    "id": 100425,
+    "path": "node_modules/react-is/index.js"
+  },
+  {
+    "id": 100426,
+    "path": "node_modules/react-is/cjs/react-is.production.min.js"
+  },
+  {
+    "id": 100427,
+    "path": "node_modules/@react-navigation/core/src/useRegisterNavigator.tsx"
+  },
+  {
+    "id": 100428,
+    "path": "node_modules/@react-navigation/core/src/useDescriptors.tsx"
+  },
+  {
+    "id": 100429,
+    "path": "node_modules/@react-navigation/core/src/SceneView.tsx"
+  },
+  {
+    "id": 100430,
+    "path": "node_modules/@react-navigation/core/src/StaticContainer.tsx"
+  },
+  {
+    "id": 100431,
+    "path": "node_modules/@react-navigation/core/src/useNavigationCache.tsx"
+  },
+  {
+    "id": 100432,
+    "path": "node_modules/@react-navigation/core/src/useNavigationHelpers.tsx"
+  },
+  {
+    "id": 100433,
+    "path": "node_modules/@react-navigation/core/src/types.tsx"
+  },
+  {
+    "id": 100434,
+    "path": "node_modules/@react-navigation/core/src/useOnAction.tsx"
+  },
+  {
+    "id": 100435,
+    "path": "node_modules/@react-navigation/core/src/useFocusEvents.tsx"
+  },
+  {
+    "id": 100436,
+    "path": "node_modules/@react-navigation/core/src/useOnRouteFocus.tsx"
+  },
+  {
+    "id": 100437,
+    "path": "node_modules/@react-navigation/core/src/useChildActionListeners.tsx"
+  },
+  {
+    "id": 100438,
+    "path": "node_modules/@react-navigation/core/src/useFocusedListenersChildrenAdapter.tsx"
+  },
+  {
+    "id": 100439,
+    "path": "node_modules/@react-navigation/core/src/useOnGetState.tsx"
+  },
+  {
+    "id": 100440,
+    "path": "node_modules/@react-navigation/core/src/isArrayEqual.tsx"
+  },
+  {
+    "id": 100441,
+    "path": "node_modules/@react-navigation/core/src/useCurrentRender.tsx"
+  },
+  {
+    "id": 100442,
+    "path": "node_modules/@react-navigation/core/src/useNavigation.tsx"
+  },
+  {
+    "id": 100443,
+    "path": "node_modules/@react-navigation/core/src/useRoute.tsx"
+  },
+  {
+    "id": 100444,
+    "path": "node_modules/@react-navigation/core/src/useFocusEffect.tsx"
+  },
+  {
+    "id": 100445,
+    "path": "node_modules/@react-navigation/core/src/useIsFocused.tsx"
+  },
+  {
+    "id": 100446,
+    "path": "node_modules/@react-navigation/core/src/useNavigationState.tsx"
+  },
+  {
+    "id": 100447,
+    "path": "node_modules/@react-navigation/core/src/getStateFromPath.tsx"
+  },
+  {
+    "id": 100448,
+    "path": "node_modules/@react-navigation/core/node_modules/escape-string-regexp/index.js"
+  },
+  {
+    "id": 100449,
+    "path": "node_modules/query-string/index.js"
+  },
+  {
+    "id": 100450,
+    "path": "node_modules/strict-uri-encode/index.js"
+  },
+  {
+    "id": 100451,
+    "path": "node_modules/decode-uri-component/index.js"
+  },
+  {
+    "id": 100452,
+    "path": "node_modules/split-on-first/index.js"
+  },
+  {
+    "id": 100453,
+    "path": "node_modules/@react-navigation/core/src/getPathFromState.tsx"
+  },
+  {
+    "id": 100454,
+    "path": "node_modules/@react-navigation/core/src/getActionFromState.tsx"
+  },
+  {
+    "id": 100455,
+    "path": "node_modules/@react-navigation/native/src/NavigationContainer.tsx"
+  },
+  {
+    "id": 100456,
+    "path": "node_modules/@react-navigation/native/src/theming/ThemeProvider.tsx"
+  },
+  {
+    "id": 100457,
+    "path": "node_modules/@react-navigation/native/src/theming/ThemeContext.tsx"
+  },
+  {
+    "id": 100458,
+    "path": "node_modules/@react-navigation/native/src/theming/DefaultTheme.tsx"
+  },
+  {
+    "id": 100459,
+    "path": "node_modules/@react-navigation/native/src/LinkingContext.tsx"
+  },
+  {
+    "id": 100460,
+    "path": "node_modules/@react-navigation/native/src/useThenable.tsx"
+  },
+  {
+    "id": 100461,
+    "path": "node_modules/@react-navigation/native/src/useLinking.native.tsx"
+  },
+  {
+    "id": 100462,
+    "path": "node_modules/@react-navigation/native/src/useBackButton.tsx"
+  },
+  {
+    "id": 100463,
+    "path": "node_modules/@react-navigation/native/src/useScrollToTop.tsx"
+  },
+  {
+    "id": 100464,
+    "path": "node_modules/@react-navigation/native/src/theming/DarkTheme.tsx"
+  },
+  {
+    "id": 100465,
+    "path": "node_modules/@react-navigation/native/src/theming/useTheme.tsx"
+  },
+  {
+    "id": 100466,
+    "path": "node_modules/@react-navigation/native/src/Link.tsx"
+  },
+  {
+    "id": 100467,
+    "path": "node_modules/@react-navigation/native/src/useLinkProps.tsx"
+  },
+  {
+    "id": 100468,
+    "path": "node_modules/@react-navigation/native/src/useLinkTo.tsx"
+  },
+  {
+    "id": 100469,
+    "path": "node_modules/@react-navigation/native/src/useLinkBuilder.tsx"
+  },
+  {
+    "id": 100470,
+    "path": "node_modules/@react-navigation/native/src/ServerContainer.tsx"
+  },
+  {
+    "id": 100471,
+    "path": "node_modules/@react-navigation/native/src/ServerContext.tsx"
+  },
+  {
+    "id": 100472,
+    "path": "node_modules/@react-navigation/native/src/types.tsx"
+  },
+  {
+    "id": 100473,
+    "path": "src/navigation/AuraStackNavigator.tsx"
+  },
+  {
+    "id": 100474,
+    "path": "node_modules/@react-navigation/stack/src/index.tsx"
+  },
+  {
+    "id": 100475,
+    "path": "node_modules/@react-navigation/stack/src/TransitionConfigs/CardStyleInterpolators.tsx"
+  },
+  {
+    "id": 100476,
+    "path": "node_modules/react-native-iphone-x-helper/index.js"
+  },
+  {
+    "id": 100477,
+    "path": "node_modules/@react-navigation/stack/src/utils/conditional.tsx"
+  },
+  {
+    "id": 100478,
+    "path": "node_modules/@react-navigation/stack/src/TransitionConfigs/HeaderStyleInterpolators.tsx"
+  },
+  {
+    "id": 100479,
+    "path": "node_modules/@react-navigation/stack/src/TransitionConfigs/TransitionSpecs.tsx"
+  },
+  {
+    "id": 100480,
+    "path": "node_modules/@react-navigation/stack/src/TransitionConfigs/TransitionPresets.tsx"
+  },
+  {
+    "id": 100481,
+    "path": "node_modules/@react-navigation/stack/src/navigators/createStackNavigator.tsx"
+  },
+  {
+    "id": 100482,
+    "path": "node_modules/@react-navigation/stack/src/views/Stack/StackView.tsx"
+  },
+  {
+    "id": 100483,
+    "path": "node_modules/react-native-safe-area-context/src/index.tsx"
+  },
+  {
+    "id": 100484,
+    "path": "node_modules/react-native-safe-area-context/src/SafeAreaContext.tsx"
+  },
+  {
+    "id": 100485,
+    "path": "node_modules/react-native-safe-area-context/src/NativeSafeAreaView.native.tsx"
+  },
+  {
+    "id": 100486,
+    "path": "node_modules/react-native-safe-area-context/src/SafeAreaView.tsx"
+  },
+  {
+    "id": 100487,
+    "path": "node_modules/react-native-safe-area-context/src/InitialWindow.native.ts"
+  },
+  {
+    "id": 100488,
+    "path": "node_modules/react-native-safe-area-context/src/SafeArea.types.ts"
+  },
+  {
+    "id": 100489,
+    "path": "node_modules/@react-navigation/stack/src/views/GestureHandler.native.tsx"
+  },
+  {
+    "id": 100490,
+    "path": "node_modules/react-native-gesture-handler/index.js"
+  },
+  {
+    "id": 100491,
+    "path": "node_modules/react-native-gesture-handler/Swipeable.js"
+  },
+  {
+    "id": 100492,
+    "path": "node_modules/react-native-gesture-handler/GestureHandler.js"
+  },
+  {
+    "id": 100493,
+    "path": "node_modules/react-native-gesture-handler/createNativeWrapper.js"
+  },
+  {
+    "id": 100494,
+    "path": "node_modules/react-native-gesture-handler/NativeViewGestureHandler.js"
+  },
+  {
+    "id": 100495,
+    "path": "node_modules/react-native-gesture-handler/createHandler.js"
+  },
+  {
+    "id": 100496,
+    "path": "node_modules/fbjs/lib/areEqual.js"
+  },
+  {
+    "id": 100497,
+    "path": "node_modules/react-native-gesture-handler/RNGestureHandlerModule.js"
+  },
+  {
+    "id": 100498,
+    "path": "node_modules/react-native-gesture-handler/State.js"
+  },
+  {
+    "id": 100499,
+    "path": "node_modules/react-native-gesture-handler/GestureHandlerPropTypes.js"
+  },
+  {
+    "id": 100500,
+    "path": "node_modules/react-native-gesture-handler/Directions.js"
+  },
+  {
+    "id": 100501,
+    "path": "node_modules/react-native-gesture-handler/gestureHandlerRootHOC.js"
+  },
+  {
+    "id": 100502,
+    "path": "node_modules/react-native-gesture-handler/node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js"
+  },
+  {
+    "id": 100503,
+    "path": "node_modules/react-native-gesture-handler/GestureHandlerRootView.android.js"
+  },
+  {
+    "id": 100504,
+    "path": "node_modules/react-native-gesture-handler/GestureButtons.js"
+  },
+  {
+    "id": 100505,
+    "path": "node_modules/react-native-gesture-handler/GestureHandlerButton.js"
+  },
+  {
+    "id": 100506,
+    "path": "node_modules/react-native-gesture-handler/GestureComponents.js"
+  },
+  {
+    "id": 100507,
+    "path": "node_modules/react-native-gesture-handler/Gestures.js"
+  },
+  {
+    "id": 100508,
+    "path": "node_modules/react-native-gesture-handler/PlatformConstants.js"
+  },
+  {
+    "id": 100509,
+    "path": "node_modules/react-native-gesture-handler/DrawerLayout.js"
+  },
+  {
+    "id": 100510,
+    "path": "node_modules/react-native-gesture-handler/touchables/index.js"
+  },
+  {
+    "id": 100511,
+    "path": "node_modules/react-native-gesture-handler/touchables/TouchableNativeFeedback.android.js"
+  },
+  {
+    "id": 100512,
+    "path": "node_modules/react-native-gesture-handler/touchables/GenericTouchable.js"
+  },
+  {
+    "id": 100513,
+    "path": "node_modules/react-native-gesture-handler/touchables/TouchableWithoutFeedback.js"
+  },
+  {
+    "id": 100514,
+    "path": "node_modules/react-native-gesture-handler/touchables/TouchableOpacity.js"
+  },
+  {
+    "id": 100515,
+    "path": "node_modules/react-native-gesture-handler/touchables/TouchableHighlight.js"
+  },
+  {
+    "id": 100516,
+    "path": "node_modules/@react-navigation/stack/src/utils/GestureHandlerRefContext.tsx"
+  },
+  {
+    "id": 100517,
+    "path": "node_modules/@react-navigation/stack/src/views/Stack/CardStack.tsx"
+  },
+  {
+    "id": 100518,
+    "path": "node_modules/@react-navigation/stack/src/views/Screens.tsx"
+  },
+  {
+    "id": 100519,
+    "path": "node_modules/react-native-screens/src/screens.native.js"
+  },
+  {
+    "id": 100520,
+    "path": "node_modules/react-native/Libraries/Core/ReactNativeVersion.js"
+  },
+  {
+    "id": 100521,
+    "path": "node_modules/@react-navigation/stack/src/views/Header/HeaderSegment.tsx"
+  },
+  {
+    "id": 100522,
+    "path": "node_modules/@react-navigation/stack/src/views/Header/HeaderBackButton.tsx"
+  },
+  {
+    "id": 100523,
+    "path": "node_modules/@react-navigation/stack/src/views/MaskedView.native.tsx"
+  },
+  {
+    "id": 100524,
+    "path": "node_modules/@react-native-community/masked-view/index.js"
+  },
+  {
+    "id": 100525,
+    "path": "node_modules/@react-native-community/masked-view/js/MaskedView.js"
+  },
+  {
+    "id": 100526,
+    "path": "node_modules/@react-navigation/stack/src/views/TouchableItem.native.tsx"
+  },
+  {
+    "id": 100527,
+    "path": "node_modules/@react-navigation/stack/src/views/BorderlessButton.tsx"
+  },
+  {
+    "id": 100528,
+    "path": "node_modules/@react-navigation/stack/src/views/assets/back-icon.png"
+  },
+  {
+    "id": 100529,
+    "path": "node_modules/@react-navigation/stack/src/views/assets/back-icon-mask.png"
+  },
+  {
+    "id": 100530,
+    "path": "node_modules/@react-navigation/stack/src/views/Header/HeaderBackground.tsx"
+  },
+  {
+    "id": 100531,
+    "path": "node_modules/@react-navigation/stack/src/utils/memoize.tsx"
+  },
+  {
+    "id": 100532,
+    "path": "node_modules/@react-navigation/stack/src/views/Stack/CardContainer.tsx"
+  },
+  {
+    "id": 100533,
+    "path": "node_modules/@react-navigation/stack/src/views/Stack/Card.tsx"
+  },
+  {
+    "id": 100534,
+    "path": "node_modules/color/index.js"
+  },
+  {
+    "id": 100535,
+    "path": "node_modules/color-string/index.js"
+  },
+  {
+    "id": 100536,
+    "path": "node_modules/color-name/index.js"
+  },
+  {
+    "id": 100537,
+    "path": "node_modules/simple-swizzle/index.js"
+  },
+  {
+    "id": 100538,
+    "path": "node_modules/is-arrayish/index.js"
+  },
+  {
+    "id": 100539,
+    "path": "node_modules/color-convert/index.js"
+  },
+  {
+    "id": 100540,
+    "path": "node_modules/color-convert/conversions.js"
+  },
+  {
+    "id": 100541,
+    "path": "node_modules/color-convert/node_modules/color-name/index.js"
+  },
+  {
+    "id": 100542,
+    "path": "node_modules/color-convert/route.js"
+  },
+  {
+    "id": 100543,
+    "path": "node_modules/@react-navigation/stack/src/views/Stack/CardSheet.tsx"
+  },
+  {
+    "id": 100544,
+    "path": "node_modules/@react-navigation/stack/src/utils/CardAnimationContext.tsx"
+  },
+  {
+    "id": 100545,
+    "path": "node_modules/@react-navigation/stack/src/utils/getDistanceForDirection.tsx"
+  },
+  {
+    "id": 100546,
+    "path": "node_modules/@react-navigation/stack/src/utils/getInvertedMultiplier.tsx"
+  },
+  {
+    "id": 100547,
+    "path": "node_modules/@react-navigation/stack/src/utils/HeaderHeightContext.tsx"
+  },
+  {
+    "id": 100548,
+    "path": "node_modules/@react-navigation/stack/src/utils/HeaderShownContext.tsx"
+  },
+  {
+    "id": 100549,
+    "path": "node_modules/@react-navigation/stack/src/views/KeyboardManager.tsx"
+  },
+  {
+    "id": 100550,
+    "path": "node_modules/@react-navigation/stack/src/views/Header/HeaderContainer.tsx"
+  },
+  {
+    "id": 100551,
+    "path": "node_modules/@react-navigation/stack/src/views/Header/Header.tsx"
+  },
+  {
+    "id": 100552,
+    "path": "node_modules/@react-navigation/stack/src/views/Header/HeaderTitle.tsx"
+  },
+  {
+    "id": 100553,
+    "path": "node_modules/@react-navigation/stack/src/utils/debounce.tsx"
+  },
+  {
+    "id": 100554,
+    "path": "node_modules/@react-navigation/stack/src/views/SafeAreaProviderCompat.tsx"
+  },
+  {
+    "id": 100555,
+    "path": "node_modules/@react-navigation/stack/src/utils/useCardAnimation.tsx"
+  },
+  {
+    "id": 100556,
+    "path": "node_modules/@react-navigation/stack/src/utils/useHeaderHeight.tsx"
+  },
+  {
+    "id": 100557,
+    "path": "node_modules/@react-navigation/stack/src/utils/useGestureHandlerRef.tsx"
+  },
+  {
+    "id": 100558,
+    "path": "src/samples/navigation/pages/DemoPage1.tsx"
+  },
+  {
+    "id": 100559,
+    "path": "src/aura/base/BaseComponent.ts"
+  },
+  {
+    "id": 100560,
+    "path": "src/samples/navigation/pages/DemoPage3.tsx"
+  },
+  {
+    "id": 100561,
+    "path": "src/samples/navigation/pages/DemoPage4.tsx"
+  },
+  {
+    "id": 100562,
+    "path": "src/samples/navigation/pages/DemoPage2.tsx"
+  },
+  {
+    "id": 100563,
+    "path": "src/navigation/AuraBottomTabNavigator.tsx"
+  },
+  {
+    "id": 100564,
+    "path": "node_modules/@react-navigation/bottom-tabs/src/index.tsx"
+  },
+  {
+    "id": 100565,
+    "path": "node_modules/@react-navigation/bottom-tabs/src/navigators/createBottomTabNavigator.tsx"
+  },
+  {
+    "id": 100566,
+    "path": "node_modules/@react-navigation/bottom-tabs/src/views/BottomTabView.tsx"
+  },
+  {
+    "id": 100567,
+    "path": "node_modules/@react-navigation/bottom-tabs/src/views/SafeAreaProviderCompat.tsx"
+  },
+  {
+    "id": 100568,
+    "path": "node_modules/@react-navigation/bottom-tabs/src/views/ResourceSavingScene.tsx"
+  },
+  {
+    "id": 100569,
+    "path": "node_modules/@react-navigation/bottom-tabs/src/views/BottomTabBar.tsx"
+  },
+  {
+    "id": 100570,
+    "path": "node_modules/@react-navigation/bottom-tabs/src/views/BottomTabItem.tsx"
+  },
+  {
+    "id": 100571,
+    "path": "node_modules/@react-navigation/bottom-tabs/src/views/TabBarIcon.tsx"
+  },
+  {
+    "id": 100572,
     "path": "src/components/ItemBottomTabBar.tsx"
+  },
+  {
+    "id": 100573,
+    "path": "src/navigation/NavigationRouter.ts"
+  },
+  {
+    "id": 100574,
+    "path": "src/pages/shop_recomend/SwipeRecommendShopPage.tsx"
+  },
+  {
+    "id": 100575,
+    "path": "src/resources/dimensions/ScreenDimensions.ts"
+  },
+  {
+    "id": 100576,
+    "path": "src/aura/utils/DeviceUtils.ts"
+  },
+  {
+    "id": 100577,
+    "path": "src/resources/images/ImageRes.ts"
+  },
+  {
+    "id": 100578,
+    "path": "src/resources/images/src/main/tabbar_homepage.png"
+  },
+  {
+    "id": 100579,
+    "path": "src/resources/images/src/main/tabbar_homepage_selected.png"
+  },
+  {
+    "id": 100580,
+    "path": "src/resources/images/src/main/tabbar_recommend.png"
+  },
+  {
+    "id": 100581,
+    "path": "src/resources/images/src/main/tabbar_recommend_selected.png"
+  },
+  {
+    "id": 100582,
+    "path": "src/resources/images/src/main/tabbar_discover.png"
+  },
+  {
+    "id": 100583,
+    "path": "src/resources/images/src/main/tabbar_discover_selected.png"
+  },
+  {
+    "id": 100584,
+    "path": "src/resources/images/src/main/tabbar_mine.png"
+  },
+  {
+    "id": 100585,
+    "path": "src/resources/images/src/main/tabbar_mine_selected.png"
+  },
+  {
+    "id": 100586,
+    "path": "src/resources/images/src/main/search_icon.png"
+  },
+  {
+    "id": 100587,
+    "path": "src/resources/images/src/main/main_bg_img.png"
+  },
+  {
+    "id": 100588,
+    "path": "src/resources/images/src/main/icon_exclamation_mark.png"
+  },
+  {
+    "id": 100589,
+    "path": "src/resources/images/src/home/icon_navigation_item_message_white.png"
+  },
+  {
+    "id": 100590,
+    "path": "src/resources/images/src/main/icon_item_home_page.png"
+  },
+  {
+    "id": 100591,
+    "path": "src/resources/images/src/shopinfo/shop_info_title.png"
+  },
+  {
+    "id": 100592,
+    "path": "src/pages/shop_recomend/ShopInfoRecommendPage.tsx"
+  },
+  {
+    "id": 100593,
+    "path": "node_modules/react-native-linear-gradient/index.android.js"
+  },
+  {
+    "id": 100594,
+    "path": "node_modules/react-native-linear-gradient/common.js"
+  },
+  {
+    "id": 100595,
+    "path": "src/pages/HomePage.tsx"
+  },
+  {
+    "id": 100596,
+    "path": "src/aura/widgets/AuraText.js"
+  },
+  {
+    "id": 100597,
+    "path": "src/resources/colors/ColorRes.ts"
+  },
+  {
+    "id": 100598,
+    "path": "src/widgets/TopNavigationItem.tsx"
+  },
+  {
+    "id": 100599,
+    "path": "src/resources/styles/HomePageStyle.ts"
+  },
+  {
+    "id": 100600,
+    "path": "src/resources/styles/CommonStyles.ts"
+  },
+  {
+    "id": 100601,
+    "path": "src/components/CommonGridMenuVIew.tsx"
+  },
+  {
+    "id": 100602,
+    "path": "node_modules/react-native-page-control/index.js"
+  },
+  {
+    "id": 100603,
+    "path": "node_modules/react-native-page-control/PageControl.js"
+  },
+  {
+    "id": 100604,
+    "path": "node_modules/create-react-class/index.js"
+  },
+  {
+    "id": 100605,
+    "path": "node_modules/create-react-class/factory.js"
+  },
+  {
+    "id": 100606,
+    "path": "node_modules/create-react-class/node_modules/fbjs/lib/emptyObject.js"
+  },
+  {
+    "id": 100607,
+    "path": "node_modules/create-react-class/node_modules/fbjs/lib/invariant.js"
+  },
+  {
+    "id": 100608,
+    "path": "src/api/HomeGridMenuInfos.ts"
+  },
+  {
+    "id": 100609,
+    "path": "src/aura/network/FetchHelper.ts"
+  },
+  {
+    "id": 100610,
+    "path": "src/aura/network/lib/Options.ts"
+  },
+  {
+    "id": 100611,
+    "path": "src/aura/network/lib/AuraHttp.ts"
+  },
+  {
+    "id": 100612,
+    "path": "src/aura/network/interceptors/FetchMainRequest.ts"
+  },
+  {
+    "id": 100613,
+    "path": "src/aura/utils/RegExgUtils.ts"
+  },
+  {
+    "id": 100614,
+    "path": "src/aura/network/utils/FetchUtils.ts"
+  },
+  {
+    "id": 100615,
+    "path": "src/aura/network/response/ErrorCode.ts"
+  },
+  {
+    "id": 100616,
+    "path": "src/api/HomeFlatListData.ts"
+  },
+  {
+    "id": 100617,
+    "path": "src/components/HomeFlatList.tsx"
+  },
+  {
+    "id": 100618,
+    "path": "src/pages/RecommendPage.tsx"
+  },
+  {
+    "id": 100619,
+    "path": "src/aura/network/index.js"
+  },
+  {
+    "id": 100620,
+    "path": "src/network/RequestUrl.ts"
+  },
+  {
+    "id": 100621,
+    "path": "src/resources/styles/RecommendStyles.ts"
+  },
+  {
+    "id": 100622,
+    "path": "src/pages/DiscoveryPage.tsx"
+  },
+  {
+    "id": 100623,
+    "path": "src/resources/styles/index.ts"
+  },
+  {
+    "id": 100624,
+    "path": "src/resources/styles/ListItemStyles.ts"
+  },
+  {
+    "id": 100625,
+    "path": "src/resources/styles/SplashStyles.ts"
+  },
+  {
+    "id": 100626,
+    "path": "src/resources/styles/DiscoveryPageStyle.ts"
+  },
+  {
+    "id": 100627,
+    "path": "src/pages/MyProfilePage.tsx"
+  },
+  {
+    "id": 100628,
+    "path": "src/utils/DataBaseUtils.ts"
+  },
+  {
+    "id": 100629,
+    "path": "src/aura/utils/FileUtils.ts"
+  },
+  {
+    "id": 100630,
+    "path": "node_modules/react-native-fs/FS.common.js"
+  },
+  {
+    "id": 100631,
+    "path": "node_modules/base-64/base64.js"
+  },
+  {
+    "id": 100632,
+    "path": "node_modules/utf8/utf8.js"
   }
 ]

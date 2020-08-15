@@ -1,63 +1,63 @@
 [
   {
     "id": 0,
-    "path": "platformEntry.js"
+    "path": "toolkits/metro/multi_bundle/entry/platformEntry.js"
   },
   {
     "id": 1,
-    "path": "node_modules/react/index.js"
-  },
-  {
-    "id": 2,
-    "path": "node_modules/react/cjs/react.production.min.js"
-  },
-  {
-    "id": 3,
-    "path": "node_modules/object-assign/index.js"
-  },
-  {
-    "id": 4,
-    "path": "node_modules/@babel/runtime/helpers/extends.js"
-  },
-  {
-    "id": 5,
-    "path": "node_modules/react-native/index.js"
-  },
-  {
-    "id": 6,
-    "path": "node_modules/invariant/browser.js"
-  },
-  {
-    "id": 7,
-    "path": "node_modules/react-native/Libraries/Utilities/warnOnce.js"
-  },
-  {
-    "id": 8,
-    "path": "node_modules/fbjs/lib/warning.js"
-  },
-  {
-    "id": 9,
-    "path": "node_modules/fbjs/lib/emptyFunction.js"
-  },
-  {
-    "id": 10,
-    "path": "node_modules/react-native/Libraries/Components/AccessibilityInfo/AccessibilityInfo.android.js"
-  },
-  {
-    "id": 11,
-    "path": "node_modules/@babel/runtime/helpers/interopRequireDefault.js"
-  },
-  {
-    "id": 12,
-    "path": "node_modules/react-native/Libraries/Components/AccessibilityInfo/NativeAccessibilityInfo.js"
-  },
-  {
-    "id": 13,
     "path": "node_modules/@babel/runtime/helpers/interopRequireWildcard.js"
   },
   {
-    "id": 14,
+    "id": 2,
     "path": "node_modules/@babel/runtime/helpers/typeof.js"
+  },
+  {
+    "id": 3,
+    "path": "node_modules/react/index.js"
+  },
+  {
+    "id": 4,
+    "path": "node_modules/react/cjs/react.production.min.js"
+  },
+  {
+    "id": 5,
+    "path": "node_modules/object-assign/index.js"
+  },
+  {
+    "id": 6,
+    "path": "node_modules/@babel/runtime/helpers/extends.js"
+  },
+  {
+    "id": 7,
+    "path": "node_modules/react-native/index.js"
+  },
+  {
+    "id": 8,
+    "path": "node_modules/invariant/browser.js"
+  },
+  {
+    "id": 9,
+    "path": "node_modules/react-native/Libraries/Utilities/warnOnce.js"
+  },
+  {
+    "id": 10,
+    "path": "node_modules/fbjs/lib/warning.js"
+  },
+  {
+    "id": 11,
+    "path": "node_modules/fbjs/lib/emptyFunction.js"
+  },
+  {
+    "id": 12,
+    "path": "node_modules/react-native/Libraries/Components/AccessibilityInfo/AccessibilityInfo.android.js"
+  },
+  {
+    "id": 13,
+    "path": "node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+  },
+  {
+    "id": 14,
+    "path": "node_modules/react-native/Libraries/Components/AccessibilityInfo/NativeAccessibilityInfo.js"
   },
   {
     "id": 15,

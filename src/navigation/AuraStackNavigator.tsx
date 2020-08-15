@@ -49,13 +49,6 @@ export default function AuraStackNavigator() {
                 options={{headerLeft: null, headerShown: false}}
             />
 
-            {/*栈管理路由器包含的是一个底部标签的路由容器*/}
-            <Stack.Screen
-                name={stackNavigationRouter.MainPage.pageName}
-                component={AuraBottomTabNavigator}
-                // @ts-ignore
-                options={{headerLeft: null, headerShown: false}}
-            />
             {/*带有滑动效果的店铺列表配置页面*/}
             <Stack.Screen
                 name={stackNavigationRouter.SwipeRecommendShopPage.pageName}
