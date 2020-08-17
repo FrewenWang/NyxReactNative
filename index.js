@@ -38,7 +38,9 @@ ignoreYellowWarning();
 
 // import App from './src/samples/decorators/DemoDecorators';
 
-import App from './App';
+import App from './src/samples/basic/DemoModal';
+
+// import App from './App';
 
 console.log('HelloReactNative', 'Enter App');
 AppRegistry.registerComponent(appName, () => App);
