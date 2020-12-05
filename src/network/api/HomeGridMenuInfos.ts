@@ -1,4 +1,4 @@
-import ImageRes from '../resources/images/ImageRes';
+import ImageRes from '../../resources/images/ImageRes';
 
 export const menuInfos = [
     {title: '美食', icon: ImageRes.home.itemIcon},

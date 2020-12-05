@@ -5,7 +5,7 @@ import BottomTabBarItem from '../components/ItemBottomTabBar';
 import navigationHelper from '../utils/NavigationHelper';
 import Logger from '../aura/utils/Logger';
 import {StackHeaderOptions} from '@react-navigation/stack/lib/typescript/src/types';
-import {bottomTabNavigationRouter} from './NavigationRouter';
+import {bottomTabRouter} from './NavigationRouter';
 
 const Tab = createBottomTabNavigator();
 const TAG = 'AuraBottomTabNavigator';
@@ -34,9 +34,9 @@ export default class AuraBottomTabNavigator<ViewProps, State> extends PureCompon
                                 tintColor={'purple'}
                                 focused={focused}
                                 // @ts-ignore
-                                normalImage={bottomTabNavigationRouter[route.name].inActiveIcon}
+                                normalImage={bottomTabRouter[route.name].inActiveIcon}
                                 // @ts-ignore
-                                selectedImage={bottomTabNavigationRouter[route.name].activeIcon}
+                                selectedImage={bottomTabRouter[route.name].activeIcon}
                             />
                         );
                     },
@@ -46,9 +46,9 @@ export default class AuraBottomTabNavigator<ViewProps, State> extends PureCompon
                 {/*tabBarOptions={_tabBarOptions}  */}
 
                 {/* 遍历我们底部导航栏的配置数据.遍历对象所有的属性*/}
-                {Object.keys(bottomTabNavigationRouter).map((key: any, index: number) => {
+                {Object.keys(bottomTabRouter).map((key: any, index: number) => {
                     // @ts-ignore
-                    const item = bottomTabNavigationRouter[key];
+                    const item = bottomTabRouter[key];
                     return (
                         <Tab.Screen
                             name={item.pageName}

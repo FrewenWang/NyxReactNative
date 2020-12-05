@@ -6,6 +6,8 @@ import AuraStackNavigator from './AuraStackNavigator';
 
 /**
  * App的Navigation容器
+ * 这个路由导航里面由一个NavigationContainer的路由导航的容器
+ * 目前路由导航的容器里面存放的是AuraStackNavigator（Aura栈路由）
  * @constructor
  */
 const AppNavigator = () => {

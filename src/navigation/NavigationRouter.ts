@@ -5,23 +5,25 @@ import ImageRes from '../resources/images/ImageRes';
 import RecommendPage from '../pages/RecommendPage';
 import DiscoveryPage from '../pages/DiscoveryPage';
 import MyProfilePage from '../pages/MyProfilePage';
+import SplashPage from '../pages/SplashPage';
 
 /**
  * 栈导航路由的配置表
  * 这个路由配置的对象名称和PageName需要必须保持一致
  */
-export const stackNavigationRouter = {
-    splashPage: {
-        pageName: 'splashPage',
-        screen: AuraBottomTabNavigator,
+export const stackRouter = {
+    // 这个是我们默认栈路由的首页启动页面
+    SplashPage: {
+        name: 'SplashPage',
+        screen: SplashPage,
     },
     MainPage: {
-        pageName: 'MainPage',
+        name: 'MainPage',
         screen: AuraBottomTabNavigator,
     },
 
     SwipeRecommendShopPage: {
-        pageName: 'SwipeRecommendShopPage',
+        name: 'SwipeRecommendShopPage',
         screen: SwipeRecommendShopPage,
     },
 };
@@ -29,7 +31,7 @@ export const stackNavigationRouter = {
  * 底部标签页面的路由映射表
  * 这个路由配置的对象名称和PageName需要必须保持一致
  */
-export const bottomTabNavigationRouter = {
+export const bottomTabRouter = {
     home: {
         pageName: 'home',
         screen: HomePage,

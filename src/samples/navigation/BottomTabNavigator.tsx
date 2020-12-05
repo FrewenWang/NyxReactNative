@@ -15,7 +15,7 @@ import BottomTabPage4 from './pages/BottomTabPage4';
  */
 const tabBottomConfigs = {
     bottomTabPage1: {
-        pageName: 'bottomTabPage1',
+        name: 'bottomTabPage1',
         screen: BottomTabPage1,
         tintColor: 'purple',
         activeIcon: ImageRes.main.homeSelected,
@@ -23,7 +23,7 @@ const tabBottomConfigs = {
         options: {tabBarLabel: '页面1', headerShown: false},
     },
     bottomTabPage2: {
-        pageName: 'bottomTabPage2',
+        name: 'bottomTabPage2',
         screen: BottomTabPage2,
         tintColor: 'purple',
         activeIcon: ImageRes.main.recommendSelected,
@@ -31,7 +31,7 @@ const tabBottomConfigs = {
         options: {tabBarLabel: '推荐'},
     },
     bottomTabPage3: {
-        pageName: 'bottomTabPage3',
+        name: 'bottomTabPage3',
         screen: BottomTabPage3,
         tintColor: 'purple',
         activeIcon: ImageRes.main.discoverySelected,
@@ -39,7 +39,7 @@ const tabBottomConfigs = {
         options: {tabBarLabel: '发现'},
     },
     bottomTabPage4: {
-        pageName: 'bottomTabPage4',
+        name: 'bottomTabPage4',
         screen: BottomTabPage4,
         tintColor: 'purple',
         activeIcon: ImageRes.main.myProfileSelected,

@@ -8,14 +8,13 @@ import {HomeStyles} from '../resources/styles/HomePageStyle';
 import {CommonStyles} from '../resources/styles/CommonStyles';
 import ColorRes from '../resources/colors/ColorRes';
 import Logger from '../aura/utils/Logger';
-import ItemDemoFlatList from '../samples/basic/list/ItemDemoFlatList';
 import CommonGridMenuView from '../components/CommonGridMenuVIew';
-import {menuInfos} from '../api/HomeGridMenuInfos';
+import {menuInfos} from '../network/api/HomeGridMenuInfos';
 import FetchHelper from '../aura/network/FetchHelper';
 import {Method} from '../aura/network/lib/Options';
-import {recommend} from '../api/HomeFlatListData';
+import {recommend} from '../network/api/HomeFlatListData';
 import HomeFlatList from '../components/HomeFlatList';
-import {stackNavigationRouter} from "../navigation/NavigationRouter";
+import {stackRouter} from '../navigation/NavigationRouter';
 
 /**
  * 定义首页的State
@@ -33,14 +32,12 @@ export default class HomePage extends BaseComponent<ViewProps, HomeState> {
     static navigationOptions = ({navigation}: any) => ({
         headerTitle: () => (
             <TouchableOpacity style={CommonStyles.searchBar}>
-                <Image source={ImageRes.main.search} style={CommonStyles.searchIcon}/>
+                <Image source={ImageRes.main.search} style={CommonStyles.searchIcon} />
                 <Paragraph style={{color: 'red'}}>搜索</Paragraph>
             </TouchableOpacity>
         ),
-        headerRight: () => <TopNavigationItem icon={ImageRes.home.message} onPress={() => {
-        }}/>,
-        headerLeft: () => <TopNavigationItem title="福州" titleStyle={{color: 'white'}} onPress={() => {
-        }}/>,
+        headerRight: () => <TopNavigationItem icon={ImageRes.home.message} onPress={() => {}} />,
+        headerLeft: () => <TopNavigationItem title="福州" titleStyle={{color: 'white'}} onPress={() => {}} />,
         headerStyle: {backgroundColor: ColorRes.common.primary},
     });
 
@@ -124,7 +121,7 @@ export default class HomePage extends BaseComponent<ViewProps, HomeState> {
          * ItemDemoFlatList最好使用React.PureComponent
          * 否则每次渲染的时候，都会将上面的Item进行重复渲染
          */
-        return <HomeFlatList info={item.item} onPress={this.onCellSelected}/>;
+        return <HomeFlatList info={item.item} onPress={this.onCellSelected} />;
         // return (
         //     <View>
         //         <Text>{2}</Text>
@@ -153,7 +150,7 @@ export default class HomePage extends BaseComponent<ViewProps, HomeState> {
      * @private
      */
     private _headerPageComponent = () => {
-        return <CommonGridMenuView menuItems={menuInfos} onItemSelected={this.onGridMenuSelected}/>;
+        return <CommonGridMenuView menuItems={menuInfos} onItemSelected={this.onGridMenuSelected} />;
     };
 
     private onGridMenuSelected(index: number): void {
@@ -179,6 +176,6 @@ export default class HomePage extends BaseComponent<ViewProps, HomeState> {
 
     onCellSelected = (info: Object) => {
         StatusBar.setBarStyle('default', false);
-        this.props.navigation.navigate(stackNavigationRouter.SwipeRecommendShopPage.pageName, {info: info});
+        this.props.navigation.navigate(stackRouter.SwipeRecommendShopPage.name, {info: info});
     };
 }

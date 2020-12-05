@@ -1,4 +1,5 @@
 import React from 'react';
+// createStackNavigator这个是react-navigation
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import DemoPage1 from '../samples/navigation/pages/DemoPage1';
 import DemoPage3 from '../samples/navigation/pages/DemoPage3';
@@ -6,9 +7,7 @@ import DemoPage4 from '../samples/navigation/pages/DemoPage4';
 import DemoPage2 from '../samples/navigation/pages/DemoPage2';
 import {Button, StyleSheet} from 'react-native';
 import navigationHelper from '../utils/NavigationHelper';
-import AuraBottomTabNavigator from './AuraBottomTabNavigator';
-import SwipeRecommendShopPage from '../pages/shop_recomend/SwipeRecommendShopPage';
-import {stackNavigationRouter} from './NavigationRouter';
+import {stackRouter} from './NavigationRouter';
 
 const Stack = createStackNavigator();
 /**
@@ -28,7 +27,7 @@ export default function AuraStackNavigator() {
      */
     return (
         <Stack.Navigator
-            initialRouteName={stackNavigationRouter.MainPage.pageName}
+            initialRouteName={stackRouter.SplashPage.name}
             screenOptions={{
                 headerStyle: styles.header, // 顶部标题栏的Style
                 headerTintColor: '#fff', // 返回按钮和标题都使用这个属性作为它们的颜色
@@ -40,28 +39,28 @@ export default function AuraStackNavigator() {
                 headerLeft: _backButton,
                 ...TransitionPresets.SlideFromRightIOS,
             }}>
+            {/*栈管理路由器的起始页面我们希望打开的是Splash页面*/}
+            <Stack.Screen
+                name={stackRouter.SplashPage.name}
+                component={stackRouter.SplashPage.screen}
+                options={{headerLeft: undefined, headerShown: false}}
+            />
 
             {/*栈管理路由器包含的是一个底部标签的路由容器*/}
             <Stack.Screen
-                name={stackNavigationRouter.MainPage.pageName}
-                component={AuraBottomTabNavigator}
-                // @ts-ignore
-                options={{headerLeft: null, headerShown: false}}
+                name={stackRouter.MainPage.name}
+                component={stackRouter.MainPage.screen}
+                options={{headerLeft: undefined, headerShown: false}}
             />
 
             {/*带有滑动效果的店铺列表配置页面*/}
             <Stack.Screen
-                name={stackNavigationRouter.SwipeRecommendShopPage.pageName}
-                component={SwipeRecommendShopPage}
+                name={stackRouter.SwipeRecommendShopPage.name}
+                component={stackRouter.SwipeRecommendShopPage.screen}
             />
             <Stack.Screen name="Page1" component={DemoPage1} />
             <Stack.Screen name="Page2" component={DemoPage2} />
-            <Stack.Screen
-                name="Page3"
-                component={DemoPage3}
-                // @ts-ignore
-                options={{headerLeft: null, headerShown: false}}
-            />
+            <Stack.Screen name="Page3" component={DemoPage3} options={{headerLeft: undefined, headerShown: false}} />
             <Stack.Screen name="Page4" component={DemoPage4} />
         </Stack.Navigator>
     );

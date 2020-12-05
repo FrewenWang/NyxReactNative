@@ -199,4 +199,5 @@ class NavigationHelper {
 }
 
 const navigationHelper = new NavigationHelper();
+/// 默认导出navigationHelper的对象
 export default navigationHelper;
