@@ -2,7 +2,7 @@ export default {
     common: {
         black: 'black',
         white: 'white',
-        primary: '#06C1AE',
+        primary: 'purple',
         chatBrandBgColor: '#092B77FF',
         containerBg: '#FFFFFF',
         borderColor: '#cccccc',

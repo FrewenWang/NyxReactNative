@@ -1,4 +1,4 @@
-import AuraBottomTabNavigator from './AuraBottomTabNavigator';
+import NaviBottomTabContainer from './NaviBottomTabContainer';
 import SwipeRecommendShopPage from '../pages/shop_recomend/SwipeRecommendShopPage';
 import HomePage from '../pages/HomePage';
 import ImageRes from '../resources/images/ImageRes';
@@ -19,7 +19,7 @@ export const stackRouter = {
     },
     MainPage: {
         name: 'MainPage',
-        screen: AuraBottomTabNavigator,
+        screen: NaviBottomTabContainer,
     },
 
     SwipeRecommendShopPage: {

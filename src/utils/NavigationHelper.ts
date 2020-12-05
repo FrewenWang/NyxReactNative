@@ -1,5 +1,6 @@
 import {CommonActions, StackActions, NavigationContainerRef} from '@react-navigation/native';
 import {Keyboard, ToastAndroid, BackHandler, Platform} from 'react-native';
+import {stackRouter} from '../navigation/NavigationRouter';
 
 /**
  * 路由导航帮助类
@@ -18,6 +19,10 @@ class NavigationHelper {
         this._backActionMap = {};
     }
 
+    /**
+     * 设置当前的路由导航器
+     * @param ref
+     */
     setNavigator(ref: any) {
         this.navigator = ref;
     }
@@ -32,11 +37,12 @@ class NavigationHelper {
     };
 
     /**
-     * 重置路由
-     * @param routeName 如果不指定,默认重置回首页, routeName可以是栈中的路由也可以是新的, reset会重新创建该页面
+     * 重置路由到首页
+     * @param routeName 如果不指定,默认重置回首页,
+     * routeName可以是栈中的路由也可以是新的, reset会重新创建该页面
      * @param params 设置参数
      */
-    reset = (routeName: string = 'index', params?: any) => {
+    reset = (routeName: string = stackRouter.SplashPage.name, params?: any) => {
         this.navigator?.reset({
             index: 0,
             routes: [{name: routeName, params: params}],

@@ -13,7 +13,7 @@ import {BaseComponent} from '../../aura/base/BaseComponent';
 /**
  * 只有路由导航的根页面需要调用这个NavigationPageProps
  */
-import NavigationPageProps from '../../navigation/NavigationPageProps';
+import NaviPageProps from '../../navigation/NaviPageProps';
 import ScreenDimensions from '../../resources/dimensions/ScreenDimensions';
 import ImageRes from '../../resources/images/ImageRes';
 import Logger from '../../aura/utils/Logger';
@@ -24,11 +24,11 @@ import ShopInfoRecommendPage from './ShopInfoRecommendPage';
  * 具体效果：
  */
 const TAG = 'SwipeRecommendShopPage';
-export default class SwipeRecommendShopPage extends BaseComponent<NavigationPageProps, any> {
+export default class SwipeRecommendShopPage extends BaseComponent<NaviPageProps, any> {
     private floatAnimTop: Animated.Value;
     private _panResponder?: PanResponderInstance;
 
-    constructor(props: NavigationPageProps) {
+    constructor(props: NaviPageProps) {
         super(props);
 
         // 底部的悬浮窗的距离顶部的布局

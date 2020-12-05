@@ -5,9 +5,10 @@ import DemoPage1 from '../samples/navigation/pages/DemoPage1';
 import DemoPage3 from '../samples/navigation/pages/DemoPage3';
 import DemoPage4 from '../samples/navigation/pages/DemoPage4';
 import DemoPage2 from '../samples/navigation/pages/DemoPage2';
-import {Button, StyleSheet} from 'react-native';
+import {Button, Platform, StyleSheet} from 'react-native';
 import navigationHelper from '../utils/NavigationHelper';
 import {stackRouter} from './NavigationRouter';
+import ColorRes from "../resources/colors/ColorRes";
 
 const Stack = createStackNavigator();
 /**
@@ -15,7 +16,7 @@ const Stack = createStackNavigator();
  * 具体的demo。我们后来学习：
  * @constructor
  */
-export default function AuraStackNavigator() {
+export default function NaviStackContainer() {
     /**
      * NavigationContainer是导航容器。将导航前转化成为页面的Component的元素
      * 我们AuraStackNavigator的可以存放在NavigationContainer组件中
@@ -50,7 +51,7 @@ export default function AuraStackNavigator() {
             <Stack.Screen
                 name={stackRouter.MainPage.name}
                 component={stackRouter.MainPage.screen}
-                options={{headerLeft: undefined, headerShown: false}}
+                options={{headerLeft: undefined, headerShown: true}}
             />
 
             {/*带有滑动效果的店铺列表配置页面*/}
@@ -58,24 +59,24 @@ export default function AuraStackNavigator() {
                 name={stackRouter.SwipeRecommendShopPage.name}
                 component={stackRouter.SwipeRecommendShopPage.screen}
             />
-            <Stack.Screen name="Page1" component={DemoPage1} />
-            <Stack.Screen name="Page2" component={DemoPage2} />
-            <Stack.Screen name="Page3" component={DemoPage3} options={{headerLeft: undefined, headerShown: false}} />
-            <Stack.Screen name="Page4" component={DemoPage4} />
+            <Stack.Screen name="Page1" component={DemoPage1}/>
+            <Stack.Screen name="Page2" component={DemoPage2}/>
+            <Stack.Screen name="Page3" component={DemoPage3} options={{headerLeft: undefined, headerShown: false}}/>
+            <Stack.Screen name="Page4" component={DemoPage4}/>
         </Stack.Navigator>
     );
 }
 
 const styles = StyleSheet.create({
     header: {
-        backgroundColor: '#3047df',
-        height: 50,
-        // paddingTop: Platform.OS === 'ios' ? 0 : StatusBarHeight,
+        backgroundColor: ColorRes.common.primary,
+        height: 100,
+        paddingTop: Platform.OS === 'ios' ? 0 : 80,
         shadowOpacity: 0, // remove shadow on iOS
     },
     headerTitle: {
         color: '#fff',
-        fontSize: 32,
+        fontSize: 26,
         alignSelf: 'center',
         textAlign: 'center',
     },
@@ -85,4 +86,4 @@ const styles = StyleSheet.create({
     },
 });
 
-const _backButton = () => <Button title="返回" onPress={navigationHelper.backAction} />;
+const _backButton = () => <Button title="返回" onPress={navigationHelper.backAction}/>;

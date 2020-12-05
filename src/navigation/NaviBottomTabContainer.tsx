@@ -5,16 +5,15 @@ import BottomTabBarItem from '../components/ItemBottomTabBar';
 import navigationHelper from '../utils/NavigationHelper';
 import Logger from '../aura/utils/Logger';
 import {StackHeaderOptions} from '@react-navigation/stack/lib/typescript/src/types';
-import {bottomTabRouter} from './NavigationRouter';
+import {bottomTabRouter, stackRouter} from './NavigationRouter';
+import NaviPageProps from './NaviPageProps';
 
 const Tab = createBottomTabNavigator();
-const TAG = 'AuraBottomTabNavigator';
-export default class AuraBottomTabNavigator<ViewProps, State> extends PureComponent<ViewProps, State> {
-    public constructor(props: ViewProps) {
+const TAG = 'NaviBottomTabContainer';
+export default class NaviBottomTabContainer extends PureComponent<NaviPageProps> {
+    public constructor(props: NaviPageProps) {
         super(props);
-        // @ts-ignore
         let navigation = props.navigation;
-        // @ts-ignore
         let route = props.route;
         Logger.log(TAG, `navigation:${navigation},route:${route}`);
         // React.useLayoutEffect(() => {
@@ -25,7 +24,7 @@ export default class AuraBottomTabNavigator<ViewProps, State> extends PureCompon
     public render(): ReactElement {
         return (
             <Tab.Navigator
-                initialRouteName={'home'}
+                initialRouteName={bottomTabRouter.home.pageName}
                 screenOptions={({route, navigation}) => ({
                     tabBarIcon: ({focused, color, size}) => {
                         return (
@@ -33,6 +32,7 @@ export default class AuraBottomTabNavigator<ViewProps, State> extends PureCompon
                                 size={size}
                                 tintColor={'purple'}
                                 focused={focused}
+                                // TODO 后续我们会考虑换成VectorIcons,暂时先搭框架
                                 // @ts-ignore
                                 normalImage={bottomTabRouter[route.name].inActiveIcon}
                                 // @ts-ignore

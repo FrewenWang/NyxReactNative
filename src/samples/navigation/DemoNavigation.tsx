@@ -31,7 +31,7 @@ const AppNavigator = () => {
         // 2、堆栈导航容器
         // 3、Drawerable抽屉导航容器
         <NavigationContainer>
-            {/*<AuraBottomTabNavigator />*/}
+            {/*<NaviBottomTabContainer />*/}
 
             {/*下面是测试堆栈导航容器，父组件是AuraStackNavigator容器组件*/}
             {/*下面，我们来看AuraStackNavigator的*/}

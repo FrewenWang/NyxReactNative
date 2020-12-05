@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {BackHandler} from 'react-native';
 import navigationHelper from '../utils/NavigationHelper';
 import {NavigationContainer} from '@react-navigation/native';
-import AuraStackNavigator from './AuraStackNavigator';
+import NaviStackContainer from './NaviStackContainer';
 
 /**
  * App的Navigation容器
@@ -21,7 +21,7 @@ const AppNavigator = () => {
 
     return (
         <NavigationContainer>
-            <AuraStackNavigator></AuraStackNavigator>
+            <NaviStackContainer></NaviStackContainer>
         </NavigationContainer>
     );
 };
