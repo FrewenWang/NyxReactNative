@@ -6,6 +6,7 @@ import RecommendPage from '../pages/RecommendPage';
 import DiscoveryPage from '../pages/DiscoveryPage';
 import MyProfilePage from '../pages/MyProfilePage';
 import SplashPage from '../pages/SplashPage';
+import NaviMaterialTopTabContainer from './NaviMaterialTopTabContainer';
 
 /**
  * 栈导航路由的配置表
@@ -40,9 +41,11 @@ export const bottomTabRouter = {
         inActiveIcon: ImageRes.main.home,
         options: {tabBarLabel: '首页', headerShown: false},
     },
+    // 推荐页面，我们签入顶部标签页面，
+    // 所以这个地方的Screen需要设置为NaviMaterialTopTabContainer
     recommend: {
         pageName: 'recommend',
-        screen: RecommendPage,
+        screen: NaviMaterialTopTabContainer,
         tintColor: 'purple',
         activeIcon: ImageRes.main.recommendSelected,
         inActiveIcon: ImageRes.main.recommend,
@@ -63,5 +66,19 @@ export const bottomTabRouter = {
         activeIcon: ImageRes.main.myProfileSelected,
         inActiveIcon: ImageRes.main.myProfile,
         options: {tabBarLabel: '我的'},
+    },
+};
+
+/**
+ * 顶部标签栏的的页面Page
+ */
+export const topTabRouter = {
+    home: {
+        name: 'home',
+        screen: HomePage,
+    },
+    recommend: {
+        name: 'recommend',
+        screen: RecommendPage,
     },
 };
