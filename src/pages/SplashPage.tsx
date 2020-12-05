@@ -26,7 +26,7 @@ export default class SplashPage extends BasePureComponent<ViewProps, any> {
         this.timer = this.timeoutManager.startTimeout(() => {
             // 我们从当前页面的属性中，拿到navigation对象，调用导航navigate方法
             navigation.navigate(stackRouter.MainPage.name);
-        }, 2000);
+        }, 200);
     }
 
     public componentWillUnmount(): void {

@@ -8,9 +8,22 @@ type BottomTabBarItemProps = {
     selectedImage: any;
     focused: boolean;
 };
+/**
+ * 这个是只针对底部的Tab标签栏的Icon属性
+ */
+export default class IconBottomTabBar extends PureComponent<BottomTabBarItemProps, any> {
+    private theme: {tintColor: String; updateTime: number};
 
-export default class BottomTabBarItem extends PureComponent<BottomTabBarItemProps, any> {
+    constructor(props: BottomTabBarItemProps) {
+        super(props);
+        this.theme = {
+            tintColor: this.props.tintColor,
+            updateTime: new Date().getTime(),
+        };
+    }
+
     public render(): React.ReactNode {
+
         let selectedImage = this.props.selectedImage ? this.props.selectedImage : this.props.normalImage;
         return (
             <Image

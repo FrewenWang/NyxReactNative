@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {PureComponent, ReactElement} from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import BottomTabBarItem from '../../components/ItemBottomTabBar';
+import IconBottomTabBar from '../../navigation/bottom/IconBottomTabBar';
 import ImageRes from '../../resources/images/ImageRes';
 import navigationHelper from '../../utils/NavigationHelper';
 import BottomTabPage1 from './pages/BottomTabPage1';
@@ -61,11 +61,11 @@ export default class BottomTabNavigator<ViewProps, State> extends PureComponent<
             // initialRouteName:导航器第一次加载时要呈现的路由名称。
             // screenOptions:导航器中用于屏幕的默认选项
             <Tab.Navigator
-                initialRouteName={tabBottomConfigs.bottomTabPage1.pageName}
+                initialRouteName={tabBottomConfigs.bottomTabPage1.name}
                 screenOptions={({route, navigation}) => ({
                     tabBarIcon: ({focused, color, size}) => {
                         return (
-                            <BottomTabBarItem
+                            <IconBottomTabBar
                                 size={size}
                                 tintColor={'purple'}
                                 focused={focused}
